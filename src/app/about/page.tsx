@@ -10,7 +10,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-[#FF6B35] to-[#FFD700] bg-clip-text text-transparent">About Winning Casino</span>
+                  <span className="bg-gradient-to-r from-[#FF6B35] to-[#FFD700] bg-clip-text text-transparent">About Fast Casino UK</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Your trusted guide exclusively featuring UK Gambling Commission licensed online casinos with exclusive bonuses and safe gaming experiences for British players.
@@ -21,7 +21,7 @@ export default function AboutPage() {
             <div className="bg-[#151520] border border-[#FF6B35]/20 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Who We Are</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Winning Casino is an independent UK-focused casino listing site dedicated exclusively to featuring UK Gambling Commission licensed casinos. 
+                Fast Casino UK is an independent UK-focused casino listing site dedicated exclusively to featuring UK Gambling Commission licensed casinos. 
                 We are not affiliated with any casino operator, ensuring our reviews remain completely unbiased and focused on what matters most to British players.
               </p>
               <p className="text-gray-300 leading-relaxed">

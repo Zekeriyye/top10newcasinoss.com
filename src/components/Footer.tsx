@@ -18,8 +18,7 @@ export default function Footer() {
               />
             </div>
             <div>
-              <h2 className="text-white font-bold text-2xl bg-gradient-to-r from-white to-[#FF6B35] bg-clip-text text-transparent">Winning</h2>
-              <p className="text-[#00D4AA] text-sm font-semibold">Casino</p>
+              <h2 className="text-white font-bold text-2xl bg-gradient-to-r from-white to-[#FF6B35] bg-clip-text text-transparent">Fast Casino UK</h2>
             </div>
           </div>
           <p className="text-gray-300 text-sm max-w-2xl leading-relaxed">

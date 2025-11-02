@@ -1,8 +1,8 @@
 export const siteConfig = {
   // Basic site information
-  name: "Winning Casino",
+  name: "Fast Casino UK",
   description: "Compare UK-licensed casinos featuring secure bonuses and rapid payout options",
-  url: "https://winningcasino.org",
+  url: "https://fastcasinouk.com",
   
   // Brand colors - modern redesign
   colors: {
@@ -109,6 +109,6 @@ export const siteConfig = {
   
   // Contact information
   contact: {
-    email: "support@winningcasino.org"
+    email: "support@fastcasinouk.com"
   }
 };
