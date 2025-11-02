@@ -30,13 +30,7 @@ export const siteConfig = {
       rating: 10.0,
       playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
     },
-    {
-      name: "SpinMillion",
-      logo: "spinmillion.webp", // Change this filename to switch logos
-      bonus: "100% up to £750 + 100 Free Spins + 3x Wheel of Luck",
-      rating: 9.8,
-      playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
-    },
+    
     {
       name: "Qbet",
       logo: "qbet.png", // Change this filename to switch logos
@@ -50,6 +44,13 @@ export const siteConfig = {
       bonus: "WELCOME BONUS UP TO €1500 PLUS 175 BONUS SPINS",
       rating: 9.4,
       playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
+    },
+    {
+      name: "SpinMillion",
+      logo: "spinmillion.webp", // Change this filename to switch logos
+      bonus: "100% up to £750 + 100 Free Spins + 3x Wheel of Luck",
+      rating: 9.8,
+      playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
     },
     {
       name: "Rizzio",
