@@ -3,20 +3,62 @@
 import { siteConfig } from '@/config/site';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { getTrackingValue } from '@/utils/tracking';
 
 export default function CasinoBrands() {
-  const [gclid, setGclid] = useState('');
+  const [trackingValue, setTrackingValue] = useState('');
 
   useEffect(() => {
-    // Get GCLID from URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const gclidValue = urlParams.get('gclid') || '';
-    setGclid(gclidValue);
+    // Get tracking value - checks URL first, then sessionStorage
+    const value = getTrackingValue();
+    setTrackingValue(value);
+    
+    // Debug: Log captured parameters (remove in production)
+    if (value) {
+      console.log('📊 Using tracking value:', value);
+    }
   }, []);
 
-  // Function to replace {gclid} placeholder in URLs
+  // Function to process play links with tracking parameters
   const processPlayLink = (link: string) => {
-    return link.replace('{gclid}', gclid);
+    if (!trackingValue) {
+      return link; // No tracking value to append
+    }
+    
+    let processedLink = link;
+    
+    // Common parameter names that might need the tracking value appended
+    const trackingParamNames = ['gclid', 'payload', 'clickid', 'afp', 'gcslid', 'visit_id', 'trackid', 'ref', 'subid'];
+    
+    // Check each parameter name to see if it exists empty in the URL
+    for (const paramName of trackingParamNames) {
+      // Check if parameter exists with empty value: "param=" with nothing after (or just & after)
+      // Match: "&param=" or "?param=" at end OR "&param=&" in middle
+      const emptyParamPattern = new RegExp(`([&?])${paramName}=(?=&|$)`);
+      if (emptyParamPattern.test(processedLink)) {
+        // Replace the empty parameter with the tracking value
+        if (processedLink.endsWith(`${paramName}=`)) {
+          // At the end of URL
+          processedLink = processedLink + encodeURIComponent(trackingValue);
+        } else {
+          // In the middle: "&param=&" becomes "&param=value&"
+          processedLink = processedLink.replace(emptyParamPattern, `$1${paramName}=${encodeURIComponent(trackingValue)}`);
+        }
+        console.log(`✅ Appended tracking value to ${paramName}:`, processedLink);
+        return processedLink;
+      }
+    }
+    
+    // If no empty parameter found, check if we should add clickid as default
+    const hasTrackingParam = trackingParamNames.some(param => processedLink.includes(`${param}=`));
+    if (!hasTrackingParam) {
+      // Add clickid parameter if URL uses query string
+      const separator = processedLink.includes('?') ? '&' : '?';
+      processedLink = `${processedLink}${separator}clickid=${encodeURIComponent(trackingValue)}`;
+      console.log('Added clickid parameter:', processedLink);
+    }
+    
+    return processedLink;
   };
   return (
     <section id="casinos" className="py-12 md:py-20 bg-[#0A0A0F] relative overflow-hidden">
@@ -27,24 +69,19 @@ export default function CasinoBrands() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="casino-grid">
           {siteConfig.casinos.map((casino, index) => {
-            // Determine tag based on position
-            const getTag = (index: number) => {
-              if (index === 0) return { text: "MOST POPULAR", color: "bg-orange-500" };
-              if (index === 1) return { text: "RUNNER UP", color: "bg-orange-500" };
-              if (index === 2) return { text: "HOT", color: "bg-orange-500" };
-              return { text: "MOST POPULAR", color: "bg-orange-500" };
-            };
-
-            const tag = getTag(index);
+            // Only show badge on first casino
+            const showBadge = index === 0;
 
             return (
               <div key={index} className="card hover:transform hover:scale-[1.01] transition-all duration-300 group relative flex flex-col md:flex-row w-full">
-                {/* Top Badge */}
-                <div className="absolute -top-2 -left-2 z-10">
-                  <div className={`${tag.color} text-white text-sm font-bold px-4 py-2 rounded-md shadow-lg`}>
-                    {tag.text}
+                {/* Top Badge - Only on first casino */}
+                {showBadge && (
+                  <div className="absolute -top-2 -left-2 z-10">
+                    <div className="bg-orange-500 text-white text-sm font-bold px-4 py-2 rounded-md shadow-lg">
+                      MOST POPULAR
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div className="p-6 pt-8 flex flex-col md:flex-row items-center md:items-center w-full gap-6 md:gap-8">
                   {/* Left Side - Logo */}
