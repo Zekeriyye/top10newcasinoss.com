@@ -1,0 +1,30 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gold coin design -->
+  <circle cx="20" cy="20" r="18" fill="#F59E0B" stroke="#D97706" stroke-width="2"/>
+  <circle cx="20" cy="20" r="14" fill="#FBBF24" stroke="#F59E0B" stroke-width="1"/>
+  
+  <!-- Coin center design - casino chip style -->
+  <circle cx="20" cy="20" r="8" fill="#F59E0B" stroke="#D97706" stroke-width="1"/>
+  <circle cx="20" cy="20" r="4" fill="#FBBF24"/>
+  
+  <!-- Classic 7 slot sign in the center -->
+  <text x="20" y="25" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#D97706">7</text>
+  
+  <!-- Decorative elements around the coin -->
+  <circle cx="20" cy="6" r="1.5" fill="#FBBF24"/>
+  <circle cx="34" cy="20" r="1.5" fill="#FBBF24"/>
+  <circle cx="20" cy="34" r="1.5" fill="#FBBF24"/>
+  <circle cx="6" cy="20" r="1.5" fill="#FBBF24"/>
+  
+  <!-- Corner decorations -->
+  <circle cx="12" cy="12" r="1" fill="#FBBF24"/>
+  <circle cx="28" cy="12" r="1" fill="#FBBF24"/>
+  <circle cx="12" cy="28" r="1" fill="#FBBF24"/>
+  <circle cx="28" cy="28" r="1" fill="#FBBF24"/>
+  
+  <!-- Inner decorative dots -->
+  <circle cx="16" cy="16" r="0.8" fill="#D97706"/>
+  <circle cx="24" cy="16" r="0.8" fill="#D97706"/>
+  <circle cx="16" cy="24" r="0.8" fill="#D97706"/>
+  <circle cx="24" cy="24" r="0.8" fill="#D97706"/>
+</svg>
