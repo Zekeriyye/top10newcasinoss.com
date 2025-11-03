@@ -67,19 +67,20 @@ export const siteConfig = {
       playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
     },
     {
-      name: "GoldenLion",
-      logo: "goldenlion.png", // Change this filename to switch logos
-      bonus: "100 Free spins + 400% up to 2000€",
-      rating: 8.8,
-      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5349&utm_campaign=GoldenLion-CXUK01&afp="
-    },
-    {
       name: "WinBeast",
       logo: "winbeast.svg", // Change this filename to switch logos
       bonus: "Welcome Pack €/£3000 + 300 FS",
-      rating: 8.6,
+      rating: 8.8,
       playLink: "https://beast-net.co/aojqgntf6?subid=WinBeast-CXUK01&visit_id="
     },
+    {
+      name: "GoldenLion",
+      logo: "goldenlion.png", // Change this filename to switch logos
+      bonus: "100 Free spins + 400% up to 2000€",
+      rating: 8.6,
+      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5349&utm_campaign=GoldenLion-CXUK01&afp="
+    },
+   
     {
       name: "50Crowns",
       logo: "50crowns.svg", // Change this filename to switch logos
