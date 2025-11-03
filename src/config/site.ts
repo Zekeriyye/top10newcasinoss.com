@@ -50,6 +50,14 @@ export const siteConfig = {
       bonus: "100% UP TO £500 + 250 FREE SPINS",
       rating: 9.4,
       playLink: "https://luckytwice.site/j90006c83?subid=LuckyTwice-CXUK01&clickid="
+    }
+    ,
+    {
+      name: "Rizzio",
+      logo: "rizzio-logo-nl.svg", // Change this filename to switch logos
+      bonus: "EXCLUSIVE WELCOME CASINO BONUS 250% UP TO £2.500 + 100 FS ON WILDS OF FORTUNE!",
+      rating: 9.0,
+      playLink: "https://go.infinitystarspartners.com/visit/?bta=39161&nci=8800&utm_campaign=Rizzio-CXUK01&afp="
     },
     {
       name: "FishAndSpins",
@@ -57,13 +65,6 @@ export const siteConfig = {
       bonus: "WELCOME BONUS UP TO €1500 PLUS 175 BONUS SPINS",
       rating: 9.2,
       playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
-    },
-    {
-      name: "Rizzio",
-      logo: "rizzio-logo-nl.svg", // Change this filename to switch logos
-      bonus: "EXCLUSIVE WELCOME CASINO BONUS 250% UP TO £2.500 + 100 FS ON WILDS OF FORTUNE!",
-      rating: 9.0,
-      playLink: "https://go.infinitystarspartners.com/visit/?bta=39161&nci=8800&utm_campaign=Rizzio-CXUK01&afp="
     },
     {
       name: "WinBeast",
