@@ -24,20 +24,19 @@ export const siteConfig = {
   // Casino brands data
   casinos: [
     {
-      name: "GoldenGenie",
-      logo: "goldengenie.webp", // Change this filename to switch logos
-      bonus: "100 Free spins + 400% up to 2000€",
-      rating: 10.0,
-      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
-    },
-    {
       name: "SpinMillion",
       logo: "spinmillion.webp", // Change this filename to switch logos
       bonus: "100% up to £750 + 100 Free Spins + 3x Wheel of Luck",
-      rating: 9.8,
+      rating: 10,
       playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
     },
-    
+    {
+      name: "GoldenGenie",
+      logo: "goldengenie.webp", // Change this filename to switch logos
+      bonus: "100 Free spins + 400% up to 2000€",
+      rating: 9.8,
+      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
+    },
     {
       name: "Qbet",
       logo: "qbet.png", // Change this filename to switch logos
