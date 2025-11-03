@@ -41,25 +41,23 @@ export const siteConfig = {
       name: "Rizzio",
       logo: "rizzio-logo-nl.svg", // Change this filename to switch logos
       bonus: "EXCLUSIVE WELCOME CASINO BONUS 250% UP TO £2.500 + 100 FS ON WILDS OF FORTUNE!",
-      rating: 9.2,
+      rating: 9.6,
       playLink: "https://go.infinitystarspartners.com/visit/?bta=39161&nci=8800&utm_campaign=Rizzio-CXUK01&afp="
     },
     {
       name: "GoldenGenie",
       logo: "goldengenie.webp", // Change this filename to switch logos
       bonus: "100 Free spins + 400% up to 2000€",
-      rating: 9.6,
+      rating: 9.4,
       playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
     },
     {
       name: "GoldenLion",
       logo: "goldenlion.png", // Change this filename to switch logos
       bonus: "100 Free spins + 400% up to 2000€",
-      rating: 9.4,
+      rating: 9.2,
       playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5349&utm_campaign=GoldenLion-CXUK01&afp="
     },
-    
-    
     {
       name: "WinBeast",
       logo: "winbeast.svg", // Change this filename to switch logos
