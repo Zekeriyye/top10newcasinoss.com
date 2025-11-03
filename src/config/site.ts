@@ -27,14 +27,14 @@ export const siteConfig = {
       name: "SpinMillion",
       logo: "spinmillion.webp", // Change this filename to switch logos
       bonus: "100% up to £750 + 100 Free Spins + 3x Wheel of Luck",
-      rating: 10,
+      rating: 10.0,
       playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
     },
     {
       name: "Rizzio",
       logo: "rizzio-logo-nl.svg", // Change this filename to switch logos
       bonus: "EXCLUSIVE WELCOME CASINO BONUS 250% UP TO £2.500 + 100 FS ON WILDS OF FORTUNE!",
-      rating: 9.0,
+      rating: 9.8,
       playLink: "https://go.infinitystarspartners.com/visit/?bta=39161&nci=8800&utm_campaign=Rizzio-CXUK01&afp="
     },
 
@@ -49,7 +49,7 @@ export const siteConfig = {
       name: "WinBeast",
       logo: "winbeast.svg", // Change this filename to switch logos
       bonus: "Welcome Pack €/£3000 + 300 FS",
-      rating: 8.8,
+      rating: 9.4,
       playLink: "https://beast-net.co/aojqgntf6?subid=WinBeast-CXUK01&visit_id="
     },
     
@@ -57,14 +57,14 @@ export const siteConfig = {
       name: "GoldenGenie",
       logo: "goldengenie.webp", // Change this filename to switch logos
       bonus: "100 Free spins + 400% up to 2000€",
-      rating: 9.8,
+      rating: 9.2,
       playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
     },
     {
       name: "LuckyTwice",
       logo: "luckytwice.webp", // Change this filename to switch logos
       bonus: "100% UP TO £500 + 250 FREE SPINS",
-      rating: 9.4,
+      rating: 9.0,
       playLink: "https://luckytwice.site/j90006c83?subid=LuckyTwice-CXUK01&clickid="
     }
     ,
@@ -72,7 +72,7 @@ export const siteConfig = {
       name: "FishAndSpins",
       logo: "fishandspins.svg", // Change this filename to switch logos
       bonus: "WELCOME BONUS UP TO €1500 PLUS 175 BONUS SPINS",
-      rating: 9.2,
+      rating: 8.8,
       playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
     },
     
