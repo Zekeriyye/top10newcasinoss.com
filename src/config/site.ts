@@ -37,6 +37,29 @@ export const siteConfig = {
       rating: 9.0,
       playLink: "https://go.infinitystarspartners.com/visit/?bta=39161&nci=8800&utm_campaign=Rizzio-CXUK01&afp="
     },
+
+    {
+      name: "Qbet",
+      logo: "qbet.png", // Change this filename to switch logos
+      bonus: "Bonus up to £100 + 50 Free Spins ",
+      rating: 9.6,
+      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
+    },
+    {
+      name: "WinBeast",
+      logo: "winbeast.svg", // Change this filename to switch logos
+      bonus: "Welcome Pack €/£3000 + 300 FS",
+      rating: 8.8,
+      playLink: "https://beast-net.co/aojqgntf6?subid=WinBeast-CXUK01&visit_id="
+    },
+    
+    {
+      name: "GoldenGenie",
+      logo: "goldengenie.webp", // Change this filename to switch logos
+      bonus: "100 Free spins + 400% up to 2000€",
+      rating: 9.8,
+      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
+    },
     {
       name: "LuckyTwice",
       logo: "luckytwice.webp", // Change this filename to switch logos
@@ -46,35 +69,13 @@ export const siteConfig = {
     }
     ,
     {
-      name: "Qbet",
-      logo: "qbet.png", // Change this filename to switch logos
-      bonus: "Bonus up to £100 + 50 Free Spins ",
-      rating: 9.6,
-      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
-    },
-    {
-      name: "GoldenGenie",
-      logo: "goldengenie.webp", // Change this filename to switch logos
-      bonus: "100 Free spins + 400% up to 2000€",
-      rating: 9.8,
-      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
-    },
-    
-    
-    {
       name: "FishAndSpins",
       logo: "fishandspins.svg", // Change this filename to switch logos
       bonus: "WELCOME BONUS UP TO €1500 PLUS 175 BONUS SPINS",
       rating: 9.2,
       playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
     },
-    {
-      name: "WinBeast",
-      logo: "winbeast.svg", // Change this filename to switch logos
-      bonus: "Welcome Pack €/£3000 + 300 FS",
-      rating: 8.8,
-      playLink: "https://beast-net.co/aojqgntf6?subid=WinBeast-CXUK01&visit_id="
-    },
+    
     {
       name: "UspinMe",
       logo: "uspinme.png", // Change this filename to switch logos
