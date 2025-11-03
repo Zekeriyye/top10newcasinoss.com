@@ -46,7 +46,7 @@ export const siteConfig = {
     },
     {
       name: "GoldenLion",
-      logo: "GOLDENLION.jpg", // Change this filename to switch logos
+      logo: "goldenlion.png", // Change this filename to switch logos
       bonus: "100 Free spins + 400% up to 2000€",
       rating: 9.4,
       playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5349&utm_campaign=GoldenLion-CXUK01&afp="
