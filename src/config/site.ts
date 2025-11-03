@@ -23,13 +23,12 @@ export const siteConfig = {
   
   // Casino brands data
   casinos: [
-
     {
-      name: "GoldenGenie",
-      logo: "goldengenie.webp", // Change this filename to switch logos
-      bonus: "100 Free spins + 400% up to 2000€",
-      rating: 9.2,
-      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
+      name: "Qbet",
+      logo: "qbet.png", // Change this filename to switch logos
+      bonus: "Bonus up to £100 + 50 Free Spins ",
+      rating: 9.6,
+      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
     },
     {
       name: "SpinMillion",
@@ -39,12 +38,14 @@ export const siteConfig = {
       playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
     },
     {
-      name: "Qbet",
-      logo: "qbet.png", // Change this filename to switch logos
-      bonus: "Bonus up to £100 + 50 Free Spins ",
-      rating: 9.6,
-      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
+      name: "GoldenGenie",
+      logo: "goldengenie.webp", // Change this filename to switch logos
+      bonus: "100 Free spins + 400% up to 2000€",
+      rating: 9.2,
+      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
     },
+    
+    
     {
       name: "Rizzio",
       logo: "rizzio-logo-nl.svg", // Change this filename to switch logos
