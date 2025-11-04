@@ -126,7 +126,7 @@ export const siteConfig = {
     {
       name: "GrandIvy",
       logo: "grandivy.webp", // Change this filename to switch logos
-      bonus: "WELCOME BONUS UP TO €1500 PLUS 175 BONUS SPINS",
+      bonus: "Bet £20\nGet 100 Free Spins",
       rating: 8.2,
       playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
     }
