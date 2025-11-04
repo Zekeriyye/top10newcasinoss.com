@@ -20,7 +20,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
+          <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-48 h-12">
               <Image
                 src="/logos/winfastcasinos-new-logo.svg"
@@ -28,6 +28,10 @@ export default function Header() {
                 fill
                 className="object-contain group-hover:opacity-90 transition-opacity"
               />
+            </div>
+            {/* 18+ Badge */}
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-orange-600 border-2 border-red-400 shadow-lg">
+              <span className="text-white font-bold text-sm">18+</span>
             </div>
           </Link>
 
