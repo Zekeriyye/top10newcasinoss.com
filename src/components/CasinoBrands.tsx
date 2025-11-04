@@ -189,17 +189,17 @@ export default function CasinoBrands() {
                     <div className="relative bg-gradient-to-br from-[#1e1b4b] to-[#312e81] p-4 md:p-8 flex flex-col justify-between w-[60%] md:w-[60%]">
                       {/* Bonus Offer Text */}
                       <div className="text-center mb-3 md:mb-6">
-                        <div className="text-white text-base md:text-3xl font-bold mb-1 md:mb-2 leading-tight">
+                        <div className="text-white text-xl md:text-4xl font-bold mb-1 md:mb-3 leading-tight">
                           {casino.bonus.split('\n')[0] || casino.bonus}
                         </div>
                         {casino.bonus.includes('\n') && (
-                          <div className="text-cyan-300 text-sm md:text-2xl font-bold leading-tight">
+                          <div className="text-cyan-300 text-lg md:text-3xl font-bold leading-tight">
                             {casino.bonus.split('\n')[1]}
                           </div>
                         )}
                       </div>
 
-                      {/* GET BONUS Button */}
+                      {/* GET BONUS Button - Elegant Gold */}
                       <div className="mt-auto">
                         <a
                           href={processPlayLink(casino.playLink)}
@@ -213,7 +213,7 @@ export default function CasinoBrands() {
                               button_type: 'get_bonus'
                             });
                           }}
-                          className="block w-full bg-gradient-to-r from-purple-600 via-pink-500 to-pink-600 text-white font-bold py-2.5 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl text-center text-sm md:text-lg hover:from-purple-500 hover:via-pink-400 hover:to-pink-500 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105"
+                          className="block w-full bg-gradient-to-r from-[#D4AF37] via-[#F4E5B1] to-[#D4AF37] text-gray-900 font-bold py-2.5 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl text-center text-sm md:text-lg hover:from-[#E5C158] hover:via-[#F9F0C9] hover:to-[#E5C158] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 border border-[#B8941F]"
                         >
                           GET BONUS
                         </a>
