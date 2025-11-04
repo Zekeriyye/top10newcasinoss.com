@@ -75,21 +75,21 @@ export default function CasinoBrands() {
   };
 
   return (
-    <section id="casinos" className="py-12 md:py-20 bg-gradient-to-br from-[#1a0b2e] via-[#16213e] to-[#0f1419] relative overflow-hidden">
+    <section id="casinos" className="py-6 md:py-10 bg-gradient-to-br from-[#1a0b2e] via-[#16213e] to-[#0f1419] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden opacity-30">
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-600 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-6 md:space-y-8">
+      <div className="relative max-w-6xl mx-auto px-3 md:px-4">
+        <div className="space-y-4 md:space-y-5">
           {siteConfig.casinos.map((casino, index) => {
             const ribbonType = getRibbonType(index);
             const visitorCount = getVisitorCount(index);
 
             return (
-              <div key={index} className="relative pt-6">
+              <div key={index} className="relative pt-5">
                 {/* Small Badge Box */}
                 {ribbonType && (
                   <div className="absolute -top-0 left-4 md:left-6 z-20">
