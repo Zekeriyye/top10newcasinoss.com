@@ -29,15 +29,20 @@ export default function Hero() {
         {/* Main Headline */}
         <div className="text-center mb-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 leading-tight">
-            <span className="text-white">Top 10 Best </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#D4AF37]">
-              Online Casino
+              {siteConfig.hero.headline}
             </span>
-            <span className="text-white"> UK Sites</span>
           </h1>
+          
+          {/* Optional Subtext */}
+          {siteConfig.hero.subtext && (
+            <p className="text-sm md:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed mb-4">
+              {siteConfig.hero.subtext}
+            </p>
+          )}
 
           {/* Trust Badges - 3 Icons - Compact */}
-          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6">
+          <div className={`flex flex-wrap items-center justify-center gap-3 md:gap-6 ${!siteConfig.hero.subtext ? 'mt-0' : ''}`}>
             {/* UK Licensed */}
             <div className="flex items-center gap-1.5 md:gap-2">
               <div className="w-7 h-7 md:w-9 md:h-9 bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] rounded-lg flex items-center justify-center shadow-lg">
