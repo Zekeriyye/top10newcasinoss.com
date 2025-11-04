@@ -1,55 +1,39 @@
-<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<svg width="512" height="200" viewBox="0 0 512 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="chipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2563EB;stop-opacity:1" />
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="wGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
   
-  <!-- Background Circle -->
-  <circle cx="256" cy="256" r="240" fill="url(#chipGradient)" opacity="0.9"/>
+  <!-- "WIN FAST" Text - Left Side -->
+  <text x="0" y="140" font-family="Arial, sans-serif" font-weight="900" font-size="72" fill="#FFFFFF" letter-spacing="2">
+    WIN FAST
+  </text>
   
-  <!-- Outer Ring -->
-  <circle cx="256" cy="256" r="220" fill="none" stroke="#111827" stroke-width="8"/>
-  <circle cx="256" cy="256" r="200" fill="none" stroke="#111827" stroke-width="4"/>
-  
-  <!-- Inner Decorative Circles -->
-  <circle cx="256" cy="256" r="180" fill="none" stroke="#1E3A8A" stroke-width="2" opacity="0.6"/>
-  <circle cx="256" cy="256" r="160" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.6"/>
-  
-  <!-- Casino Chip Lines -->
-  <line x1="256" y1="76" x2="256" y2="436" stroke="#111827" stroke-width="3" opacity="0.3"/>
-  <line x1="76" y1="256" x2="436" y2="256" stroke="#111827" stroke-width="3" opacity="0.3"/>
-  <line x1="146" y1="146" x2="366" y2="366" stroke="#111827" stroke-width="3" opacity="0.3"/>
-  <line x1="366" y1="146" x2="146" y2="366" stroke="#111827" stroke-width="3" opacity="0.3"/>
-  
-  <!-- W Letter -->
-  <path d="M 180 160 L 200 160 L 220 280 L 240 160 L 260 160 L 280 280 L 300 160 L 320 160 L 290 340 L 270 340 L 256 250 L 242 340 L 222 340 Z" 
-        fill="url(#wGradient)" 
-        filter="url(#glow)"
-        opacity="0.95"/>
-  
-  <!-- Small Decorative Elements -->
-  <circle cx="256" cy="100" r="8" fill="#D4AF37" opacity="0.8"/>
-  <circle cx="256" cy="412" r="8" fill="#D4AF37" opacity="0.8"/>
-  <circle cx="100" cy="256" r="8" fill="#1E3A8A" opacity="0.8"/>
-  <circle cx="412" cy="256" r="8" fill="#1E3A8A" opacity="0.8"/>
-  
-  <!-- Corner Accents -->
-  <circle cx="180" cy="180" r="6" fill="#D4AF37" opacity="0.7"/>
-  <circle cx="332" cy="180" r="6" fill="#D4AF37" opacity="0.7"/>
-  <circle cx="180" cy="332" r="6" fill="#D4AF37" opacity="0.7"/>
-  <circle cx="332" cy="332" r="6" fill="#D4AF37" opacity="0.7"/>
+  <!-- "CASINOS" Red Tab Shape -->
+  <g>
+    <!-- Red rounded rectangle/tab shape with speech bubble style -->
+    <path d="M 240 20 L 400 20 Q 460 20 460 60 L 460 140 Q 460 180 420 180 L 400 180 L 240 180 L 240 20 Z" 
+          fill="url(#redGradient)" 
+          stroke="#FFFFFF" 
+          stroke-width="3"/>
+    
+    <!-- "CASINOS" Text inside red shape -->
+    <text x="250" y="130" font-family="Arial, sans-serif" font-weight="900" font-size="48" fill="#FFFFFF" letter-spacing="1">
+      CASINOS
+    </text>
+    
+    <!-- Spade icon - simplified and clean -->
+    <g transform="translate(430, 100)">
+      <path d="M 0 -15 L 8 5 L 5 5 L 5 12 L -5 12 L -5 5 L -8 5 Z" 
+            fill="#FFFFFF" 
+            opacity="0.95"/>
+      <path d="M 0 -15 Q -3 -18 -8 -15 Q -10 -10 -8 -5 Q -5 0 0 5 Q 5 0 8 -5 Q 10 -10 8 -15 Q 3 -18 0 -15" 
+            fill="none" 
+            stroke="#FFFFFF" 
+            stroke-width="1.5" 
+            opacity="0.8"/>
+    </g>
+  </g>
 </svg>
