@@ -11,14 +11,14 @@ export default function Footer() {
             {/* Website Logo */}
             <div className="w-16 h-16 relative">
               <Image
-                src="/logos/fastcasinouk-logo.svg"
+                src="/logos/winfastcasinos-logo.svg"
                 alt={siteConfig.name}
                 fill
                 className="object-contain"
               />
             </div>
             <div>
-              <h2 className="text-white font-bold text-2xl bg-gradient-to-r from-white to-[#FF6B35] bg-clip-text text-transparent">Fast Casino UK</h2>
+              <h2 className="text-white font-bold text-2xl bg-gradient-to-r from-white to-[#FF6B35] bg-clip-text text-transparent">Win Fast Casinos</h2>
             </div>
           </div>
           <p className="text-gray-300 text-sm max-w-2xl leading-relaxed">
