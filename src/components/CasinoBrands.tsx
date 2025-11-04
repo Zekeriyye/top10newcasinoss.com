@@ -61,11 +61,7 @@ export default function CasinoBrands() {
     return processedLink;
   };
   return (
-    <section id="casinos" className="py-12 md:py-20 bg-[#0A0A0F] relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-pink-500/5"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+    <section id="casinos" className="py-12 md:py-20 bg-[#0F172A] relative overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="casino-grid">
           {siteConfig.casinos.map((casino, index) => {
@@ -73,74 +69,94 @@ export default function CasinoBrands() {
             const showBadge = index === 0;
 
             return (
-              <div key={index} className="card hover:transform hover:scale-[1.01] transition-all duration-300 group relative flex flex-col md:flex-row w-full">
+              <div key={index} className="relative mb-6">
                 {/* Top Badge - Only on first casino */}
                 {showBadge && (
-                  <div className="absolute -top-2 -left-2 z-10">
-                    <div className="bg-orange-500 text-white text-sm font-bold px-4 py-2 rounded-md shadow-lg">
+                  <div className="absolute -top-3 left-4 z-10">
+                    <div className="bg-gradient-to-r from-[#EF4444] to-[#DC2626] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                       MOST POPULAR
                     </div>
                   </div>
                 )}
 
-                <div className="p-6 pt-8 flex flex-col md:flex-row items-center md:items-center w-full gap-6 md:gap-8">
-                  {/* Left Side - Logo */}
-                  <div className="flex-shrink-0 w-full md:w-48 flex justify-center md:justify-start">
-                    <div className="relative w-full md:w-full h-24 md:h-32">
-                      <Image
-                        src={`/casino-logos/${casino.logo}`}
-                        alt={casino.name}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                  </div>
+                {/* Casino Card with Two Sections */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]">
+                  <div className="flex flex-col md:flex-row h-full min-h-[200px]">
+                    {/* Left Section - Purple/Pink Gradient */}
+                    <div className="relative bg-gradient-to-b from-purple-600 via-purple-500 to-pink-500 p-6 md:p-8 flex flex-col justify-between md:w-2/5" style={{clipPath: 'polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%)'}}>
 
-                  {/* Middle - Rating Section */}
-                  <div className="flex flex-col items-center flex-shrink-0 w-full md:w-32">
-                    <div className="flex items-center space-x-1 mb-2">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <span
-                          key={star}
-                          className={`text-xl ${
-                            star <= Math.round(casino.rating) 
-                              ? 'text-yellow-400' 
-                              : 'text-gray-600'
-                          }`}
+                      {/* Casino Logo/Name */}
+                      <div className="relative z-20 mb-4">
+                        <div className="relative h-16 w-48">
+                          <Image
+                            src={`/casino-logos/${casino.logo}`}
+                            alt={casino.name}
+                            fill
+                            className="object-contain filter brightness-0 invert"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Rating Section */}
+                      <div className="relative z-20 flex items-end gap-4">
+                        <div className="text-6xl font-bold text-white">{casino.rating}</div>
+                        <div className="flex flex-col justify-end pb-2">
+                          <div className="flex items-center gap-1 mb-1">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <span
+                                key={star}
+                                className={`text-lg ${
+                                  star <= Math.round(casino.rating) 
+                                    ? 'text-yellow-400' 
+                                    : 'text-gray-300/50'
+                                }`}
+                              >
+                                ★
+                              </span>
+                            ))}
+                          </div>
+                          <div className="flex items-center gap-1 text-white text-sm">
+                            <span>1300</span>
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM10 11a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right Section - Dark Blue/Purple */}
+                    <div className="relative bg-[#1E1B4B] p-6 md:p-8 flex flex-col justify-between md:w-3/5">
+                      {/* Bonus Offer Text */}
+                      <div className="mb-6">
+                        <div className="text-white text-2xl md:text-3xl font-bold mb-2 leading-tight">
+                          {casino.bonus.split(' ').slice(0, 4).join(' ')}
+                        </div>
+                        {casino.bonus.split(' ').slice(4).length > 0 && (
+                          <div className="text-cyan-400 text-lg md:text-xl font-semibold leading-tight">
+                            {casino.bonus.split(' ').slice(4).join(' ')}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* GET BONUS Button */}
+                      <div className="mt-auto">
+                        <a
+                          href={processPlayLink(casino.playLink)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block w-full bg-gradient-to-r from-purple-600 via-pink-500 to-pink-600 text-white font-bold py-4 px-8 rounded-xl text-center hover:from-purple-500 hover:via-pink-400 hover:to-pink-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
-                          ★
-                        </span>
-                      ))}
+                          GET BONUS
+                        </a>
+                      </div>
                     </div>
-                    <div className="text-3xl font-bold text-yellow-400 mb-1">{casino.rating}</div>
-                    <div className="text-sm text-gray-400">Reviews (1300)</div>
-                  </div>
-
-                  {/* Center - Bonus Deal Section */}
-                  <div className="flex-grow text-center md:text-left w-full md:w-auto">
-                    <div className="text-sm text-gray-400 mb-2">Bonus Deal</div>
-                    <div className="text-lg text-cyan-400 font-bold leading-tight">
-                      {casino.bonus}
-                    </div>
-                  </div>
-
-                  {/* Right Side - Action Button */}
-                  <div className="flex-shrink-0 w-full md:w-auto">
-                    <a
-                      href={processPlayLink(casino.playLink)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-yellow-500 text-white font-bold py-4 px-8 rounded-lg text-center hover:bg-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap w-full md:w-auto"
-                    >
-                      GET BONUS
-                    </a>
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );
