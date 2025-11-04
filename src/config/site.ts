@@ -30,12 +30,27 @@ export const siteConfig = {
     //   rating: 10.0,
     //   playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
     // },
+    //,
+    // {
+    //   name: "LuckyTwice",
+    //   logo: "luckytwice.webp", // Change this filename to switch logos
+    //   bonus: "100% UP TO £500 + 250 FREE SPINS",
+    //   rating: 8.8,
+    //   playLink: "https://luckytwice.site/j90006c83?subid=LuckyTwice-CXUK01&clickid="
+    // },
     // {
     //   name: "SpinMillion",
     //   logo: "spinmillion.webp", // Change this filename to switch logos
     //   bonus: "100% up to £750 + 100 Free Spins + 3x Wheel of Luck",
     //   rating: 9.8,
     //   playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
+    // },
+    //{
+    //   name: "FishAndSpins",
+    //   logo: "fishandspins.svg", // Change this filename to switch logos
+    //   bonus: "WELCOME BONUS UP TO €1500 PLUS 175 BONUS SPINS",
+    //   rating: 9.2,
+    //   playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
     // },
     // {
     //   name: "GoldenGenie",
@@ -52,13 +67,7 @@ export const siteConfig = {
     //   playLink: "https://go.infinitystarspartners.com/visit/?bta=39161&nci=8800&utm_campaign=Rizzio-CXUK01&afp="
     // },
     
-    // {
-    //   name: "FishAndSpins",
-    //   logo: "fishandspins.svg", // Change this filename to switch logos
-    //   bonus: "WELCOME BONUS UP TO €1500 PLUS 175 BONUS SPINS",
-    //   rating: 9.2,
-    //   playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
-    // },
+    // 
     // {
     //   name: "WinBeast",
     //   logo: "winbeast.svg", // Change this filename to switch logos

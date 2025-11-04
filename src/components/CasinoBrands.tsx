@@ -8,6 +8,7 @@ import { track } from '@vercel/analytics';
 
 export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
+  const [expandedTerms, setExpandedTerms] = useState<number | null>(null);
 
   useEffect(() => {
     // Get tracking value - checks URL first, then sessionStorage
@@ -61,103 +62,187 @@ export default function CasinoBrands() {
     
     return processedLink;
   };
+
+  // Generate random visitor count for demo purposes
+  const getVisitorCount = (index: number) => {
+    const counts = [866, 881, 973, 611, 208, 621, 290, 628, 662, 463];
+    return counts[index % counts.length];
+  };
+
+  // Ribbon badge types
+  const ribbonTypes = ['EDITOR\'S PICK', 'TRENDING!', 'EXCLUSIVE OFFER', 'SPECIAL', null];
+  const getRibbonType = (index: number) => {
+    if (index === 0) return 'EDITOR\'S PICK';
+    if (index === 1) return 'TRENDING!';
+    if (index === 4) return 'EXCLUSIVE OFFER';
+    if (index === 6) return 'SPECIAL';
+    return null;
+  };
+
   return (
-    <section id="casinos" className="py-12 md:py-20 bg-[#0F172A] relative overflow-hidden">
+    <section id="casinos" className="py-12 md:py-20 bg-gradient-to-b from-[#0F172A] to-[#1E293B] relative overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="casino-grid">
+        <div className="space-y-6">
           {siteConfig.casinos.map((casino, index) => {
-            // Only show badge on first casino
-            const showBadge = index === 0;
+            const ribbonType = getRibbonType(index);
+            const visitorCount = getVisitorCount(index);
+            const isExpanded = expandedTerms === index;
 
             return (
-              <div key={index} className="relative mb-6">
-                {/* Top Badge - Only on first casino */}
-                {showBadge && (
-                  <div className="absolute -top-3 left-4 z-10">
-                    <div className="bg-gradient-to-r from-[#EF4444] to-[#DC2626] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                      MOST POPULAR
+              <div key={index} className="relative">
+                {/* Ribbon Badge */}
+                {ribbonType && (
+                  <div className="absolute -top-0 -left-0 z-20">
+                    <div className={`relative ${
+                      ribbonType === 'EDITOR\'S PICK' 
+                        ? 'bg-gradient-to-br from-yellow-500 to-amber-600' 
+                        : ribbonType === 'TRENDING!'
+                        ? 'bg-gradient-to-br from-green-500 to-emerald-600'
+                        : ribbonType === 'EXCLUSIVE OFFER'
+                        ? 'bg-gradient-to-br from-purple-600 to-purple-700'
+                        : 'bg-gradient-to-br from-red-500 to-red-600'
+                    } text-white text-xs font-bold px-4 py-2 shadow-lg`}
+                    style={{
+                      clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%)'
+                    }}>
+                      <div className="flex items-center gap-1">
+                        {ribbonType === 'EDITOR\'S PICK' && (
+                          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        )}
+                        {ribbonType}
+                      </div>
                     </div>
                   </div>
                 )}
 
-                {/* Casino Card with Two Sections */}
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]">
-                  <div className="flex flex-col md:flex-row h-full min-h-[200px]">
-                    {/* Left Section - Purple/Pink Gradient */}
-                    <div className="relative bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 p-6 md:p-8 flex flex-col justify-between md:w-2/5" style={{clipPath: 'polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%)'}}>
-
-                      {/* Casino Logo - Top */}
-                      <div className="relative z-20 mb-4">
-                        <div className="relative h-20 md:h-24 w-full">
+                {/* Casino Card */}
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                  {/* Top Section - Casino Logo and Bonus */}
+                  <div className="p-6 sm:p-8 border-b border-gray-100">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                      {/* Logo */}
+                      <div className="flex-shrink-0">
+                        <div className="relative h-16 w-40 sm:h-20 sm:w-48">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
                             alt={casino.name}
                             fill
-                            className="object-contain filter drop-shadow-lg"
+                            className="object-contain"
                           />
                         </div>
                       </div>
 
-                      {/* Rating Section - Bottom Left */}
-                      <div className="relative z-20 flex items-end gap-3">
-                        <div className="text-6xl md:text-7xl font-bold text-white leading-none">{casino.rating}</div>
-                        <div className="flex flex-col justify-end pb-1">
-                          <div className="flex items-center gap-0.5 mb-1">
+                      {/* Bonus Offer */}
+                      <div className="flex-grow text-center md:text-left">
+                        <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+                          {casino.bonus}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Quick Preview Section */}
+                  <div className="bg-gray-50 px-6 sm:px-8 py-4 border-b border-gray-100">
+                    <div className="flex items-center justify-between text-sm text-gray-600">
+                      <span className="font-semibold text-gray-700">Quick Preview</span>
+                    </div>
+                  </div>
+
+                  {/* Stats and CTA Section */}
+                  <div className="p-6 sm:p-8">
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+                      {/* Rating and Visitors */}
+                      <div className="flex items-center gap-8">
+                        {/* Rating */}
+                        <div className="text-center">
+                          <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-pink-600">
+                            {casino.rating}
+                          </div>
+                          <div className="flex items-center justify-center gap-0.5 mt-1">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <span
                                 key={star}
-                                className={`text-lg md:text-xl ${
+                                className={`text-lg ${
                                   star <= Math.round(casino.rating) 
                                     ? 'text-yellow-400' 
-                                    : 'text-gray-300/30'
+                                    : 'text-gray-300'
                                 }`}
                               >
                                 ★
                               </span>
                             ))}
                           </div>
-                          <div className="flex items-center gap-1 text-white text-sm md:text-base">
-                            <span>16324</span>
-                            <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 20 20">
-                              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM10 11a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6z"/>
-                            </svg>
-                          </div>
+                        </div>
+
+                        {/* Visitors */}
+                        <div className="text-sm text-gray-600">
+                          <span className="font-bold text-gray-900">{visitorCount}</span> People visited{' '}
+                          <span className="font-semibold text-gray-800">{casino.name}</span> today
                         </div>
                       </div>
-                    </div>
 
-                    {/* Right Section - Dark Blue/Purple */}
-                    <div className="relative bg-[#1E1B4B] p-6 md:p-8 flex flex-col justify-between md:w-3/5">
-                      {/* Bonus Offer Text - Centered Top */}
-                      <div className="text-center mb-6">
-                        <div className="text-white text-2xl md:text-3xl font-bold mb-2 leading-tight">
-                          {casino.bonus.split(' ').slice(0, 4).join(' ')}
-                        </div>
-                        {casino.bonus.split(' ').slice(4).length > 0 && (
-                          <div className="text-cyan-400 text-lg md:text-xl font-semibold leading-tight">
-                            {casino.bonus.split(' ').slice(4).join(' ')}
-                          </div>
-                        )}
-                      </div>
-
-                      {/* GET BONUS Button - Purple/Pink Gradient - Bottom */}
-                      <div className="mt-auto">
+                      {/* CTA Buttons */}
+                      <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                         <a
                           href={processPlayLink(casino.playLink)}
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => {
-                            // Track casino click event
                             track('casino_click', {
                               casino_name: casino.name,
                               casino_rating: casino.rating.toString(),
                               position: (index + 1).toString(),
+                              button_type: 'get_bonus'
                             });
                           }}
-                          className="block w-full bg-gradient-to-r from-purple-600 via-pink-500 to-pink-600 text-white font-bold py-4 px-8 rounded-xl text-center hover:from-purple-500 hover:via-pink-400 hover:to-pink-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                          className="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-3 px-8 rounded-lg text-center hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 whitespace-nowrap"
                         >
                           GET BONUS
                         </a>
+                        <a
+                          href={processPlayLink(casino.playLink)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => {
+                            track('casino_click', {
+                              casino_name: casino.name,
+                              casino_rating: casino.rating.toString(),
+                              position: (index + 1).toString(),
+                              button_type: 'visit_site'
+                            });
+                          }}
+                          className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold py-3 px-8 rounded-lg text-center hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 whitespace-nowrap"
+                        >
+                          visit {casino.name} &gt;&gt;
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Terms & Conditions */}
+                  <div className="px-6 sm:px-8 pb-6">
+                    <div className="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                      <div className="text-xs text-gray-600 leading-relaxed">
+                        {isExpanded ? (
+                          <>
+                            18+ New customers only. Wagering requirements apply. Maximum bonus 
+                            amount and withdrawal limits may apply. Please read full terms and 
+                            conditions on the casino website before playing. Deposit methods 
+                            exclusions may apply. BeGambleAware.org
+                          </>
+                        ) : (
+                          <>
+                            18+ New customers only. Wagering requirements apply...
+                          </>
+                        )}
+                        <button
+                          onClick={() => setExpandedTerms(isExpanded ? null : index)}
+                          className="text-blue-600 hover:text-blue-700 font-semibold ml-1 transition-colors"
+                        >
+                          {isExpanded ? 'Show Less' : 'Read More'}
+                        </button>
                       </div>
                     </div>
                   </div>
