@@ -8,7 +8,6 @@ import { track } from '@vercel/analytics';
 
 export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
-  const [expandedTerms, setExpandedTerms] = useState<number | null>(null);
 
   useEffect(() => {
     // Get tracking value - checks URL first, then sessionStorage
@@ -92,7 +91,6 @@ export default function CasinoBrands() {
           {siteConfig.casinos.map((casino, index) => {
             const ribbonType = getRibbonType(index);
             const visitorCount = getVisitorCount(index);
-            const isExpanded = expandedTerms === index;
 
             return (
               <div key={index} className="relative">
@@ -218,13 +216,6 @@ export default function CasinoBrands() {
                           GET BONUS
                         </a>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Terms & Conditions - Bottom Dark Section */}
-                  <div className="bg-gradient-to-r from-gray-900 to-gray-800 px-3 md:px-6 py-2 md:py-4 border-t border-gray-700">
-                    <div className="text-[10px] md:text-xs text-gray-300 leading-relaxed text-center">
-                      18+ New customers only. Wager £20 or more on {casino.name} within 14 days of sign-up. Get 100 Free Spins to use on selected games, valued at 10p and valid for 7 days. T&Cs apply. BeGambleAware.org
                     </div>
                   </div>
                 </div>
