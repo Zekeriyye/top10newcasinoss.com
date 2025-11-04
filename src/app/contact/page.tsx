@@ -135,12 +135,6 @@ export default function ContactPage() {
                   Send Message
                 </button>
               </form>
-
-              <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
-                <p className="text-yellow-400 text-sm">
-                  <strong>Note:</strong> This is a demo form. In a real implementation, you would need to set up a backend service to handle form submissions.
-                </p>
-              </div>
             </div>
           </div>
         </div>
