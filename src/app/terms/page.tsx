@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { siteConfig } from '@/config/site';
 
 export default function TermsPage() {
   return (
@@ -143,7 +144,7 @@ export default function TermsPage() {
               <ul className="text-gray-300 space-y-2 mb-4">
                 <li className="flex items-start">
                   <span className="text-yellow-400 mr-2">•</span>
-                  <span><strong>Step 1:</strong> Contact us directly at info@10bestonlinecasinosuk.org with details of your complaint</span>
+                  <span><strong>Step 1:</strong> Contact us directly at {siteConfig.contact.email} with details of your complaint</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-yellow-400 mr-2">•</span>
@@ -166,7 +167,7 @@ export default function TermsPage() {
                 If you have any questions about these Terms & Conditions, please contact us:
               </p>
               <div className="text-gray-300 space-y-2">
-                <p><strong>Email:</strong> info@10bestonlinecasinosuk.org</p>
+                <p><strong>Email:</strong> {siteConfig.contact.email}</p>
               </div>
             </div>
           </div>

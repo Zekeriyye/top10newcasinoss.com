@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { siteConfig } from '@/config/site';
 
 export default function PrivacyPage() {
   return (
@@ -127,7 +128,7 @@ export default function PrivacyPage() {
                 If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us:
               </p>
               <div className="text-gray-300 space-y-2">
-                <p><strong>Email:</strong> info@10bestonlinecasinosuk.org</p>
+                <p><strong>Email:</strong> {siteConfig.contact.email}</p>
               </div>
             </div>
           </div>

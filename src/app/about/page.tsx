@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { siteConfig } from '@/config/site';
 
 export default function AboutPage() {
   return (
@@ -102,7 +103,7 @@ export default function AboutPage() {
                 We're here to help. You can reach us at:
               </p>
               <div className="text-gray-300 space-y-2">
-                <p><strong>Email:</strong> info@10bestonlinecasinosuk.org</p>
+                <p><strong>Email:</strong> {siteConfig.contact.email}</p>
               </div>
             </div>
           </div>

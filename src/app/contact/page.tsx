@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { siteConfig } from '@/config/site';
 
 export default function ContactPage() {
   return (
@@ -28,7 +29,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-1">Email</h3>
-                      <p className="text-gray-300">info@10bestonlinecasinosuk.org</p>
+                      <p className="text-gray-300">{siteConfig.contact.email}</p>
                       <p className="text-gray-400 text-sm">We respond within 24 hours</p>
                     </div>
                   </div>
