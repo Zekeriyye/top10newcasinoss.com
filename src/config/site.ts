@@ -143,6 +143,6 @@ export const siteConfig = {
   
   // Contact information
   contact: {
-    email: "info@10bestonlinecasinosuk.org"
+    email: "info@winfastcasinos.com"
   }
 };
