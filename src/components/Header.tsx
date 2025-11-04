@@ -30,7 +30,7 @@ export default function Header() {
               />
             </div>
             {/* 18+ Badge */}
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-orange-600 border-2 border-red-400 shadow-lg">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] border-2 border-[#3B82F6] shadow-lg">
               <span className="text-white font-bold text-sm">18+</span>
             </div>
           </Link>
