@@ -4,6 +4,7 @@ import { siteConfig } from '@/config/site';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { getTrackingValue } from '@/utils/tracking';
+import { track } from '@vercel/analytics';
 
 export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
@@ -151,6 +152,14 @@ export default function CasinoBrands() {
                           href={processPlayLink(casino.playLink)}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() => {
+                            // Track casino click event
+                            track('casino_click', {
+                              casino_name: casino.name,
+                              casino_rating: casino.rating.toString(),
+                              position: (index + 1).toString(),
+                            });
+                          }}
                           className="block w-full bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#FFD700] text-black font-bold py-4 px-8 rounded-xl text-center hover:from-[#C9A227] hover:via-[#E6C84F] hover:to-[#F4D03F] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
                           GET BONUS
