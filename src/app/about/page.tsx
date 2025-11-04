@@ -3,14 +3,14 @@ import Footer from '@/components/Footer';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#0A0A0F]">
+    <div className="min-h-screen bg-[#0F172A]">
       <Header />
       
       <main className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-[#FF6B35] to-[#FFD700] bg-clip-text text-transparent">About Fast Casino UK</span>
+                  <span className="bg-gradient-to-r from-[#1E3A8A] to-[#D4AF37] bg-clip-text text-transparent">About Win Fast Casinos</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Your trusted guide exclusively featuring UK Gambling Commission licensed online casinos with exclusive bonuses and safe gaming experiences for British players.
@@ -18,7 +18,7 @@ export default function AboutPage() {
           </div>
 
           <div className="prose prose-invert max-w-none">
-            <div className="bg-[#151520] border border-[#FF6B35]/20 rounded-xl p-8 mb-8">
+            <div className="bg-[#1E293B] border border-[#1E3A8A]/30 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Who We Are</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Fast Casino UK is an independent UK-focused casino listing site dedicated exclusively to featuring UK Gambling Commission licensed casinos. 
@@ -51,31 +51,31 @@ export default function AboutPage() {
               </p>
               <ul className="text-gray-300 space-y-2 mb-4">
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">•</span>
+                  <span className="text-[#D4AF37] mr-2">•</span>
                   <span>UK Gambling Commission licensing and compliance</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">•</span>
+                  <span className="text-[#D4AF37] mr-2">•</span>
                   <span>Game variety and software providers</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">•</span>
+                  <span className="text-[#D4AF37] mr-2">•</span>
                   <span>Bonus offers and wagering requirements</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">•</span>
+                  <span className="text-[#D4AF37] mr-2">•</span>
                   <span>Banking options and withdrawal speeds</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">•</span>
+                  <span className="text-[#D4AF37] mr-2">•</span>
                   <span>Customer support quality and availability</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">•</span>
+                  <span className="text-[#D4AF37] mr-2">•</span>
                   <span>Mobile compatibility and user experience</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">•</span>
+                  <span className="text-[#D4AF37] mr-2">•</span>
                   <span>Responsible gambling tools and support</span>
                 </li>
               </ul>

@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#0A0A0F] to-[#151520] border-t border-[#FF6B35]/20">
+    <footer className="bg-gradient-to-b from-[#0F172A] to-[#1E293B] border-t border-[#1E3A8A]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Logo and Branding */}
-        <div className="py-8 border-b border-[#FF6B35]/20">
+        <div className="py-8 border-b border-[#1E3A8A]/30">
           <div className="flex items-center space-x-4 mb-4">
             {/* Website Logo */}
             <div className="w-16 h-16 relative">
@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </div>
             <div>
-              <h2 className="text-white font-bold text-2xl bg-gradient-to-r from-white to-[#FF6B35] bg-clip-text text-transparent">Win Fast Casinos</h2>
+              <h2 className="text-white font-bold text-2xl bg-gradient-to-r from-white to-[#D4AF37] bg-clip-text text-transparent">Win Fast Casinos</h2>
             </div>
           </div>
           <p className="text-gray-300 text-sm max-w-2xl leading-relaxed">
@@ -32,8 +32,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Pages</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-300 hover:text-[#FF6B35] text-sm transition-colors">Home</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-[#FF6B35] text-sm transition-colors">About</a></li>
+              <li><a href="/" className="text-gray-300 hover:text-[#D4AF37] text-sm transition-colors">Home</a></li>
+              <li><a href="/about" className="text-gray-300 hover:text-[#D4AF37] text-sm transition-colors">About</a></li>
             </ul>
           </div>
 
@@ -41,8 +41,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="/privacy" className="text-gray-300 hover:text-[#FF6B35] text-sm transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" className="text-gray-300 hover:text-[#FF6B35] text-sm transition-colors">Terms & Conditions</a></li>
+              <li><a href="/privacy" className="text-gray-300 hover:text-[#D4AF37] text-sm transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" className="text-gray-300 hover:text-[#D4AF37] text-sm transition-colors">Terms & Conditions</a></li>
             </ul>
           </div>
 
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-[#FF6B35]/20 py-6">
+        <div className="border-t border-[#1E3A8A]/30 py-6">
           <div className="text-center text-gray-400 text-sm">
             <p>&copy; 2025 {siteConfig.name}. All rights reserved.</p>
             <p className="mt-1">Gambling can be addictive. Please play responsibly.</p>

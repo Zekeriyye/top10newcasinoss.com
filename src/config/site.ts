@@ -4,15 +4,15 @@ export const siteConfig = {
   description: "Compare UK-licensed casinos featuring secure bonuses and rapid payout options",
   url: "https://winfastcasinos.com",
   
-  // Brand colors - modern redesign
+  // Brand colors - professional design
   colors: {
-    primary: "#FF6B35",    // Vibrant Orange
-    secondary: "#1A1A2E",  // Deep Navy
-    accent: "#00D4AA",     // Teal
-    background: "#0A0A0F", // Dark background
-    surface: "#151520",    // Dark surface
-    text: "#FFFFFF",       // White text
-    textSecondary: "#B8B8C8", // Light gray
+    primary: "#1E3A8A",    // Deep Navy Blue - professional & trustworthy
+    secondary: "#111827",  // Charcoal - refined dark
+    accent: "#D4AF37",     // Elegant Gold - sophisticated premium
+    background: "#0F172A", // Deep slate background
+    surface: "#1E293B",    // Slate surface
+    text: "#F8FAFC",       // Off-white text
+    textSecondary: "#CBD5E1", // Light slate gray
   },
   
   // Hero section content

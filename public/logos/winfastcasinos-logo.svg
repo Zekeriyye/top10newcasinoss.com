@@ -1,13 +1,13 @@
-<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/2000/svg">
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="chipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00D4AA;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563EB;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="wGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
     </linearGradient>
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
@@ -22,18 +22,18 @@
   <circle cx="256" cy="256" r="240" fill="url(#chipGradient)" opacity="0.9"/>
   
   <!-- Outer Ring -->
-  <circle cx="256" cy="256" r="220" fill="none" stroke="#1A1A2E" stroke-width="8"/>
-  <circle cx="256" cy="256" r="200" fill="none" stroke="#1A1A2E" stroke-width="4"/>
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#111827" stroke-width="8"/>
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#111827" stroke-width="4"/>
   
   <!-- Inner Decorative Circles -->
-  <circle cx="256" cy="256" r="180" fill="none" stroke="#FF6B35" stroke-width="2" opacity="0.6"/>
-  <circle cx="256" cy="256" r="160" fill="none" stroke="#00D4AA" stroke-width="2" opacity="0.6"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#1E3A8A" stroke-width="2" opacity="0.6"/>
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.6"/>
   
   <!-- Casino Chip Lines -->
-  <line x1="256" y1="76" x2="256" y2="436" stroke="#1A1A2E" stroke-width="3" opacity="0.3"/>
-  <line x1="76" y1="256" x2="436" y2="256" stroke="#1A1A2E" stroke-width="3" opacity="0.3"/>
-  <line x1="146" y1="146" x2="366" y2="366" stroke="#1A1A2E" stroke-width="3" opacity="0.3"/>
-  <line x1="366" y1="146" x2="146" y2="366" stroke="#1A1A2E" stroke-width="3" opacity="0.3"/>
+  <line x1="256" y1="76" x2="256" y2="436" stroke="#111827" stroke-width="3" opacity="0.3"/>
+  <line x1="76" y1="256" x2="436" y2="256" stroke="#111827" stroke-width="3" opacity="0.3"/>
+  <line x1="146" y1="146" x2="366" y2="366" stroke="#111827" stroke-width="3" opacity="0.3"/>
+  <line x1="366" y1="146" x2="146" y2="366" stroke="#111827" stroke-width="3" opacity="0.3"/>
   
   <!-- W Letter -->
   <path d="M 180 160 L 200 160 L 220 280 L 240 160 L 260 160 L 280 280 L 300 160 L 320 160 L 290 340 L 270 340 L 256 250 L 242 340 L 222 340 Z" 
@@ -42,15 +42,14 @@
         opacity="0.95"/>
   
   <!-- Small Decorative Elements -->
-  <circle cx="256" cy="100" r="8" fill="#FFD700" opacity="0.8"/>
-  <circle cx="256" cy="412" r="8" fill="#FFD700" opacity="0.8"/>
-  <circle cx="100" cy="256" r="8" fill="#00D4AA" opacity="0.8"/>
-  <circle cx="412" cy="256" r="8" fill="#00D4AA" opacity="0.8"/>
+  <circle cx="256" cy="100" r="8" fill="#D4AF37" opacity="0.8"/>
+  <circle cx="256" cy="412" r="8" fill="#D4AF37" opacity="0.8"/>
+  <circle cx="100" cy="256" r="8" fill="#1E3A8A" opacity="0.8"/>
+  <circle cx="412" cy="256" r="8" fill="#1E3A8A" opacity="0.8"/>
   
   <!-- Corner Accents -->
-  <circle cx="180" cy="180" r="6" fill="#FF6B35" opacity="0.7"/>
-  <circle cx="332" cy="180" r="6" fill="#FF6B35" opacity="0.7"/>
-  <circle cx="180" cy="332" r="6" fill="#FF6B35" opacity="0.7"/>
-  <circle cx="332" cy="332" r="6" fill="#FF6B35" opacity="0.7"/>
+  <circle cx="180" cy="180" r="6" fill="#D4AF37" opacity="0.7"/>
+  <circle cx="332" cy="180" r="6" fill="#D4AF37" opacity="0.7"/>
+  <circle cx="180" cy="332" r="6" fill="#D4AF37" opacity="0.7"/>
+  <circle cx="332" cy="332" r="6" fill="#D4AF37" opacity="0.7"/>
 </svg>
-

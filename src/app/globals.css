@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #FF6B35;
-  --color-secondary: #1A1A2E;
-  --color-accent: #00D4AA;
-  --color-background: #0A0A0F;
-  --color-surface: #151520;
-  --color-text: #FFFFFF;
-  --color-text-secondary: #B8B8C8;
+  --color-primary: #1E3A8A;
+  --color-secondary: #111827;
+  --color-accent: #D4AF37;
+  --color-background: #0F172A;
+  --color-surface: #1E293B;
+  --color-text: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
 }
 
 * {
@@ -44,35 +44,35 @@ a {
   }
 
   .btn-primary {
-    @apply btn bg-gradient-to-r from-yellow-400 to-yellow-500 text-black hover:from-yellow-300 hover:to-yellow-400 focus:ring-yellow-500 shadow-lg hover:shadow-xl font-bold transform hover:scale-105 transition-all duration-200;
+    @apply btn bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] text-black hover:from-[#C9A227] hover:to-[#E6C84F] focus:ring-[#D4AF37] shadow-lg hover:shadow-xl font-bold transform hover:scale-105 transition-all duration-200;
   }
 
   .btn-secondary {
-    @apply btn bg-gradient-to-r from-purple-600 to-purple-700 text-white hover:from-purple-500 hover:to-purple-600 focus:ring-purple-500 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200;
+    @apply btn bg-gradient-to-r from-[#1E3A8A] to-[#1E40AF] text-white hover:from-[#1E40AF] hover:to-[#2563EB] focus:ring-[#1E3A8A] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200;
   }
 
   .card {
     @apply rounded-xl shadow-2xl overflow-hidden backdrop-blur-sm transition-all duration-300;
-    background: linear-gradient(135deg, rgba(31, 41, 55, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid rgba(30, 58, 138, 0.3);
   }
   
   .card:hover {
-    border-color: rgba(196, 181, 253, 0.5);
+    border-color: rgba(59, 130, 246, 0.5);
     transform: translateY(-2px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(196, 181, 253, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(59, 130, 246, 0.1);
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-[#FF6B35] via-[#FFD700] to-[#00D4AA] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#1E3A8A] via-[#D4AF37] to-[#2563EB] bg-clip-text text-transparent;
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, rgba(88, 28, 135, 0.2) 0%, rgba(30, 58, 138, 0.2) 50%, rgba(157, 23, 77, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, rgba(15, 23, 42, 0.15) 50%, rgba(212, 175, 55, 0.1) 100%);
   }
 
   .neon-glow {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
+    box-shadow: 0 0 20px rgba(30, 58, 138, 0.3), 0 0 40px rgba(30, 58, 138, 0.1);
   }
 
   .casino-grid {
