@@ -129,6 +129,13 @@ export const siteConfig = {
       bonus: "Bet £20\nGet 100 Free Spins",
       rating: 8.2,
       playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
+    },
+    {
+      name: "DreamVegas",
+      logo: "dreamvegas.webp", // Change this filename to switch logos
+      bonus: "WELCOME BONUS\n200% UP TO €2500\nON YOUR FIRST DEPOSIT\n+50 FREE",
+      rating: 8.2,
+      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=37696&lpid=209&bid=1613&subid=DreamVegas-CXUK01&clickid="
     }
   ],
 
