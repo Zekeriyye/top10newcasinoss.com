@@ -34,9 +34,9 @@ export default function Hero() {
             </span>
           </h1>
           
-          {/* Optional Subtext */}
+          {/* Optional Subtext - Hidden on Mobile */}
           {siteConfig.hero.subtext && (
-            <p className="text-sm md:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed mb-4">
+            <p className="hidden md:block text-sm md:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed mb-4">
               {siteConfig.hero.subtext}
             </p>
           )}
