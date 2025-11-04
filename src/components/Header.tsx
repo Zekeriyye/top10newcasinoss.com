@@ -20,18 +20,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-12 h-12">
+          <Link href="/" className="flex items-center group">
+            <div className="relative w-48 h-12">
               <Image
-                src="/logos/winfastcasinos-logo.svg"
+                src="/logos/winfastcasinos-new-logo.svg"
                 alt={siteConfig.name}
                 fill
                 className="object-contain group-hover:opacity-90 transition-opacity"
               />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-white to-[#D4AF37] bg-clip-text text-transparent">
-              {siteConfig.name}
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
