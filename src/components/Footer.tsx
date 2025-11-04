@@ -7,18 +7,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Logo and Branding */}
         <div className="py-8 border-b border-[#1E3A8A]/30">
-          <div className="flex items-center space-x-4 mb-4">
+          <div className="flex items-center mb-4">
             {/* Website Logo */}
-            <div className="w-16 h-16 relative">
+            <div className="relative w-56 h-14">
               <Image
-                src="/logos/winfastcasinos-logo.svg"
+                src="/logos/winfastcasinos-new-logo.svg"
                 alt={siteConfig.name}
                 fill
                 className="object-contain"
               />
-            </div>
-            <div>
-              <h2 className="text-white font-bold text-2xl bg-gradient-to-r from-white to-[#D4AF37] bg-clip-text text-transparent">Win Fast Casinos</h2>
             </div>
           </div>
           <p className="text-gray-300 text-sm max-w-2xl leading-relaxed">
