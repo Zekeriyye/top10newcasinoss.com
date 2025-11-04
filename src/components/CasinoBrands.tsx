@@ -92,7 +92,7 @@ export default function CasinoBrands() {
                             src={`/casino-logos/${casino.logo}`}
                             alt={casino.name}
                             fill
-                            className="object-contain filter brightness-0 invert"
+                            className="object-contain"
                           />
                         </div>
                       </div>
