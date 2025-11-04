@@ -112,9 +112,9 @@ export default function CasinoBrands() {
                         clipPath: 'polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)'
                       }}
                     >
-                      {/* Casino Logo - Centered */}
-                      <div className="flex items-center justify-center mb-3 md:mb-6">
-                        <div className="relative h-12 w-24 md:h-24 md:w-56">
+                      {/* Casino Logo - Centered - Bigger */}
+                      <div className="flex items-center justify-center mb-2 md:mb-4">
+                        <div className="relative h-16 w-32 md:h-28 md:w-64">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
                             alt={casino.name}
@@ -124,15 +124,15 @@ export default function CasinoBrands() {
                         </div>
                       </div>
 
-                      {/* Rating Section - Bottom */}
+                      {/* Rating Section - Bottom - Smaller */}
                       <div className="flex items-end justify-center">
                         <div className="text-center">
-                          <div className="text-4xl md:text-7xl font-bold text-white leading-none mb-1 md:mb-2">{casino.rating}</div>
-                          <div className="flex items-center justify-center gap-0.5 mb-1 md:mb-2">
+                          <div className="text-3xl md:text-5xl font-bold text-white leading-none mb-1">{casino.rating}</div>
+                          <div className="flex items-center justify-center gap-0.5 mb-1">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <span
                                 key={star}
-                                className={`text-sm md:text-xl ${
+                                className={`text-xs md:text-base ${
                                   star <= Math.round(casino.rating) 
                                     ? 'text-yellow-300' 
                                     : 'text-white/30'
@@ -142,9 +142,9 @@ export default function CasinoBrands() {
                               </span>
                             ))}
                           </div>
-                          <div className="flex items-center justify-center gap-1 text-white text-xs md:text-sm font-semibold">
+                          <div className="flex items-center justify-center gap-1 text-white text-xs font-semibold">
                             <span>{visitorCount}</span>
-                            <svg className="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                               <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
                             </svg>
                           </div>
@@ -153,9 +153,9 @@ export default function CasinoBrands() {
                     </div>
 
                     {/* Right Section - Dark Navy/Blue */}
-                    <div className="relative bg-gradient-to-br from-[#1e1b4b] to-[#312e81] p-4 md:p-8 flex flex-col justify-between w-[60%] md:w-[60%]">
-                      {/* Bonus Offer Text */}
-                      <div className="text-center mb-3 md:mb-6">
+                    <div className="relative bg-gradient-to-br from-[#1e1b4b] to-[#312e81] p-4 md:p-8 flex flex-col justify-center w-[60%] md:w-[60%]">
+                      {/* Bonus Offer Text - Centered */}
+                      <div className="text-center flex-1 flex flex-col justify-center mb-3 md:mb-4">
                         <div className="text-white text-xl md:text-4xl font-bold mb-1 md:mb-3 leading-tight">
                           {casino.bonus.split('\n')[0] || casino.bonus}
                         </div>
@@ -167,7 +167,7 @@ export default function CasinoBrands() {
                       </div>
 
                       {/* GET BONUS Button - Elegant Gold */}
-                      <div className="mt-auto">
+                      <div>
                         <a
                           href={processPlayLink(casino.playLink)}
                           target="_blank"
