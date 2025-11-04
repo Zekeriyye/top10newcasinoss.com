@@ -85,16 +85,15 @@ export default function CasinoBrands() {
                     {/* Left Section - Purple/Pink Gradient */}
                     <div className="relative bg-gradient-to-b from-purple-600 via-purple-500 to-pink-500 p-6 md:p-8 flex items-center justify-center md:w-2/5" style={{clipPath: 'polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%)'}}>
 
-                      {/* WIN FAST Logo Text */}
-                      <div className="relative z-20 flex items-center gap-2">
-                        <span className="text-white text-4xl md:text-5xl font-black tracking-wider">WIN</span>
-                        <div className="relative">
-                          <div className="bg-[#1E3A8A] px-4 py-2 rounded-r-lg border-2 border-white">
-                            <span className="text-white text-4xl md:text-5xl font-black tracking-wider">FAST</span>
-                            <svg className="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6" viewBox="0 0 24 24" fill="none">
-                              <path d="M 2 12 L 8 6 L 8 10 L 20 10 L 20 14 L 8 14 L 8 18 Z" fill="#FFFFFF" opacity="0.9"/>
-                            </svg>
-                          </div>
+                      {/* Casino Logo - Big */}
+                      <div className="relative z-20 w-full">
+                        <div className="relative h-32 md:h-40 w-full">
+                          <Image
+                            src={`/casino-logos/${casino.logo}`}
+                            alt={casino.name}
+                            fill
+                            className="object-contain"
+                          />
                         </div>
                       </div>
                     </div>
