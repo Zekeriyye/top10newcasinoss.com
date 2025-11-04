@@ -8,6 +8,7 @@ import { track } from '@vercel/analytics';
 
 export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     // Get tracking value - checks URL first, then sessionStorage
@@ -18,6 +19,22 @@ export default function CasinoBrands() {
     if (value) {
       console.log('📊 Using tracking value:', value);
     }
+  }, []);
+
+  useEffect(() => {
+    // Detect if desktop (768px is md breakpoint)
+    const checkIsDesktop = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    
+    // Check on mount
+    checkIsDesktop();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIsDesktop);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIsDesktop);
   }, []);
 
   // Function to process play links with tracking parameters
@@ -74,6 +91,14 @@ export default function CasinoBrands() {
     return null;
   };
 
+  // Filter casinos based on device for A/B testing
+  // Desktop: Only show GrandIvy and DreamVegas
+  // Mobile: Show all casinos
+  const desktopCasinos = ['GrandIvy', 'DreamVegas'];
+  const filteredCasinos = isDesktop 
+    ? siteConfig.casinos.filter(casino => desktopCasinos.includes(casino.name))
+    : siteConfig.casinos;
+
   return (
     <section id="casinos" className="py-6 md:py-10 bg-gradient-to-br from-[#1a0b2e] via-[#16213e] to-[#0f1419] relative overflow-hidden">
       {/* Background decoration */}
@@ -84,7 +109,7 @@ export default function CasinoBrands() {
 
       <div className="relative max-w-6xl mx-auto px-3 md:px-4">
         <div className="space-y-4 md:space-y-5">
-          {siteConfig.casinos.map((casino, index) => {
+          {filteredCasinos.map((casino, index) => {
             const ribbonType = getRibbonType(index);
             const visitorCount = getVisitorCount(index);
 
