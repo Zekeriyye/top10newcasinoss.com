@@ -121,7 +121,7 @@ export default function CasinoBrands() {
                     >
                       {/* Casino Logo - Centered - Bigger */}
                       <div className="flex items-center justify-center mb-2 md:mb-4">
-                        <div className="relative h-16 w-32 md:h-28 md:w-64">
+                        <div className="relative h-24 w-full md:h-40 md:w-full px-2 md:px-4">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
                             alt={casino.name}
