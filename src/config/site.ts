@@ -17,8 +17,8 @@ export const siteConfig = {
   
   // Hero section content
   hero: {
-    headline: "Licensed Casinos for UK Players",
-    subtext: "Discover premier UK Gambling Commission licensed online casinos featuring exclusive promotions, secure gameplay and round-the-clock support. Every casino listed holds full UK licensing credentials.",
+    headline: "New Casinos for UK Players",
+    subtext: "Discover new online casinos featuring exclusive promotions, secure gameplay and round-the-clock support. Every casino listed holds full UK licensing credentials.",
   },
   
   // Casino brands data
@@ -82,15 +82,6 @@ export const siteConfig = {
       bonus: "EXCLUSIVE WELCOME CASINO BONUS\n250% UP TO £2.500\n100 FS ON WILDS OF FORTUNE!",
       rating: 8.6,
       playLink: "https://go.infinitystarspartners.com/visit/?bta=39161&nci=8800&utm_campaign=Rizzio-CXUK01&afp="
-    },
-    
-    
-    {
-      name: "GoldenLion",
-      logo: "goldenlion.png", // Change this filename to switch logos
-      bonus: "100 Free spins\n400% up to 2000€",
-      rating: 8.4,
-      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5349&utm_campaign=GoldenLion-CXUK01&afp="
     },
     {
       name: "50Crowns",
