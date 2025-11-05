@@ -23,20 +23,20 @@ export const siteConfig = {
   
   // Casino brands data
   casinos: [
-    // {
-    //   name: "Qbet",
-    //   logo: "qbet.png", // Change this filename to switch logos
-    //   bonus: "Bonus up to £100 + 50 Free Spins ",
-    //   rating: 10.0,
-    //   playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
-    // },
-    //,
+  
     // {
     //   name: "LuckyTwice",
     //   logo: "luckytwice.webp", // Change this filename to switch logos
     //   bonus: "100% UP TO £500\n+\n250 FREE SPINS",
     //   rating: 8.8,
     //   playLink: "https://luckytwice.site/j90006c83?subid=LuckyTwice-CXUK01&clickid="
+    // },
+      // {
+    //   name: "Qbet",
+    //   logo: "qbet.png", // Change this filename to switch logos
+    //   bonus: "Bonus up to £100 + 50 Free Spins ",
+    //   rating: 10.0,
+    //   playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
     // },
     // {
     //   name: "SpinMillion",
@@ -52,6 +52,15 @@ export const siteConfig = {
     //   rating: 9.2,
     //   playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
     // },
+
+    // {
+    //   name: "WinBeast",
+    //   logo: "winbeast.svg", // Change this filename to switch logos
+    //   bonus: "Welcome Pack €/£3000\n+\n300 FS",
+    //   rating: 9.0,
+    //   playLink: "https://beast-net.co/aue1i1msc?subid=WinBeast-CXUK01&visit_id="
+    // }
+    // ,
     //{
       //   name: "WagerTales",
       //   logo: "wagertales.png", // Change this filename to switch logos
@@ -77,14 +86,6 @@ export const siteConfig = {
     
     // 
     // {
-    //   name: "WinBeast",
-    //   logo: "winbeast.svg", // Change this filename to switch logos
-    //   bonus: "Welcome Pack €/£3000\n+\n300 FS",
-    //   rating: 9.0,
-    //   playLink: "https://beast-net.co/aojqgntf6?subid=WinBeast-CXUK01&visit_id="
-    // }
-    // ,
-    // {
     //   name: "GoldenLion",
     //   logo: "goldenlion.png", // Change this filename to switch logos
     //   bonus: "100 Free spins\n+\n400% up to 2000€",
@@ -99,14 +100,6 @@ export const siteConfig = {
     //   playLink: "https://beast-https://50crownsplay.com/je5suztrm?subid=50Crowns-CXUK01&clickid=.co/aojqgntf6?subid=WinBeast-CXUK01&visit_id="
     // },
     
-    
-    // {
-    //   name: "UspinMe",
-    //   logo: "uspinme.png", // Change this filename to switch logos
-    //   bonus: "CASINO WELCOME BONUS\nUp to €5,000\n+\n350 Free Spins",
-    //   rating: 8.2,
-    //   playLink: "https://record.primewebaffiliates.com/_nCRCtj1NPnffkb3gg_bGdGNd7ZgqdRLk/1/&s2s.req_id=UspinMe-CXUK01&payload="
-    // },
     // {
     //   name: "MadCasino",
     //   logo: "MADCASINO.png", // Change this filename to switch logos
@@ -128,14 +121,14 @@ export const siteConfig = {
       name: "GrandIvy",
       logo: "grandivy.webp", // Change this filename to switch logos
       bonus: "Bet £20\nGet 100 Free Spins",
-      rating: 8.2,
+      rating: 9.0,
       playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
     },
     {
       name: "DreamVegas",
       logo: "dreamvegas.webp", // Change this filename to switch logos
       bonus: "WELCOME BONUS\n200% UP TO €2500\nON YOUR FIRST DEPOSIT\n+50 FREE",
-      rating: 8.2,
+      rating: 8.0,
       playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=37696&lpid=209&bid=1613&subid=DreamVegas-CXUK01&clickid="
     }
   ],
