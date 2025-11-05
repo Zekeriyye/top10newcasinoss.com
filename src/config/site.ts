@@ -60,12 +60,18 @@ export const siteConfig = {
       rating: 9.2,
       playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
     },
-
+    {
+      name: "HarryCasino",
+      logo: "harrycasinjo.png", // Change this filename to switch logos
+      bonus: "Welcome Offer\n £1000 BONUS\n +100 FREE SPINS",
+      rating: 9.0,
+      playLink: "https://harry.site/j34eebe6d?subid=HarryCasino-CXUK01&clickid="
+    },
     {
       name: "WinBeast",
       logo: "winbeast.svg", // Change this filename to switch logos
       bonus: "Welcome Pack €/£3000\n300 FS",
-      rating: 9.0,
+      rating: 8.8,
       playLink: "https://beast-net.co/aue1i1msc?subid=WinBeast-CXUK01&visit_id="
     }
     ,
@@ -73,18 +79,10 @@ export const siteConfig = {
       name: "GoldenGenie",
       logo: "goldengenie.webp", // Change this filename to switch logos
       bonus: "100 Free spins\n400% up to 2000€",
-      rating: 8.8,
+      rating: 8.6,
       playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
     },
     
-
-    {
-      name: "HarryCasino",
-      logo: "goldengenie.webp", // Change this filename to switch logos
-      bonus: "Welcome Offer\n £1000 BONUS\n +100 FREE SPINS",
-      rating: 8.6,
-      playLink: "https://harry.site/j34eebe6d?subid=HarryCasino-CXUK01&clickid="
-    },
     {
       name: "Rizzio",
       logo: "rizzio-logo-nl.svg", // Change this filename to switch logos
