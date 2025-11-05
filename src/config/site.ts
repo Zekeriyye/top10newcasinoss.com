@@ -107,7 +107,14 @@ export const siteConfig = {
     //   playLink: "https://go.afftrackio.com/visit/?bta=35684&nci=5362&utm_campaign=DraculaCasino-CXUK01&afp="
     // }
     // ,
-
+    {
+      name: "GrandIvy",
+      logo: "grandivy.webp", // Change this filename to switch logos
+      bonus: "Bet £20\nGet 100 Free Spins",
+      rating: 7.6,
+      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
+    }
+,
     {
       name: "GrandIvy",
       logo: "grandivy.webp", // Change this filename to switch logos
