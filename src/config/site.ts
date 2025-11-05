@@ -23,22 +23,22 @@ export const siteConfig = {
   
   // Casino brands data
   casinos: [
-
-    {
-      name: "Qbet",
-      logo: "qbet.png", // Change this filename to switch logos
-      bonus: "Bonus up to £100\n50 Free Spins ",
-      rating: 10.0,
-      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
-    },
-  
     {
       name: "LuckyTwice",
       logo: "luckytwice.webp", // Change this filename to switch logos
       bonus: "100% UP TO £500\n250 FREE SPINS",
-      rating: 9.8,
+      rating: 10.0,
       playLink: "https://luckytwice.site/j90006c83?subid=LuckyTwice-CXUK01&clickid="
     },
+    {
+      name: "Qbet",
+      logo: "qbet.png", // Change this filename to switch logos
+      bonus: "Bonus up to £100\n50 Free Spins ",
+      rating: 9.8,
+      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
+    },
+  
+    
     {
       name: "VegasHero",
       logo: "VegasHero.png", // Change this filename to switch logos
@@ -71,7 +71,7 @@ export const siteConfig = {
       name: "WinBeast",
       logo: "winbeast.svg", // Change this filename to switch logos
       bonus: "Welcome Pack €/£3000\n300 FS",
-      rating: 8.8,
+      rating: 9.0,
       playLink: "https://beast-net.co/aue1i1msc?subid=WinBeast-CXUK01&visit_id="
     }
     ,
@@ -79,7 +79,7 @@ export const siteConfig = {
       name: "GoldenGenie",
       logo: "goldengenie.webp", // Change this filename to switch logos
       bonus: "100 Free spins\n400% up to 2000€",
-      rating: 8.6,
+      rating: 8.8,
       playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
     },
     
@@ -87,14 +87,14 @@ export const siteConfig = {
       name: "Rizzio",
       logo: "rizzio-logo-nl.svg", // Change this filename to switch logos
       bonus: "EXCLUSIVE WELCOME CASINO BONUS\n250% UP TO £2.500\n100 FS ON WILDS OF FORTUNE!",
-      rating: 8.4,
+      rating: 8.6,
       playLink: "https://go.infinitystarspartners.com/visit/?bta=39161&nci=8800&utm_campaign=Rizzio-CXUK01&afp="
     },
     {
       name: "50Crowns",
       logo: "50crowns.svg", // Change this filename to switch logos
       bonus: "100% up to £500\n100 FS",
-      rating: 8.2,
+      rating: 8.4,
       playLink: "https://beast-https://50crownsplay.com/je5suztrm?subid=50Crowns-CXUK01&clickid=.co/aojqgntf6?subid=WinBeast-CXUK01&visit_id="
     },
 
@@ -102,7 +102,7 @@ export const siteConfig = {
       name: "DraculaCasino",
       logo: "dracula.png", // Change this filename to switch logos
       bonus: "Slots welcome Package 777% \nup to $11,665.50\n20% cashback Wager: 25x",
-      rating: 8.0,
+      rating: 8.2,
       playLink: "https://go.afftrackio.com/visit/?bta=35684&nci=5362&utm_campaign=DraculaCasino-CXUK01&afp="
     }
     ,
@@ -118,7 +118,7 @@ export const siteConfig = {
       name: "GrandIvy",
       logo: "grandivy.webp", // Change this filename to switch logos
       bonus: "Bet £20\nGet 100 Free Spins",
-      rating: 7.8,
+      rating: 8.0,
       playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
     }
   ],
