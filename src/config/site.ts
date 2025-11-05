@@ -60,13 +60,13 @@ export const siteConfig = {
       rating: 9.2,
       playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
     },
-    {
-      name: "HarryCasino",
-      logo: "harrycasinjo.png", // Change this filename to switch logos
-      bonus: "Welcome Offer\n £1000 BONUS\n +100 FREE SPINS",
-      rating: 9.0,
-      playLink: "https://harry.site/j34eebe6d?subid=HarryCasino-CXUK01&clickid="
-    },
+    // {
+    //   name: "HarryCasino",
+    //   logo: "harrycasinjo.png", // Change this filename to switch logos
+    //   bonus: "Welcome Offer\n £1000 BONUS\n +100 FREE SPINS",
+    //   rating: 9.0,
+    //   playLink: "https://harry.site/j34eebe6d?subid=HarryCasino-CXUK01&clickid="
+    // },
     {
       name: "WinBeast",
       logo: "winbeast.svg", // Change this filename to switch logos
