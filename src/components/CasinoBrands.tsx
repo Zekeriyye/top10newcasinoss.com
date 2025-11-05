@@ -126,7 +126,8 @@ export default function CasinoBrands() {
                             src={`/casino-logos/${casino.logo}`}
                             alt={casino.name}
                             fill
-                            className="object-contain filter drop-shadow-2xl"
+                            className="filter drop-shadow-2xl"
+                            style={{ objectFit: 'contain', objectPosition: 'center' }}
                           />
                         </div>
                       </div>
