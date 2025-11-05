@@ -38,14 +38,15 @@ export const siteConfig = {
       playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
     },
   
-    
     {
-      name: "VegasHero",
-      logo: "VegasHero.png", // Change this filename to switch logos
-      bonus: "Exclusive bonus offer:\n 300% up to 500 EUR\n +300 FS\n +1 Bonus Crab",
+      name: "FishAndSpins",
+      logo: "fishandspins.svg", // Change this filename to switch logos
+      bonus: "WELCOME BONUS\nUP TO €1500\nPLUS 175 BONUS SPINS",
       rating: 9.6,
-      playLink: "https://vgr.naralvin.com/?mid=314792_1851701&subid=VegasHero-CXUK01&clickid="
+      playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
     },
+    
+    
     {
       name: "SpinMillion",
       logo: "spinmillion.webp", // Change this filename to switch logos
@@ -54,11 +55,19 @@ export const siteConfig = {
       playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
     },
     {
-      name: "FishAndSpins",
-      logo: "fishandspins.svg", // Change this filename to switch logos
-      bonus: "WELCOME BONUS\nUP TO €1500\nPLUS 175 BONUS SPINS",
+      name: "GoldenGenie",
+      logo: "goldengenie.webp", // Change this filename to switch logos
+      bonus: "100 Free spins\n400% up to 2000€",
       rating: 9.2,
-      playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
+      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
+    },
+    
+    {
+      name: "VegasHero",
+      logo: "VegasHero.png", // Change this filename to switch logos
+      bonus: "Exclusive bonus offer:\n 300% up to 500 EUR\n +300 FS\n +1 Bonus Crab",
+      rating: 9.0,
+      playLink: "https://vgr.naralvin.com/?mid=314792_1851701&subid=VegasHero-CXUK01&clickid="
     },
     // {
     //   name: "HarryCasino",
@@ -71,17 +80,10 @@ export const siteConfig = {
       name: "WinBeast",
       logo: "winbeast.svg", // Change this filename to switch logos
       bonus: "Welcome Pack €/£3000\n300 FS",
-      rating: 9.0,
+      rating: 8.8,
       playLink: "https://beast-net.co/aue1i1msc?subid=WinBeast-CXUK01&visit_id="
     }
     ,
-    {
-      name: "GoldenGenie",
-      logo: "goldengenie.webp", // Change this filename to switch logos
-      bonus: "100 Free spins\n400% up to 2000€",
-      rating: 8.8,
-      playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
-    },
     
     {
       name: "Rizzio",
