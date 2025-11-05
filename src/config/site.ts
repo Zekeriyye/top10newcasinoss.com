@@ -23,6 +23,14 @@ export const siteConfig = {
   
   // Casino brands data
   casinos: [
+
+    {
+      name: "Qbet",
+      logo: "qbet.png", // Change this filename to switch logos
+      bonus: "Bonus up to £100\n50 Free Spins ",
+      rating: 9.8,
+      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
+    },
   
     {
       name: "LuckyTwice",
@@ -30,13 +38,6 @@ export const siteConfig = {
       bonus: "100% UP TO £500\n250 FREE SPINS",
       rating: 10.0,
       playLink: "https://luckytwice.site/j90006c83?subid=LuckyTwice-CXUK01&clickid="
-    },
-      {
-      name: "Qbet",
-      logo: "qbet.png", // Change this filename to switch logos
-      bonus: "Bonus up to £100\n50 Free Spins ",
-      rating: 9.8,
-      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
     },
     {
       name: "SpinMillion",
