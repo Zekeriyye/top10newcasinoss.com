@@ -121,13 +121,13 @@ export default function CasinoBrands() {
                     >
                       {/* Casino Logo - Centered - Bigger */}
                       <div className="flex items-center justify-center mb-2 md:mb-4">
-                        <div className="relative h-24 w-full md:h-40 md:w-full px-2 md:px-4">
+                        <div className="relative h-20 w-40 md:h-32 md:w-64">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
                             alt={casino.name}
                             fill
                             className="filter drop-shadow-2xl"
-                            style={{ objectFit: 'contain', objectPosition: 'center' }}
+                            style={{ objectFit: 'cover', objectPosition: 'center' }}
                           />
                         </div>
                       </div>
