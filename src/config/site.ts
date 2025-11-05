@@ -23,18 +23,26 @@ export const siteConfig = {
   
   // Casino brands data
   casinos: [
+     
+    {
+      name: "SpinMillion",
+      logo: "spinmillion.webp", // Change this filename to switch logos
+      bonus: "100% up to £750\n100 Free Spins\n3x Wheel of Luck",
+      rating: 10.0,
+      playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
+    },
     {
       name: "LuckyTwice",
       logo: "luckytwice.webp", // Change this filename to switch logos
       bonus: "100% UP TO £500\n250 FREE SPINS",
-      rating: 10.0,
+      rating: 9.8,
       playLink: "https://luckytwice.site/j90006c83?subid=LuckyTwice-CXUK01&clickid="
     },
     {
       name: "Qbet",
       logo: "qbet.png", // Change this filename to switch logos
       bonus: "Bonus up to £100\n50 Free Spins ",
-      rating: 9.8,
+      rating: 9.6,
       playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
     },
   
@@ -42,18 +50,11 @@ export const siteConfig = {
       name: "FishAndSpins",
       logo: "fishandspins.svg", // Change this filename to switch logos
       bonus: "WELCOME BONUS\nUP TO €1500\nPLUS 175 BONUS SPINS",
-      rating: 9.6,
+      rating: 9.4,
       playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
     },
     
-    
-    {
-      name: "SpinMillion",
-      logo: "spinmillion.webp", // Change this filename to switch logos
-      bonus: "100% up to £750\n100 Free Spins\n3x Wheel of Luck",
-      rating: 9.4,
-      playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
-    },
+   
     {
       name: "GoldenGenie",
       logo: "goldengenie.webp", // Change this filename to switch logos
