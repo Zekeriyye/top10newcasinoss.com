@@ -188,7 +188,7 @@ export default function CasinoBrands() {
                               button_type: 'get_bonus'
                             });
                           }}
-                          className="block w-full bg-gradient-to-r from-[#D4AF37] via-[#F4E5B1] to-[#D4AF37] text-gray-900 font-bold py-2.5 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl text-center text-sm md:text-lg hover:from-[#E5C158] hover:via-[#F9F0C9] hover:to-[#E5C158] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 border border-[#B8941F]"
+                          className="block w-full bg-gradient-to-r from-[#8B5CF6] via-[#10B981] to-[#8B5CF6] text-white font-bold py-2.5 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl text-center text-sm md:text-lg hover:from-[#7C3AED] hover:via-[#059669] hover:to-[#7C3AED] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 border border-[#8B5CF6]"
                         >
                           GET BONUS
                         </a>

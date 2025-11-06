@@ -1,24 +1,24 @@
 export const siteConfig = {
   // Basic site information
-  name: "Win Fast Casinos",
-  description: "Compare UK-licensed casinos featuring secure bonuses and rapid payout options",
-  url: "https://winfastcasinos.com",
+  name: "10 Best New Casinos",
+  description: "Explore top-rated UK-licensed casinos with generous welcome bonuses and instant payment options",
+  url: "https://10bestnewcasinos.org",
   
-  // Brand colors - professional design
+  // Brand colors - modern fresh design
   colors: {
-    primary: "#1E3A8A",    // Deep Navy Blue - professional & trustworthy
-    secondary: "#111827",  // Charcoal - refined dark
-    accent: "#D4AF37",     // Elegant Gold - sophisticated premium
-    background: "#0F172A", // Deep slate background
-    surface: "#1E293B",    // Slate surface
+    primary: "#8B5CF6",    // Vibrant Purple - modern & exciting
+    secondary: "#1E1B4B",  // Deep Indigo - sophisticated dark
+    accent: "#10B981",     // Emerald Green - fresh & premium
+    background: "#0F0F23", // Deep navy background
+    surface: "#1E1B4B",   // Indigo surface
     text: "#F8FAFC",       // Off-white text
     textSecondary: "#CBD5E1", // Light slate gray
   },
   
   // Hero section content
   hero: {
-    headline: "New Casinos for UK Players",
-    subtext: "Discover new online casinos featuring exclusive promotions, secure gameplay and round-the-clock support. Every casino listed holds full UK licensing credentials.",
+    headline: "Top 10 Newest Casinos for UK Players",
+    subtext: "Browse the best new online casinos offering special welcome bonuses, protected gaming and 24/7 customer assistance. All featured casinos are fully licensed by the UK Gambling Commission.",
   },
   
   // Casino brands data
@@ -123,6 +123,6 @@ export const siteConfig = {
   
   // Contact information
   contact: {
-    email: "info@winfastcasinos.com"
+    email: "info@10bestnewcasinos.org"
   }
 };

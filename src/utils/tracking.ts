@@ -2,7 +2,7 @@
  * Tracking utility to capture and persist tracking parameters across page navigation
  */
 
-const TRACKING_STORAGE_KEY = 'winfastcasinos_tracking';
+const TRACKING_STORAGE_KEY = '10bestnewcasinos_tracking';
 const TRACKING_PARAMS = ['gclid', 'payload', 'clickid', 'afp', 'gcslid', 'visit_id', 'subid', 'trackid', 'ref'];
 
 /**
