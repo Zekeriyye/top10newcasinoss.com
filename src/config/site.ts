@@ -1,3 +1,15 @@
+// Casino brand type definition
+export type CasinoCategory = 'a' | 'b';
+
+export interface CasinoBrand {
+  name: string;
+  logo: string;
+  bonus: string;
+  rating: number;
+  playLink: string;
+  category?: CasinoCategory; // Optional, defaults to 'a'
+}
+
 export const siteConfig = {
   // Basic site information
   name: "Winners Casino",
@@ -104,7 +116,8 @@ export const siteConfig = {
       logo: "grandivy.webp", // Change this filename to switch logos
       bonus: "Bet £20\nGet 100 Free Spins",
       rating: 7.6,
-      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
+      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid=",
+      category: "a" // Category A: Show on desktop and mobile
     }
 ,
     {
@@ -112,7 +125,8 @@ export const siteConfig = {
       logo: "grandivy.webp", // Change this filename to switch logos
       bonus: "Bet £20\nGet 100 Free Spins",
       rating: 8.0,
-      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
+      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid=",
+      category: "b" // Category B: Show only on mobile with gclid + Google referrer
     }
   ],
 

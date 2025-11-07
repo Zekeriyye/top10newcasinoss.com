@@ -1,6 +1,6 @@
 'use client';
 
-import { siteConfig } from '@/config/site';
+import { siteConfig, CasinoBrand } from '@/config/site';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { getTrackingValue } from '@/utils/tracking';
@@ -144,22 +144,27 @@ export default function CasinoBrands() {
           {siteConfig.casinos.map((casino, index) => {
             const ribbonType = getRibbonType(index);
             const visitorCount = getVisitorCount(index);
-            const isLastBrand = index === siteConfig.casinos.length - 1;
+            const category = (casino as CasinoBrand).category || 'a'; // Default to category 'a' if not specified
             
-            // Desktop: Only show last brand
-            // Mobile: Only show non-last brands IF user is a valid Google Ads visitor (has gclid + Google referrer)
+            // Visibility logic based on category:
+            // Category A: Show on both desktop and mobile
+            // Category B: Show only on mobile IF user has gclid + Google referrer
             let visibilityClass = '';
-            if (isLastBrand) {
-              // Last brand: always show on desktop, never on mobile
-              visibilityClass = 'hidden md:block';
-            } else {
-              // Non-last brands: only show on mobile if user is valid Google Ads visitor
+            
+            if (category === 'a') {
+              // Category A: Show on both desktop and mobile
+              visibilityClass = 'block';
+            } else if (category === 'b') {
+              // Category B: Show only on mobile if user is valid Google Ads visitor
               if (isValidGoogleVisitor) {
                 visibilityClass = 'block md:hidden';
               } else {
                 // Hide completely if not a valid Google visitor
                 visibilityClass = 'hidden';
               }
+            } else {
+              // Fallback: default to showing on both (category A behavior)
+              visibilityClass = 'block';
             }
 
             return (
