@@ -1,6 +1,6 @@
 'use client';
 
-import { siteConfig, CasinoBrand } from '@/config/site';
+import { siteConfig } from '@/config/site';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { getTrackingValue } from '@/utils/tracking';
@@ -8,68 +8,11 @@ import { track } from '@vercel/analytics';
 
 export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
-  const [isValidGoogleVisitor, setIsValidGoogleVisitor] = useState(false);
 
   useEffect(() => {
     // Get tracking value - checks URL first, then sessionStorage
     const value = getTrackingValue();
     setTrackingValue(value);
-    
-    // Check if user is a valid Google Ads visitor
-    const checkGoogleVisitor = () => {
-      if (typeof window === 'undefined') {
-        setIsValidGoogleVisitor(false);
-        return;
-      }
-      
-      // Check for gclid in URL parameters (must have a value)
-      const urlParams = new URLSearchParams(window.location.search);
-      const gclidValue = urlParams.get('gclid');
-      const hasGclid = gclidValue !== null && gclidValue.length > 0;
-      
-      // Also check if gclid was stored in sessionStorage (from previous page)
-      // We'll store a flag when gclid is detected
-      let hasGclidInStorage = false;
-      try {
-        const gclidFlag = sessionStorage.getItem('has_gclid');
-        if (gclidFlag === 'true') {
-          hasGclidInStorage = true;
-        }
-        // Also check if current stored value is from gclid
-        const storedValue = sessionStorage.getItem('winnerscasinos_tracking');
-        if (storedValue && gclidFlag === 'true') {
-          hasGclidInStorage = true;
-        }
-      } catch (e) {
-        // Ignore errors
-      }
-      
-      // Store gclid flag if we found one
-      if (hasGclid) {
-        try {
-          sessionStorage.setItem('has_gclid', 'true');
-        } catch (e) {
-          // Ignore errors
-        }
-      }
-      
-      // Check referrer - must be from Google
-      const referrer = document.referrer.toLowerCase();
-      const isGoogleReferrer = referrer.includes('google.com') || referrer.includes('google.co.uk');
-      
-      // User is valid if they have gclid (in URL or previously stored) AND came from Google
-      const isValid = (hasGclid || hasGclidInStorage) && isGoogleReferrer;
-      
-      setIsValidGoogleVisitor(isValid);
-      
-      if (isValid) {
-        console.log('✅ Valid Google Ads visitor - showing mobile brands', { hasGclid, hasGclidInStorage, referrer });
-      } else {
-        console.log('❌ Not a valid Google Ads visitor - hiding mobile brands', { hasGclid, hasGclidInStorage, referrer });
-      }
-    };
-    
-    checkGoogleVisitor();
     
     // Debug: Log captured parameters (remove in production)
     if (value) {
@@ -144,28 +87,10 @@ export default function CasinoBrands() {
           {siteConfig.casinos.map((casino, index) => {
             const ribbonType = getRibbonType(index);
             const visitorCount = getVisitorCount(index);
-            const category = (casino as CasinoBrand).category || 'a'; // Default to category 'a' if not specified
+            const isLastBrand = index === siteConfig.casinos.length - 1;
             
-            // Visibility logic based on category:
-            // Category A: Show on both desktop and mobile
-            // Category B: Show only on mobile IF user has gclid + Google referrer
-            let visibilityClass = '';
-            
-            if (category === 'a') {
-              // Category A: Show on both desktop and mobile
-              visibilityClass = 'block';
-            } else if (category === 'b') {
-              // Category B: Show only on mobile if user is valid Google Ads visitor
-              if (isValidGoogleVisitor) {
-                visibilityClass = 'block md:hidden';
-              } else {
-                // Hide completely if not a valid Google visitor
-                visibilityClass = 'hidden';
-              }
-            } else {
-              // Fallback: default to showing on both (category A behavior)
-              visibilityClass = 'block';
-            }
+            // Visibility logic: Last brand shows only on desktop, all others show only on mobile
+            const visibilityClass = isLastBrand ? 'hidden md:block' : 'block md:hidden';
 
             return (
               <div key={index} className={`relative pt-5 ${visibilityClass}`}>
