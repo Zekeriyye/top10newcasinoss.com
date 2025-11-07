@@ -106,6 +106,13 @@ export const siteConfig = {
       bonus: "Slots welcome Package 777% \nup to $11,665.50\n20% cashback Wager: 25x",
       rating: 8.2,
       playLink: "https://go.afftrackio.com/visit/?bta=35684&nci=5362&utm_campaign=DraculaCasino-CXUK01&afp="
+    },
+    {
+      name: "GrandIvy",
+      logo: "grandivy.webp", // Change this filename to switch logos
+      bonus: "Bet £20\nGet 100 Free Spins",
+      rating: 8.0,
+      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
     }
     
 ,
