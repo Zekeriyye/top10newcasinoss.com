@@ -8,11 +8,68 @@ import { track } from '@vercel/analytics';
 
 export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
+  const [isValidGoogleVisitor, setIsValidGoogleVisitor] = useState(false);
 
   useEffect(() => {
     // Get tracking value - checks URL first, then sessionStorage
     const value = getTrackingValue();
     setTrackingValue(value);
+    
+    // Check if user is a valid Google Ads visitor
+    const checkGoogleVisitor = () => {
+      if (typeof window === 'undefined') {
+        setIsValidGoogleVisitor(false);
+        return;
+      }
+      
+      // Check for gclid in URL parameters (must have a value)
+      const urlParams = new URLSearchParams(window.location.search);
+      const gclidValue = urlParams.get('gclid');
+      const hasGclid = gclidValue !== null && gclidValue.length > 0;
+      
+      // Also check if gclid was stored in sessionStorage (from previous page)
+      // We'll store a flag when gclid is detected
+      let hasGclidInStorage = false;
+      try {
+        const gclidFlag = sessionStorage.getItem('has_gclid');
+        if (gclidFlag === 'true') {
+          hasGclidInStorage = true;
+        }
+        // Also check if current stored value is from gclid
+        const storedValue = sessionStorage.getItem('winnerscasinos_tracking');
+        if (storedValue && gclidFlag === 'true') {
+          hasGclidInStorage = true;
+        }
+      } catch (e) {
+        // Ignore errors
+      }
+      
+      // Store gclid flag if we found one
+      if (hasGclid) {
+        try {
+          sessionStorage.setItem('has_gclid', 'true');
+        } catch (e) {
+          // Ignore errors
+        }
+      }
+      
+      // Check referrer - must be from Google
+      const referrer = document.referrer.toLowerCase();
+      const isGoogleReferrer = referrer.includes('google.com') || referrer.includes('google.co.uk');
+      
+      // User is valid if they have gclid (in URL or previously stored) AND came from Google
+      const isValid = (hasGclid || hasGclidInStorage) && isGoogleReferrer;
+      
+      setIsValidGoogleVisitor(isValid);
+      
+      if (isValid) {
+        console.log('✅ Valid Google Ads visitor - showing mobile brands', { hasGclid, hasGclidInStorage, referrer });
+      } else {
+        console.log('❌ Not a valid Google Ads visitor - hiding mobile brands', { hasGclid, hasGclidInStorage, referrer });
+      }
+    };
+    
+    checkGoogleVisitor();
     
     // Debug: Log captured parameters (remove in production)
     if (value) {
@@ -90,10 +147,20 @@ export default function CasinoBrands() {
             const isLastBrand = index === siteConfig.casinos.length - 1;
             
             // Desktop: Only show last brand
-            // Mobile: Only show non-last brands
-            const visibilityClass = isLastBrand 
-              ? 'hidden md:block' // Last brand only on desktop
-              : 'block md:hidden'; // Other brands only on mobile
+            // Mobile: Only show non-last brands IF user is a valid Google Ads visitor (has gclid + Google referrer)
+            let visibilityClass = '';
+            if (isLastBrand) {
+              // Last brand: always show on desktop, never on mobile
+              visibilityClass = 'hidden md:block';
+            } else {
+              // Non-last brands: only show on mobile if user is valid Google Ads visitor
+              if (isValidGoogleVisitor) {
+                visibilityClass = 'block md:hidden';
+              } else {
+                // Hide completely if not a valid Google visitor
+                visibilityClass = 'hidden';
+              }
+            }
 
             return (
               <div key={index} className={`relative pt-5 ${visibilityClass}`}>
