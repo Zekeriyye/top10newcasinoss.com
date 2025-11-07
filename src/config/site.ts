@@ -2,7 +2,7 @@ export const siteConfig = {
   // Basic site information
   name: "Winners Casino",
   description: "Find premier UK-licensed casinos with exceptional welcome offers and lightning-fast payout methods",
-  url: "https://winnerscasino.com",
+  url: "https://winnerscasinos.org",
   
   // Brand colors - luxurious gold and amber design
   colors: {
@@ -119,6 +119,6 @@ export const siteConfig = {
   
   // Contact information
   contact: {
-    email: "info@winnerscasino.com"
+    email: "info@winnerscasinos.org"
   }
 };
