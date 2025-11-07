@@ -37,32 +37,32 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 bg-[#0F172A] border-y border-[#1E3A8A]/20">
+    <section className="py-16 bg-[#0A0A0A] border-y border-[#F59E0B]/20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-white to-[#D4AF37] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white to-[#FCD34D] bg-clip-text text-transparent">
               Frequently Asked Questions
             </span>
           </h2>
           <p className="text-gray-300 text-lg">
-            Essential information about our casino recommendations
+            Key details about our casino suggestions
           </p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-[#1E293B] border border-[#1E3A8A]/30 rounded-xl overflow-hidden hover:border-[#D4AF37]/50 transition-all">
+            <div key={index} className="bg-[#1C1917] border border-[#F59E0B]/30 rounded-xl overflow-hidden hover:border-[#FCD34D]/50 transition-all">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-[#1A1A2E]/50 transition-colors"
+                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-[#292524]/50 transition-colors"
               >
                 <h3 className="text-white font-semibold text-lg pr-4">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
                   <svg
-                    className={`w-5 h-5 text-[#D4AF37] transition-transform duration-200 ${
+                    className={`w-5 h-5 text-[#FCD34D] transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -79,7 +79,7 @@ export default function FAQ() {
                 </div>
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-5 border-t border-[#1E3A8A]/20">
+                <div className="px-6 pb-5 border-t border-[#F59E0B]/20">
                   <p className="text-gray-300 leading-relaxed pt-4">
                     {faq.answer}
                   </p>

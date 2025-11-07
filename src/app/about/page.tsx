@@ -4,31 +4,31 @@ import { siteConfig } from '@/config/site';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#0F0F23]">
+    <div className="min-h-screen bg-[#0A0A0A]">
       <Header />
       
       <main className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-[#8B5CF6] to-[#10B981] bg-clip-text text-transparent">About 10 Best New Casinos</span>
+                  <span className="bg-gradient-to-r from-[#F59E0B] to-[#FCD34D] bg-clip-text text-transparent">About Winners Casino</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Your reliable source showcasing the top UK Gambling Commission licensed online casinos with generous welcome bonuses and secure gaming environments for UK players.
+              Your trusted resource highlighting premier UK Gambling Commission licensed online casinos featuring attractive welcome bonuses and protected gaming spaces for British players.
             </p>
           </div>
 
           <div className="prose prose-invert max-w-none">
-            <div className="bg-[#1E1B4B] border border-[#8B5CF6]/30 rounded-xl p-8 mb-8">
+            <div className="bg-[#1C1917] border border-[#F59E0B]/30 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Who We Are</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                10 Best New Casinos is an independent UK-focused casino review platform dedicated exclusively to showcasing UK Gambling Commission licensed casinos. 
-                We maintain no affiliations with casino operators, guaranteeing our evaluations remain completely objective and centered on what matters most to British players.
+                Winners Casino is an independent UK-focused casino comparison site committed exclusively to presenting UK Gambling Commission licensed casinos. 
+                We have no partnerships with casino operators, ensuring our assessments stay fully impartial and focused on what's most important to UK players.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Our team consists of skilled gambling industry experts who understand the UK market, 
-                UK Gambling Commission regulatory standards, and British player preferences. We've personally evaluated every UK-licensed casino we feature, 
-                from sign-up and deposits to gameplay and cashouts.
+                Our team comprises experienced gambling industry specialists who know the UK market, 
+                UK Gambling Commission regulatory requirements, and British player needs. We've personally tested every UK-licensed casino we showcase, 
+                from registration and funding to game play and withdrawals.
               </p>
             </div>
 
@@ -52,31 +52,31 @@ export default function AboutPage() {
               </p>
               <ul className="text-gray-300 space-y-2 mb-4">
                 <li className="flex items-start">
-                  <span className="text-[#10B981] mr-2">•</span>
+                  <span className="text-[#FCD34D] mr-2">•</span>
                   <span>UK Gambling Commission licensing and compliance</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#10B981] mr-2">•</span>
+                  <span className="text-[#FCD34D] mr-2">•</span>
                   <span>Game variety and software providers</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#10B981] mr-2">•</span>
+                  <span className="text-[#FCD34D] mr-2">•</span>
                   <span>Bonus offers and wagering requirements</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#10B981] mr-2">•</span>
+                  <span className="text-[#FCD34D] mr-2">•</span>
                   <span>Banking options and withdrawal speeds</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#10B981] mr-2">•</span>
+                  <span className="text-[#FCD34D] mr-2">•</span>
                   <span>Customer support quality and availability</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#10B981] mr-2">•</span>
+                  <span className="text-[#FCD34D] mr-2">•</span>
                   <span>Mobile compatibility and user experience</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#10B981] mr-2">•</span>
+                  <span className="text-[#FCD34D] mr-2">•</span>
                   <span>Responsible gambling tools and support</span>
                 </li>
               </ul>

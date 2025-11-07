@@ -1,24 +1,24 @@
 export const siteConfig = {
   // Basic site information
-  name: "10 Best New Casinos",
-  description: "Explore top-rated UK-licensed casinos with generous welcome bonuses and instant payment options",
-  url: "https://10bestnewcasinos.org",
+  name: "Winners Casino",
+  description: "Find premier UK-licensed casinos with exceptional welcome offers and lightning-fast payout methods",
+  url: "https://winnerscasino.com",
   
-  // Brand colors - modern fresh design
+  // Brand colors - luxurious gold and amber design
   colors: {
-    primary: "#8B5CF6",    // Vibrant Purple - modern & exciting
-    secondary: "#1E1B4B",  // Deep Indigo - sophisticated dark
-    accent: "#10B981",     // Emerald Green - fresh & premium
-    background: "#0F0F23", // Deep navy background
-    surface: "#1E1B4B",   // Indigo surface
+    primary: "#F59E0B",    // Amber Gold - premium & winning
+    secondary: "#1C1917",  // Rich Charcoal - elegant dark
+    accent: "#FCD34D",     // Bright Gold - success & victory
+    background: "#0A0A0A", // Deep black background
+    surface: "#1C1917",   // Charcoal surface
     text: "#F8FAFC",       // Off-white text
-    textSecondary: "#CBD5E1", // Light slate gray
+    textSecondary: "#D1D5DB", // Light gray
   },
   
   // Hero section content
   hero: {
-    headline: "Top 10 Newest Casinos for UK Players",
-    subtext: "Browse the best new online casinos offering special welcome bonuses, protected gaming and 24/7 customer assistance. All featured casinos are fully licensed by the UK Gambling Commission.",
+    headline: "Premier Casinos for UK Players",
+    subtext: "Explore leading online casinos providing exclusive welcome packages, secure gaming environments and round-the-clock support services. Each casino featured holds complete UK Gambling Commission licensing.",
   },
   
   // Casino brands data
@@ -119,6 +119,6 @@ export const siteConfig = {
   
   // Contact information
   contact: {
-    email: "info@10bestnewcasinos.org"
+    email: "info@winnerscasino.com"
   }
 };
