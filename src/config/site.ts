@@ -9,25 +9,25 @@ export interface CasinoBrand {
 
 export const siteConfig = {
   // Basic site information
-  name: "Winners Casino",
-  description: "Find premier UK-licensed casinos with exceptional welcome offers and lightning-fast payout methods",
-  url: "https://winnerscasinos.org",
+  name: "10 Best Casinos",
+  description: "Discover top-rated UK-licensed casinos featuring generous welcome bonuses and instant withdrawal options",
+  url: "https://10bestcasinos.org",
   
-  // Brand colors - luxurious gold and amber design
+  // Brand colors - modern blue and purple design
   colors: {
-    primary: "#F59E0B",    // Amber Gold - premium & winning
-    secondary: "#1C1917",  // Rich Charcoal - elegant dark
-    accent: "#FCD34D",     // Bright Gold - success & victory
-    background: "#0A0A0A", // Deep black background
-    surface: "#1C1917",   // Charcoal surface
-    text: "#F8FAFC",       // Off-white text
-    textSecondary: "#D1D5DB", // Light gray
+    primary: "#3B82F6",    // Vibrant Blue - trust & reliability
+    secondary: "#1E1B4B",  // Deep Indigo - premium & sophisticated
+    accent: "#8B5CF6",     // Purple - creativity & excellence
+    background: "#0F172A", // Deep navy background
+    surface: "#1E293B",   // Slate surface
+    text: "#F1F5F9",       // Off-white text
+    textSecondary: "#CBD5E1", // Light gray
   },
   
   // Hero section content
   hero: {
-    headline: "Premier Casinos for UK Players",
-    subtext: "Explore leading online casinos providing exclusive welcome packages, secure gaming environments and round-the-clock support services. Each casino featured holds complete UK Gambling Commission licensing.",
+    headline: "Top 10 Best Casinos for UK Players",
+    subtext: "Browse the finest online casinos offering outstanding welcome bonuses, protected gaming platforms and 24/7 customer support. Every casino listed is fully licensed by the UK Gambling Commission.",
   },
   
   // Casino brands data
@@ -128,6 +128,6 @@ export const siteConfig = {
   
   // Contact information
   contact: {
-    email: "info@winnerscasinos.org"
+    email: "info@10bestcasinos.org"
   }
 };

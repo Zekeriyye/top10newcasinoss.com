@@ -75,11 +75,11 @@ export default function CasinoBrands() {
   };
 
   return (
-    <section id="casinos" className="py-6 md:py-10 bg-gradient-to-br from-[#0A0A0A] via-[#1C1917] to-[#0A0A0A] relative overflow-hidden">
+    <section id="casinos" className="py-6 md:py-10 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-600 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-yellow-600 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-600 rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="relative max-w-6xl mx-auto px-3 md:px-4">
@@ -97,7 +97,7 @@ export default function CasinoBrands() {
                 {/* Small Badge Box */}
                 {ribbonType && (
                   <div className="absolute -top-0 left-4 md:left-6 z-20">
-                    <div className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 text-xs md:text-sm font-bold px-3 md:px-4 py-2 rounded-lg shadow-lg">
+                    <div className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs md:text-sm font-bold px-3 md:px-4 py-2 rounded-lg shadow-lg">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
@@ -107,11 +107,11 @@ export default function CasinoBrands() {
                 )}
 
                 {/* Casino Card */}
-                <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-amber-400/30">
+                <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-blue-400/30">
                   <div className="flex flex-row min-h-[200px] md:min-h-[280px]">
-                    {/* Left Section - Gold/Amber Gradient with Angled Edge */}
+                    {/* Left Section - Blue/Purple Gradient with Angled Edge */}
                     <div 
-                      className="relative bg-gradient-to-br from-amber-600 via-amber-500 to-yellow-500 p-4 md:p-8 flex flex-col justify-between w-[40%] md:w-[40%]"
+                      className="relative bg-gradient-to-br from-blue-600 via-blue-500 to-purple-500 p-4 md:p-8 flex flex-col justify-between w-[40%] md:w-[40%]"
                       style={{
                         clipPath: 'polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)'
                       }}
@@ -139,7 +139,7 @@ export default function CasinoBrands() {
                                 key={star}
                                 className={`text-xs md:text-base ${
                                   star <= Math.round(casino.rating) 
-                                    ? 'text-yellow-300' 
+                                    ? 'text-blue-300' 
                                     : 'text-white/30'
                                 }`}
                               >
@@ -157,21 +157,21 @@ export default function CasinoBrands() {
                       </div>
                     </div>
 
-                    {/* Right Section - Dark Charcoal */}
-                    <div className="relative bg-gradient-to-br from-[#1C1917] to-[#292524] p-4 md:p-8 flex flex-col justify-center w-[60%] md:w-[60%]">
+                    {/* Right Section - Dark Slate */}
+                    <div className="relative bg-gradient-to-br from-[#1E293B] to-[#334155] p-4 md:p-8 flex flex-col justify-center w-[60%] md:w-[60%]">
                       {/* Bonus Offer Text - Centered */}
                       <div className="text-center flex-1 flex flex-col justify-center mb-3 md:mb-4">
                         <div className="text-white text-xl md:text-4xl font-bold mb-1 md:mb-3 leading-tight">
                           {casino.bonus.split('\n')[0] || casino.bonus}
                         </div>
                         {casino.bonus.includes('\n') && (
-                          <div className="text-amber-300 text-lg md:text-3xl font-bold leading-tight">
+                          <div className="text-blue-300 text-lg md:text-3xl font-bold leading-tight">
                             {casino.bonus.split('\n')[1]}
                           </div>
                         )}
                       </div>
 
-                      {/* GET BONUS Button - Elegant Gold */}
+                      {/* GET BONUS Button - Elegant Blue/Purple */}
                       <div>
                         <a
                           href={processPlayLink(casino.playLink)}
@@ -185,7 +185,7 @@ export default function CasinoBrands() {
                               button_type: 'get_bonus'
                             });
                           }}
-                          className="block w-full bg-gradient-to-r from-[#F59E0B] via-[#FCD34D] to-[#F59E0B] text-gray-900 font-bold py-2.5 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl text-center text-sm md:text-lg hover:from-[#D97706] hover:via-[#FBBF24] hover:to-[#D97706] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 border border-[#F59E0B]"
+                          className="block w-full bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3B82F6] text-white font-bold py-2.5 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl text-center text-sm md:text-lg hover:from-[#2563EB] hover:via-[#7C3AED] hover:to-[#2563EB] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 border border-[#3B82F6]"
                         >
                           GET BONUS
                         </a>
