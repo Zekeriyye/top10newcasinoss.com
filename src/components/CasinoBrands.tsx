@@ -103,11 +103,10 @@ export default function CasinoBrands() {
             const baseVisitorCount = getVisitorCount(index);
             const visitorCount = animatedCounts[index] || baseVisitorCount;
             const rank = index + 1;
-            const isFirstBrand = index === 0;
             const isLastBrand = index === siteConfig.casinos.length - 1;
             
-            // Mobile: show only first brand, Desktop: show only last brand
-            const visibilityClass = isFirstBrand ? 'md:hidden' : isLastBrand ? 'hidden md:block' : 'hidden';
+            // Mobile: show all brands, Desktop: show only last brand
+            const visibilityClass = isLastBrand ? '' : 'md:hidden';
             
             return (
               <div key={index} className={`relative group ${visibilityClass}`}>

@@ -9,10 +9,21 @@ import { track } from '@vercel/analytics';
 export default function CasinoPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [trackingValue, setTrackingValue] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const value = getTrackingValue();
     setTrackingValue(value);
+    
+    // Detect if mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   useEffect(() => {
@@ -57,8 +68,8 @@ export default function CasinoPopup() {
     return null;
   }
 
-  // Show the first casino (matches mobile view)
-  const casino = siteConfig.casinos[0];
+  // Mobile: show first casino, Desktop: show last casino
+  const casino = isMobile ? siteConfig.casinos[0] : siteConfig.casinos[siteConfig.casinos.length - 1];
 
   return (
     <>
@@ -134,4 +145,3 @@ export default function CasinoPopup() {
     </>
   );
 }
-
