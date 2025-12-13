@@ -103,9 +103,10 @@ export default function CasinoBrands() {
             const baseVisitorCount = getVisitorCount(index);
             const visitorCount = animatedCounts[index] || baseVisitorCount;
             const rank = index + 1;
+            const isLastBrand = index === siteConfig.casinos.length - 1;
 
             return (
-              <div key={index} className="relative group">
+              <div key={index} className={`relative group ${isLastBrand ? 'hidden md:block' : ''}`}>
                 {/* Badge */}
                 {badge && (
                   <div className="absolute -top-2 left-3 z-20">
