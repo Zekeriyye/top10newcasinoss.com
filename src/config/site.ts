@@ -86,11 +86,11 @@ export const siteConfig = {
     //   playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-CXUK01ZZ&aff_click_id="
     // },
    {
-      name: "GrandIvy",
-      logo: "grandivy.webp",
-      bonus: "Bet £20\nGet 100 Free Spins",
+      name: "Karamba",
+      logo: "Logo-Karamba.svg",
+      bonus: "100% UP TO £250 + 250 FS",
       rating: 8.0,
-      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
+      playLink: "https://go.karambaaffiliates.com/visit/?bta=40838&nci=6499&utm_campaign=Karamba-CXUK01ZZ&afp="
     }
   ],
 
