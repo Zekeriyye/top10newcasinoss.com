@@ -5,6 +5,7 @@ import TrustSignals from '@/components/TrustSignals';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
+import CasinoPopup from '@/components/CasinoPopup';
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
         <FAQ />
         <Footer />
       </div>
+      <CasinoPopup />
     </div>
   );
 }
