@@ -28,7 +28,7 @@ export const siteConfig = {
   
   // Hero section content
   hero: {
-    headline: "Discover Your Winning Casino",
+    headline: "Best New Casinos UK",
     subtext: "We've handpicked the UK's finest licensed casinos, each offering exceptional bonuses, premium games, and lightning-fast payouts. Find your perfect match today.",
     cta: "Explore Top Casinos",
   },

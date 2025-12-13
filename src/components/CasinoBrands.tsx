@@ -8,6 +8,7 @@ import { track } from '@vercel/analytics';
 
 export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
+  const [animatedCounts, setAnimatedCounts] = useState<{[key: number]: number}>({});
 
   useEffect(() => {
     const value = getTrackingValue();
@@ -16,6 +17,23 @@ export default function CasinoBrands() {
     if (value) {
       console.log('📊 Using tracking value:', value);
     }
+  }, []);
+
+  // Animate player counts every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimatedCounts(prev => {
+        const newCounts = {...prev};
+        siteConfig.casinos.forEach((_, index) => {
+          const baseCount = getVisitorCount(index);
+          const variation = Math.floor(Math.random() * 21) - 10; // Random -10 to +10
+          newCounts[index] = baseCount + variation;
+        });
+        return newCounts;
+      });
+    }, 3000);
+    
+    return () => clearInterval(interval);
   }, []);
 
   const processPlayLink = (link: string) => {
@@ -62,7 +80,7 @@ export default function CasinoBrands() {
   };
 
   return (
-    <section id="casinos" className="pt-4 pb-8 md:py-16 bg-[#0F1419] relative overflow-hidden">
+    <section id="casinos" className="pt-6 pb-8 md:py-16 bg-[#0F1419] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#FFD700] rounded-full filter blur-3xl"></div>
@@ -79,10 +97,11 @@ export default function CasinoBrands() {
         </div>
 
         {/* Casino Cards */}
-        <div className="space-y-3">
+        <div className="space-y-5 md:space-y-3">
           {siteConfig.casinos.map((casino, index) => {
             const badge = getBadge(index);
-            const visitorCount = getVisitorCount(index);
+            const baseVisitorCount = getVisitorCount(index);
+            const visitorCount = animatedCounts[index] || baseVisitorCount;
             const rank = index + 1;
 
             return (
@@ -113,13 +132,13 @@ export default function CasinoBrands() {
                 )}
 
                 {/* Casino Card */}
-                <div className="bg-[#1A2332] border border-[#FFD700]/20 rounded-lg overflow-hidden hover:border-[#FFD700]/50 hover:shadow-lg hover:shadow-[#FFD700]/20 transition-all duration-300">
+                <div className="bg-[#1A2332] border border-[#FFD700]/20 rounded-xl md:rounded-lg overflow-hidden hover:border-[#FFD700]/50 hover:shadow-lg hover:shadow-[#FFD700]/20 transition-all duration-300">
                   {/* Mobile Layout - Horizontal */}
-                  <div className="md:hidden flex items-center gap-3 p-3">
+                  <div className="md:hidden flex items-center gap-4 p-5">
                     {/* Left Section - Logo & Info */}
-                    <div className="flex items-center gap-3 flex-shrink-0">
+                    <div className="flex items-center gap-4 flex-shrink-0">
                       {/* Logo - Bigger */}
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#FFD700]/20 to-[#FFC929]/20 p-2 border border-[#FFD700]/30 flex-shrink-0">
+                      <div className="w-28 h-28 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[#FFD700]/20 to-[#FFC929]/20 p-2.5 md:p-2 border-2 md:border border-[#FFD700]/30 flex-shrink-0">
                         <div className="relative w-full h-full">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
@@ -132,20 +151,20 @@ export default function CasinoBrands() {
                       </div>
 
                       {/* Rating & Info */}
-                      <div className="flex flex-col gap-1.5">
+                      <div className="flex flex-col gap-2 md:gap-1.5">
                         {/* Live Players */}
-                        <div className="flex items-center gap-1 text-[#FFD700] text-[10px]">
-                          <div className="w-1.5 h-1.5 bg-[#FFD700] rounded-full animate-pulse"></div>
+                        <div className="flex items-center gap-1.5 text-white text-xs md:text-[10px]">
+                          <div className="w-2 h-2 md:w-1.5 md:h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
                           <span>{visitorCount} Live Players</span>
                         </div>
                         
                         {/* Star Rating & Number */}
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-2 md:gap-1.5">
                           <div className="flex items-center gap-0.5">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <span
                                 key={star}
-                                className={`text-[10px] ${
+                                className={`text-sm md:text-[10px] ${
                                   star <= Math.round(casino.rating) 
                                     ? 'text-[#FFD700]' 
                                     : 'text-gray-600'
@@ -155,20 +174,20 @@ export default function CasinoBrands() {
                               </span>
                             ))}
                           </div>
-                          <span className="text-[#FFD700] text-xs font-bold">{casino.rating}</span>
+                          <span className="text-[#FFD700] text-base md:text-xs font-bold">{casino.rating}</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Right Section - Bonus & CTA */}
-                    <div className="flex-1 flex flex-col justify-center gap-2 min-w-0">
+                    <div className="flex-1 flex flex-col justify-center gap-3 md:gap-2 min-w-0">
                       {/* Bonus */}
-                      <div>
-                        <div className="text-[#FFD700] text-xs font-bold leading-tight">
+                      <div className="text-center md:text-left">
+                        <div className="text-white text-base md:text-xs font-bold leading-tight">
                           {casino.bonus.split('\n')[0] || casino.bonus}
                         </div>
                         {casino.bonus.includes('\n') && (
-                          <div className="text-[#B8C5D6] text-[10px] leading-tight mt-0.5">
+                          <div className="text-white text-sm md:text-[10px] leading-tight mt-1 md:mt-0.5">
                             {casino.bonus.split('\n')[1]}
                           </div>
                         )}
@@ -187,22 +206,22 @@ export default function CasinoBrands() {
                             button_type: 'get_bonus'
                           });
                         }}
-                        className="w-full btn-primary py-2 px-3 rounded-lg text-center text-[10px]"
+                        className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-3 md:py-2 px-4 md:px-3 rounded-xl md:rounded-lg text-center text-sm md:text-[10px] shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transform hover:scale-[1.02] transition-all duration-300"
                       >
                         PLAY NOW
                       </a>
                       
                       {/* Payment Icons */}
                       <div className="flex items-center gap-2 justify-center">
-                        <div className="relative w-8 h-5">
+                        <div className="relative w-10 h-6 md:w-8 md:h-5">
                           <Image
-                            src="/logos/credit-card-debit-card-mastercard-logo-visa-go-vector-thumbnail.jpg"
+                            src="/logos/Visa_Inc._logo.svg.png"
                             alt="VISA"
                             fill
                             className="object-contain"
                           />
                         </div>
-                        <div className="relative w-8 h-5">
+                        <div className="relative w-10 h-6 md:w-8 md:h-5">
                           <Image
                             src="/logos/MasterCard_Logo.svg.png"
                             alt="Mastercard"
@@ -210,7 +229,7 @@ export default function CasinoBrands() {
                             className="object-contain"
                           />
                         </div>
-                        <div className="relative w-8 h-5">
+                        <div className="relative w-10 h-6 md:w-8 md:h-5">
                           <Image
                             src="/logos/PayPal_Logo_Icon_2014.svg"
                             alt="PayPal"
@@ -250,11 +269,11 @@ export default function CasinoBrands() {
                       <div className="text-[#FFD700] text-xs font-semibold uppercase mb-1">
                         Bonus
                       </div>
-                      <div className="text-[#FFD700] text-base font-bold leading-tight">
+                      <div className="text-white text-base font-bold leading-tight">
                         {casino.bonus.split('\n')[0] || casino.bonus}
                       </div>
-                        {casino.bonus.includes('\n') && (
-                          <div className="text-[#B8C5D6] text-sm font-semibold leading-tight mt-0.5">
+                      {casino.bonus.includes('\n') && (
+                        <div className="text-white text-sm font-semibold leading-tight mt-0.5">
                           {casino.bonus.split('\n')[1]}
                         </div>
                       )}
@@ -277,8 +296,8 @@ export default function CasinoBrands() {
                         ))}
                       </div>
                       <div className="text-[#FFD700] text-lg font-bold mb-2">{casino.rating}</div>
-                      <div className="flex items-center gap-1.5 text-[#FFD700] text-xs">
-                        <div className="w-1.5 h-1.5 bg-[#FFD700] rounded-full animate-pulse"></div>
+                      <div className="flex items-center gap-1.5 text-white text-xs">
+                        <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
                         <span>{visitorCount} Live Players</span>
                       </div>
                     </div>
@@ -297,16 +316,16 @@ export default function CasinoBrands() {
                               button_type: 'get_bonus'
                             });
                           }}
-                        className="w-full btn-primary py-3 px-4 rounded-lg text-center text-sm"
-                        >
+                        className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-3 px-4 rounded-lg text-center text-sm shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transform hover:scale-[1.02] transition-all duration-300"
+                      >
                         PLAY NOW
-                        </a>
+                      </a>
                       
                       {/* Payment Methods */}
                       <div className="flex items-center justify-center gap-2 mt-2">
                         <div className="relative w-10 h-6">
                           <Image
-                            src="/logos/credit-card-debit-card-mastercard-logo-visa-go-vector-thumbnail.jpg"
+                            src="/logos/Visa_Inc._logo.svg.png"
                             alt="VISA"
                             fill
                             className="object-contain"

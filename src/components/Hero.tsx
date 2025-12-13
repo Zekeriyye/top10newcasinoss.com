@@ -2,9 +2,15 @@ import { siteConfig } from '@/config/site';
 import Image from 'next/image';
 
 export default function Hero() {
-  // Get current date
+  // Get current date for display
   const currentDate = new Date().toLocaleDateString('en-GB', { 
     day: 'numeric', 
+    month: 'long',
+    year: 'numeric'
+  });
+  
+  // Get month and year for title
+  const monthYear = new Date().toLocaleDateString('en-GB', {
     month: 'long',
     year: 'numeric'
   });
@@ -20,10 +26,10 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         {/* Mobile: Compact Header */}
         <div className="md:hidden">
-          {/* Title - Centered */}
+          {/* Title - Centered with Dynamic Date */}
           <div className="mb-6">
-            <h1 className="text-center text-2xl md:text-3xl font-bold leading-tight text-[#FFD700]">
-              Top Rated Casinos<br />UK December 2025
+            <h1 className="text-center text-2xl md:text-3xl font-bold leading-tight text-white">
+              Top Rated Casinos<br />UK {monthYear}
             </h1>
           </div>
 
@@ -72,7 +78,7 @@ export default function Hero() {
           {/* Main Headline */}
           <div className="text-center mb-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
-              <span className="block text-[#FFD700] mb-2">{siteConfig.hero.headline}</span>
+              <span className="block text-white mb-2">{siteConfig.hero.headline}</span>
               <span className="gradient-text block">
                 Compare & Win Big
               </span>
