@@ -57,8 +57,8 @@ export default function CasinoPopup() {
     return null;
   }
 
-  // Always show the first casino
-  const casino = siteConfig.casinos[0];
+  // Show the last casino (matches desktop view)
+  const casino = siteConfig.casinos[siteConfig.casinos.length - 1];
 
   return (
     <>
