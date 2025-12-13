@@ -78,16 +78,6 @@ export const siteConfig = {
       rating: 9.0,
       playLink: "https://tokenaffstracker.com/j5scxt5kf?subid=WinOlympia-CXUK01ZZ&visit_id="
     },
-   
-    {
-      name: "WinBeast",
-      logo: "winbeast.svg", // Change this filename to switch logos
-      bonus: "Welcome Pack €/£3000\n300 FS",
-      rating: 8.8,
-      playLink: "https://beast-net.co/aue1i1msc?subid=WinBeast-CXUK01&visit_id="
-    }
-    ,
-    
     {
       name: "Lizaro",
       logo: "lizaro.webp", // Change this filename to switch logos
