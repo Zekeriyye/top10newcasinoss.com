@@ -106,7 +106,7 @@ export default function CasinoBrands() {
             const isLastBrand = index === siteConfig.casinos.length - 1;
 
             return (
-              <div key={index} className={`relative group ${isLastBrand ? 'hidden md:block' : ''}`}>
+              <div key={index} className={`relative group ${!isLastBrand ? 'md:hidden' : ''}`}>
                 {/* Badge */}
                 {badge && (
                   <div className="absolute -top-2 left-3 z-20">
