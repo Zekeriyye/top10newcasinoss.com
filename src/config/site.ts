@@ -35,56 +35,56 @@ export const siteConfig = {
   
   // Casino brands data
   casinos: [
-    {
-      name: "BetNinja",
-      logo: "BetNinja.png", // Change this filename to switch logos
-      bonus: "£1000 + 100 FS",
-      rating: 10.0,
-      playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-CXUK01ZZ&s2="
-    },
-    {
-      name: "SlotExpress",
-      logo: "SlotExpress-Casino.webp", // Change this filename to switch logos
-      bonus: "Up to £1,000 + 200 FS",
-      rating: 9.8,
-      playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-CXUK01ZZ&payload="
-    },
-    {
-      name: "30Bet",
-      logo: "30Bet.gif", // Change this filename to switch logos
-      bonus: "Up to £100 + 50 FS",
-      rating: 9.6,
-      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-CXUK01ZZ&payload="
-    },
-    {
-      name: "Superspins",
-      logo: "super spin (1).svg", // Change this filename to switch logos
-      bonus: "725% up to £6250 + 425 FS",
-      rating: 9.4,
-      playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-CXUK01ZZ&visit_id="
-    },
-    {
-      name: "RollySpin",
-      logo: "rollyspins.svg", // Change this filename to switch logos
-      bonus: "425% up to £4250 + 425 FS",
-      rating: 9.2,
-      playLink: "https://rollyspin19.net/d8hyrrn6u?subid=RollySpin-CXUK01ZZ&visit_id="
-    },
+    // {
+    //   name: "BetNinja",
+    //   logo: "BetNinja.png", // Change this filename to switch logos
+    //   bonus: "£1000 + 100 FS",
+    //   rating: 10.0,
+    //   playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-CXUK01ZZ&s2="
+    // },
+    // {
+    //   name: "SlotExpress",
+    //   logo: "SlotExpress-Casino.webp", // Change this filename to switch logos
+    //   bonus: "Up to £1,000 + 200 FS",
+    //   rating: 9.8,
+    //   playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-CXUK01ZZ&payload="
+    // },
+    // {
+    //   name: "30Bet",
+    //   logo: "30Bet.gif", // Change this filename to switch logos
+    //   bonus: "Up to £100 + 50 FS",
+    //   rating: 9.6,
+    //   playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-CXUK01ZZ&payload="
+    // },
+    // {
+    //   name: "Superspins",
+    //   logo: "super spin (1).svg", // Change this filename to switch logos
+    //   bonus: "725% up to £6250 + 425 FS",
+    //   rating: 9.4,
+    //   playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-CXUK01ZZ&visit_id="
+    // },
+    // {
+    //   name: "RollySpin",
+    //   logo: "rollyspins.svg", // Change this filename to switch logos
+    //   bonus: "425% up to £4250 + 425 FS",
+    //   rating: 9.2,
+    //   playLink: "https://rollyspin19.net/d8hyrrn6u?subid=RollySpin-CXUK01ZZ&visit_id="
+    // },
     
-    {
-      name: "WinOlympia",
-      logo: "Winolimpia.png", // Change this filename to switch logos
-      bonus: "425% up to £4250 + 425 FS",
-      rating: 9.0,
-      playLink: "https://tokenaffstracker.com/j5scxt5kf?subid=WinOlympia-CXUK01ZZ&visit_id="
-    },
-    {
-      name: "Lizaro",
-      logo: "lizaro.webp", // Change this filename to switch logos
-      bonus: "250% up to £2,550 + 350 FS + 1 Bonus Crab",
-      rating: 8.6,
-      playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-CXUK01ZZ&aff_click_id="
-    },
+    // {
+    //   name: "WinOlympia",
+    //   logo: "Winolimpia.png", // Change this filename to switch logos
+    //   bonus: "425% up to £4250 + 425 FS",
+    //   rating: 9.0,
+    //   playLink: "https://tokenaffstracker.com/j5scxt5kf?subid=WinOlympia-CXUK01ZZ&visit_id="
+    // },
+    // {
+    //   name: "Lizaro",
+    //   logo: "lizaro.webp", // Change this filename to switch logos
+    //   bonus: "250% up to £2,550 + 350 FS + 1 Bonus Crab",
+    //   rating: 8.6,
+    //   playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-CXUK01ZZ&aff_click_id="
+    // },
    {
       name: "GrandIvy",
       logo: "grandivy.webp",
