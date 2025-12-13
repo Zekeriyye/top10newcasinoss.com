@@ -1,91 +1,73 @@
+import { siteConfig } from '@/config/site';
+
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 bg-[#0F172A] border-y border-[#3B82F6]/20">
+    <section className="py-16 bg-[#0F1419] border-y border-[#FFD700]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-white to-[#8B5CF6] bg-clip-text text-transparent">
-              Why Choose Our Casino Guide?
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <span className="gradient-text">
+              {siteConfig.features.title}
             </span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            We're a UK-focused casino comparison platform dedicated exclusively to presenting UK Gambling Commission licensed casinos. Here's what makes us unique and why many British players trust our recommendations.
+          <p className="text-[#B8C5D6] text-lg max-w-3xl mx-auto">
+            {siteConfig.features.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Features */}
           <div className="space-y-6">
-            <div className="flex items-start space-x-4 bg-[#1E293B] border border-[#3B82F6]/30 rounded-xl p-5 hover:border-[#8B5CF6]/50 transition-all">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                <span className="text-white font-bold text-sm">1</span>
+            {siteConfig.features.items.map((feature, index) => (
+              <div key={index} className="flex items-start space-x-4 bg-[#1A2332] border border-[#FFD700]/20 rounded-xl p-6 hover:border-[#FFD700]/50 hover:shadow-lg hover:shadow-[#FFD700]/20 transition-all group">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#FFC929] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#FFD700]/50 group-hover:scale-110 transition-transform">
+                  <span className="text-2xl">{feature.icon}</span>
+                </div>
+                <div>
+                  <h3 className="text-[#FFD700] font-semibold text-xl mb-2">{feature.title}</h3>
+                  <p className="text-[#B8C5D6] leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-white font-semibold text-lg mb-2">Impartial & Objective</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  We maintain no ownership ties to any casino operator. Our assessments remain fully independent, grounded in genuine player feedback.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4 bg-[#1E293B] border border-[#3B82F6]/30 rounded-xl p-5 hover:border-[#8B5CF6]/50 transition-all">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                <span className="text-white font-bold text-sm">2</span>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold text-lg mb-2">UK Licensing Expertise</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  We focus solely on UK Gambling Commission licensed casinos, comprehending the unique requirements and expectations of British players.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4 bg-[#1E293B] border border-[#3B82F6]/30 rounded-xl p-5 hover:border-[#8B5CF6]/50 transition-all">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                <span className="text-white font-bold text-sm">3</span>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold text-lg mb-2">Continuous Testing & Refinement</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  We consistently evaluate each casino's games, promotions, and support services to maintain up-to-date information.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4 bg-[#1E293B] border border-[#3B82F6]/30 rounded-xl p-5 hover:border-[#8B5CF6]/50 transition-all">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                <span className="text-white font-bold text-sm">4</span>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold text-lg mb-2">Prioritizing Player Safety</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  We exclusively feature casinos equipped with robust responsible gambling resources, secure financial systems, and outstanding protective measures.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* Right Column - Stats */}
-          <div className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] border border-[#3B82F6]/40 rounded-xl p-8 shadow-xl">
-            <h3 className="text-white font-bold text-xl mb-6 text-center">Our Track Record</h3>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent mb-2">100%</div>
-                <div className="text-gray-300 text-sm">UK Licensed Casinos</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent mb-2">50K+</div>
-                <div className="text-gray-300 text-sm">Players Helped</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Support Available</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent mb-2">5★</div>
-                <div className="text-gray-300 text-sm">Average Rating</div>
+          {/* Right Column - Visual Element */}
+          <div className="relative">
+            <div className="bg-gradient-to-br from-[#1A2332] to-[#0F1419] border border-[#FFD700]/40 rounded-2xl p-8 shadow-xl">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-[#FFD700] font-bold text-2xl mb-4 text-center">Our Promise</h3>
+                  <p className="text-[#B8C5D6] text-center leading-relaxed">
+                    We're committed to helping UK players find the perfect casino match. Every recommendation is backed by thorough research, real player feedback, and strict quality standards.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-6 pt-6 border-t border-[#FFD700]/20">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold gradient-text mb-2">100%</div>
+                    <div className="text-[#B8C5D6] text-sm">Licensed Casinos</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold gradient-text mb-2">50K+</div>
+                    <div className="text-[#B8C5D6] text-sm">Happy Players</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold gradient-text mb-2">24/7</div>
+                    <div className="text-[#B8C5D6] text-sm">Support</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold gradient-text mb-2">4.9★</div>
+                    <div className="text-[#B8C5D6] text-sm">Avg Rating</div>
+                  </div>
+                </div>
               </div>
             </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#FFD700]/20 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#FFC929]/20 rounded-full blur-2xl"></div>
           </div>
         </div>
       </div>

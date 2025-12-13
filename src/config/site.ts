@@ -9,116 +9,95 @@ export interface CasinoBrand {
 
 export const siteConfig = {
   // Basic site information
-  name: "10 Best Casinos",
-  description: "Discover top-rated UK-licensed casinos featuring generous welcome bonuses and instant withdrawal options",
-  url: "https://10bestcasinos.org",
+  name: "Premium Casinos UK",
+  description: "Your ultimate guide to the best UK-licensed online casinos. Compare bonuses, games, and features to find your perfect casino match.",
+  url: "https://premiumcasinos.uk",
   
-  // Brand colors - modern blue and purple design
+  // Brand colors - sophisticated navy and gold design
   colors: {
-    primary: "#3B82F6",    // Vibrant Blue - trust & reliability
-    secondary: "#1E1B4B",  // Deep Indigo - premium & sophisticated
-    accent: "#8B5CF6",     // Purple - creativity & excellence
-    background: "#0F172A", // Deep navy background
-    surface: "#1E293B",   // Slate surface
-    text: "#F1F5F9",       // Off-white text
-    textSecondary: "#CBD5E1", // Light gray
+    primary: "#FFD700",    // Bright Gold - premium & wealth
+    secondary: "#1A2332",  // Deep Navy - sophisticated & trust
+    accent: "#FFC929",     // Vibrant Gold - luxury & rewards
+    background: "#0F1419", // Deep navy-black background
+    surface: "#1A2332",   // Dark navy surface
+    text: "#FFFFFF",       // Pure white text
+    textSecondary: "#B8C5D6", // Light blue-gray
+    gold: "#FFD700",       // Bright gold accent
+    navy: "#1A2332",       // Deep navy
   },
   
   // Hero section content
   hero: {
-    headline: "Top 10 Best Casinos for UK Players",
-    subtext: "Browse the finest online casinos offering outstanding welcome bonuses, protected gaming platforms and 24/7 customer support. Every casino listed is fully licensed by the UK Gambling Commission.",
+    headline: "Discover Your Winning Casino",
+    subtext: "We've handpicked the UK's finest licensed casinos, each offering exceptional bonuses, premium games, and lightning-fast payouts. Find your perfect match today.",
+    cta: "Explore Top Casinos",
   },
   
   // Casino brands data
   casinos: [
-    // {
-    //   name: "LuckyTwice",
-    //   logo: "luckytwice.webp", // Change this filename to switch logos
-    //   bonus: "100% UP TO £500\n250 FREE SPINS",
-    //   rating: 10.0,
-    //   playLink: "https://luckytwice.site/j90006c83?subid=LuckyTwice-CXUK01&clickid="
-    // },
-    // {
-    //   name: "Qbet",
-    //   logo: "qbet.png", // Change this filename to switch logos
-    //   bonus: "Bonus up to £100\n50 Free Spins ",
-    //   rating: 9.8,
-    //   playLink: "https://record.betgroup.partners/_YnRh4Sd1bK99cPJOz4tFzmNd7ZgqdRLk/2/?pg=5&s2s.req_id=QBET-CXUK01&payload="
-    // },
-    // {
-    //   name: "SpinMillion",
-    //   logo: "spinmillion.webp", // Change this filename to switch logos
-    //   bonus: "100% up to £750\n100 Free Spins\n3x Wheel of Luck",
-    //   rating: 9.6,
-    //   playLink: "https://www.spinmillionpartners.com/visit/?bta=35560&nci=5363&utm_campaign=SpinMillion-CXUK01&afp="
-    // },
-    // {
-    //   name: "FishAndSpins",
-    //   logo: "fishandspins.svg", // Change this filename to switch logos
-    //   bonus: "WELCOME BONUS\nUP TO €1500\nPLUS 175 BONUS SPINS",
-    //   rating: 9.4,
-    //   playLink: "https://fishnspins.site/jce4ac4a7?subid=FishAndSpins-CXUK01&clickid="
-    // },
-    // {
-    //   name: "GoldenGenie",
-    //   logo: "goldengenie.webp", // Change this filename to switch logos
-    //   bonus: "100 Free spins\n400% up to 2000€",
-    //   rating: 9.2,
-    //   playLink: "https://go.goldenwinpartners.com/visit/?bta=35642&nci=5468&utm_campaign=GoldenGenie-CXUK01&afp="
-    // },
+    {
+      name: "BetNinja",
+      logo: "BetNinja.png", // Change this filename to switch logos
+      bonus: "£1000 + 100 FS",
+      rating: 10.0,
+      playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-CXUK01ZZ&s2="
+    },
+    {
+      name: "SlotExpress",
+      logo: "SlotExpress-Casino.webp", // Change this filename to switch logos
+      bonus: "Up to £1,000 + 200 FS",
+      rating: 9.8,
+      playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-CXUK01ZZ&payload="
+    },
+    {
+      name: "30Bet",
+      logo: "30Bet.gif", // Change this filename to switch logos
+      bonus: "Up to £100 + 50 FS",
+      rating: 9.6,
+      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-CXUK01ZZ&payload="
+    },
+    {
+      name: "Superspins",
+      logo: "super spin (1).svg", // Change this filename to switch logos
+      bonus: "725% up to £6250 + 425 FS",
+      rating: 9.4,
+      playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-CXUK01ZZ&visit_id="
+    },
+    {
+      name: "RollySpin",
+      logo: "rollyspins.svg", // Change this filename to switch logos
+      bonus: "425% up to £4250 + 425 FS",
+      rating: 9.2,
+      playLink: "https://rollyspin19.net/d8hyrrn6u?subid=RollySpin-CXUK01ZZ&visit_id="
+    },
     
-    // {
-    //   name: "VegasHero",
-    //   logo: "VegasHero.png", // Change this filename to switch logos
-    //   bonus: "Exclusive bonus offer:\n 300% up to 500 EUR\n +300 FS\n +1 Bonus Crab",
-    //   rating: 9.0,
-    //   playLink: "https://vgr.naralvin.com/?mid=314792_1851701&subid=VegasHero-CXUK01&clickid="
-    // },
+    {
+      name: "WinOlympia",
+      logo: "Winolimpia.png", // Change this filename to switch logos
+      bonus: "425% up to £4250 + 425 FS",
+      rating: 9.0,
+      playLink: "https://tokenaffstracker.com/j5scxt5kf?subid=WinOlympia-CXUK01ZZ&visit_id="
+    },
    
-    // {
-    //   name: "WinBeast",
-    //   logo: "winbeast.svg", // Change this filename to switch logos
-    //   bonus: "Welcome Pack €/£3000\n300 FS",
-    //   rating: 8.8,
-    //   playLink: "https://beast-net.co/aue1i1msc?subid=WinBeast-CXUK01&visit_id="
-    // }
-    // ,
-    
-    // {
-    //   name: "Rizzio",
-    //   logo: "rizzio-logo-nl.svg", // Change this filename to switch logos
-    //   bonus: "EXCLUSIVE WELCOME CASINO BONUS\n250% UP TO £2.500\n100 FS ON WILDS OF FORTUNE!",
-    //   rating: 8.6,
-    //   playLink: "https://go.infinitystarspartners.com/visit/?bta=39161&nci=8800&utm_campaign=Rizzio-CXUK01&afp="
-    // },
-    // {
-    //   name: "50Crowns",
-    //   logo: "50crowns.svg", // Change this filename to switch logos
-    //   bonus: "100% up to £500\n100 FS",
-    //   rating: 8.4,
-    //   playLink: "https://beast-https://50crownsplay.com/je5suztrm?subid=50Crowns-CXUK01&clickid=.co/aojqgntf6?subid=WinBeast-CXUK01&visit_id="
-    // },
-
-    // {
-    //   name: "DraculaCasino",
-    //   logo: "dracula.png", // Change this filename to switch logos
-    //   bonus: "Slots welcome Package 777% \nup to $11,665.50\n20% cashback Wager: 25x",
-    //   rating: 8.2,
-    //   playLink: "https://go.afftrackio.com/visit/?bta=35684&nci=5362&utm_campaign=DraculaCasino-CXUK01&afp="
-    // },
     {
-      name: "GrandIvy",
-      logo: "grandivy.webp", // Change this filename to switch logos
-      bonus: "Bet £20\nGet 100 Free Spins",
-      rating: 8.0,
-      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
+      name: "WinBeast",
+      logo: "winbeast.svg", // Change this filename to switch logos
+      bonus: "Welcome Pack €/£3000\n300 FS",
+      rating: 8.8,
+      playLink: "https://beast-net.co/aue1i1msc?subid=WinBeast-CXUK01&visit_id="
     }
+    ,
     
-,
     {
+      name: "Lizaro",
+      logo: "lizaro.webp", // Change this filename to switch logos
+      bonus: "250% up to £2,550 + 350 FS + 1 Bonus Crab",
+      rating: 8.6,
+      playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-CXUK01ZZ&aff_click_id="
+    },
+   {
       name: "GrandIvy",
-      logo: "grandivy.webp", // Change this filename to switch logos
+      logo: "grandivy.webp",
       bonus: "Bet £20\nGet 100 Free Spins",
       rating: 8.0,
       playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
@@ -126,8 +105,49 @@ export const siteConfig = {
   ],
 
   
+  
+  // Features section
+  features: {
+    title: "Why Players Choose Us",
+    subtitle: "We make finding your perfect casino effortless",
+    items: [
+      {
+        icon: "🎯",
+        title: "Expertly Curated",
+        description: "Every casino is thoroughly vetted for quality, security, and player satisfaction"
+      },
+      {
+        icon: "⚡",
+        title: "Instant Comparisons",
+        description: "Compare bonuses, games, and features side-by-side in seconds"
+      },
+      {
+        icon: "🔒",
+        title: "100% Licensed",
+        description: "Only UK Gambling Commission licensed casinos make our list"
+      },
+      {
+        icon: "💎",
+        title: "Exclusive Bonuses",
+        description: "Access special welcome offers and promotions not available elsewhere"
+      }
+    ]
+  },
+  
+  // Trust signals
+  trustSignals: {
+    title: "Trusted by Thousands of UK Players",
+    subtitle: "Your safety and satisfaction are our top priorities",
+    stats: [
+      { value: "50K+", label: "Happy Players" },
+      { value: "100%", label: "Licensed Casinos" },
+      { value: "24/7", label: "Support Available" },
+      { value: "4.9★", label: "Average Rating" }
+    ]
+  },
+  
   // Contact information
   contact: {
-    email: "info@10bestcasinos.org"
+    email: "info@premiumcasinos.uk"
   }
 };

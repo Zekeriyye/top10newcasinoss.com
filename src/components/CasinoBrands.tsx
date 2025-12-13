@@ -10,39 +10,28 @@ export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
 
   useEffect(() => {
-    // Get tracking value - checks URL first, then sessionStorage
     const value = getTrackingValue();
     setTrackingValue(value);
     
-    // Debug: Log captured parameters (remove in production)
     if (value) {
       console.log('📊 Using tracking value:', value);
     }
   }, []);
 
-  // Function to process play links with tracking parameters
   const processPlayLink = (link: string) => {
     if (!trackingValue) {
-      return link; // No tracking value to append
+      return link;
     }
     
     let processedLink = link;
-    
-    // Common parameter names that might need the tracking value appended
     const trackingParamNames = ['gclid', 'payload', 'clickid', 'afp', 'gcslid', 'visit_id', 'trackid', 'ref', 'subid'];
     
-    // Check each parameter name to see if it exists empty in the URL
     for (const paramName of trackingParamNames) {
-      // Check if parameter exists with empty value: "param=" with nothing after (or just & after)
-      // Match: "&param=" or "?param=" at end OR "&param=&" in middle
       const emptyParamPattern = new RegExp(`([&?])${paramName}=(?=&|$)`);
       if (emptyParamPattern.test(processedLink)) {
-        // Replace the empty parameter with the tracking value
         if (processedLink.endsWith(`${paramName}=`)) {
-          // At the end of URL
           processedLink = processedLink + encodeURIComponent(trackingValue);
         } else {
-          // In the middle: "&param=&" becomes "&param=value&"
           processedLink = processedLink.replace(emptyParamPattern, `$1${paramName}=${encodeURIComponent(trackingValue)}`);
         }
         console.log(`✅ Appended tracking value to ${paramName}:`, processedLink);
@@ -50,10 +39,8 @@ export default function CasinoBrands() {
       }
     }
     
-    // If no empty parameter found, check if we should add clickid as default
     const hasTrackingParam = trackingParamNames.some(param => processedLink.includes(`${param}=`));
     if (!hasTrackingParam) {
-      // Add clickid parameter if URL uses query string
       const separator = processedLink.includes('?') ? '&' : '?';
       processedLink = `${processedLink}${separator}clickid=${encodeURIComponent(trackingValue)}`;
       console.log('Added clickid parameter:', processedLink);
@@ -62,117 +49,242 @@ export default function CasinoBrands() {
     return processedLink;
   };
 
-  // Generate random visitor count for demo purposes
   const getVisitorCount = (index: number) => {
-    const counts = [866, 881, 973, 611, 208, 621, 290, 628, 662, 463];
+    const counts = [1146, 668, 893, 766, 621, 543, 487, 432, 389, 356];
     return counts[index % counts.length];
   };
 
-  // Ribbon badge - only first casino gets EDITOR'S PICK
-  const getRibbonType = (index: number) => {
-    if (index === 0) return 'EDITOR\'S PICK';
+  const getBadge = (index: number) => {
+    if (index === 0) return { text: 'TOP IN UK', color: 'from-[#FFD700] to-[#FFC929]', icon: 'star' };
+    if (index === 1) return { text: 'POPULAR', color: 'from-[#B8C5D6] to-[#8899AA]', icon: 'flame' };
+    if (index === 2) return { text: 'EXCLUSIVE', color: 'from-[#FFD700] to-[#FFC929]', icon: 'gift' };
     return null;
   };
 
   return (
-    <section id="casinos" className="py-6 md:py-10 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] relative overflow-hidden">
+    <section id="casinos" className="pt-4 pb-8 md:py-16 bg-[#0F1419] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-600 rounded-full filter blur-3xl"></div>
+      <div className="absolute inset-0 overflow-hidden opacity-10">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#FFD700] rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#FFC929] rounded-full filter blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-3 md:px-4">
-        <div className="space-y-4 md:space-y-5">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        {/* Table Header - Desktop Only */}
+        <div className="hidden md:grid md:grid-cols-12 gap-4 mb-3 px-4">
+          <div className="col-span-2 text-gray-400 text-xs font-semibold uppercase tracking-wider">Casino</div>
+          <div className="col-span-4 text-gray-400 text-xs font-semibold uppercase tracking-wider">Welcome Bonus</div>
+          <div className="col-span-3 text-gray-400 text-xs font-semibold uppercase tracking-wider">Rating</div>
+          <div className="col-span-3 text-gray-400 text-xs font-semibold uppercase tracking-wider">Play Now</div>
+        </div>
+
+        {/* Casino Cards */}
+        <div className="space-y-3">
           {siteConfig.casinos.map((casino, index) => {
-            const ribbonType = getRibbonType(index);
+            const badge = getBadge(index);
             const visitorCount = getVisitorCount(index);
-            const isLastBrand = index === siteConfig.casinos.length - 1;
-            
-            // Visibility logic: Last brand shows only on desktop, all others show only on mobile
-            const visibilityClass = isLastBrand ? 'hidden md:block' : 'block md:hidden';
+            const rank = index + 1;
 
             return (
-              <div key={index} className={`relative pt-5 ${visibilityClass}`}>
-                {/* Small Badge Box */}
-                {ribbonType && (
-                  <div className="absolute -top-0 left-4 md:left-6 z-20">
-                    <div className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs md:text-sm font-bold px-3 md:px-4 py-2 rounded-lg shadow-lg">
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <div key={index} className="relative group">
+                {/* Badge */}
+                {badge && (
+                  <div className="absolute -top-2 left-3 z-20">
+                    <div className={`flex items-center gap-1 bg-gradient-to-r ${badge.color} text-gray-900 text-[9px] md:text-[10px] font-bold px-2.5 py-1 rounded-md shadow-lg`}>
+                      {badge.icon === 'star' && (
+                        <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
-                      <span className="uppercase">{ribbonType}</span>
+                      )}
+                      {badge.icon === 'flame' && (
+                        <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
+                        </svg>
+                      )}
+                      {badge.icon === 'gift' && (
+                        <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z" clipRule="evenodd" />
+                          <path d="M9 11H3v6a2 2 0 002 2h4v-8zm2 0v8h4a2 2 0 002-2v-6h-6z" />
+                        </svg>
+                      )}
+                      <span>{badge.text}</span>
                     </div>
                   </div>
                 )}
 
                 {/* Casino Card */}
-                <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-blue-400/30">
-                  <div className="flex flex-row min-h-[200px] md:min-h-[280px]">
-                    {/* Left Section - Blue/Purple Gradient with Angled Edge */}
-                    <div 
-                      className="relative bg-gradient-to-br from-blue-600 via-blue-500 to-purple-500 p-4 md:p-8 flex flex-col justify-between w-[40%] md:w-[40%]"
-                      style={{
-                        clipPath: 'polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)'
-                      }}
-                    >
-                      {/* Casino Logo - Centered - Bigger */}
-                      <div className="flex items-center justify-center mb-2 md:mb-4">
-                        <div className="relative h-24 w-full md:h-40 md:w-full px-2 md:px-4">
+                <div className="bg-[#1A2332] border border-[#FFD700]/20 rounded-lg overflow-hidden hover:border-[#FFD700]/50 hover:shadow-lg hover:shadow-[#FFD700]/20 transition-all duration-300">
+                  {/* Mobile Layout - Horizontal */}
+                  <div className="md:hidden flex items-center gap-3 p-3">
+                    {/* Left Section - Logo & Info */}
+                    <div className="flex items-center gap-3 flex-shrink-0">
+                      {/* Logo - Bigger */}
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#FFD700]/20 to-[#FFC929]/20 p-2 border border-[#FFD700]/30 flex-shrink-0">
+                        <div className="relative w-full h-full">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
                             alt={casino.name}
                             fill
-                            className="filter drop-shadow-2xl"
-                            style={{ objectFit: 'contain', objectPosition: 'center' }}
+                            className="object-contain rounded-full"
+                            style={{ objectFit: 'contain' }}
                           />
                         </div>
                       </div>
 
-                      {/* Rating Section - Bottom - Smaller */}
-                      <div className="flex items-end justify-center">
-                        <div className="text-center">
-                          <div className="text-3xl md:text-5xl font-bold text-white leading-none mb-1">{casino.rating}</div>
-                          <div className="flex items-center justify-center gap-0.5 mb-1">
+                      {/* Rating & Info */}
+                      <div className="flex flex-col gap-1.5">
+                        {/* Live Players */}
+                        <div className="flex items-center gap-1 text-[#FFD700] text-[10px]">
+                          <div className="w-1.5 h-1.5 bg-[#FFD700] rounded-full animate-pulse"></div>
+                          <span>{visitorCount} Live Players</span>
+                        </div>
+                        
+                        {/* Star Rating & Number */}
+                        <div className="flex items-center gap-1.5">
+                          <div className="flex items-center gap-0.5">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <span
                                 key={star}
-                                className={`text-xs md:text-base ${
+                                className={`text-[10px] ${
                                   star <= Math.round(casino.rating) 
-                                    ? 'text-blue-300' 
-                                    : 'text-white/30'
+                                    ? 'text-[#FFD700]' 
+                                    : 'text-gray-600'
                                 }`}
                               >
                                 ★
                               </span>
                             ))}
                           </div>
-                          <div className="flex items-center justify-center gap-1 text-white text-xs font-semibold">
-                            <span>{visitorCount}</span>
-                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                              <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                            </svg>
-                          </div>
+                          <span className="text-[#FFD700] text-xs font-bold">{casino.rating}</span>
                         </div>
                       </div>
                     </div>
 
-                    {/* Right Section - Dark Slate */}
-                    <div className="relative bg-gradient-to-br from-[#1E293B] to-[#334155] p-4 md:p-8 flex flex-col justify-center w-[60%] md:w-[60%]">
-                      {/* Bonus Offer Text - Centered */}
-                      <div className="text-center flex-1 flex flex-col justify-center mb-3 md:mb-4">
-                        <div className="text-white text-xl md:text-4xl font-bold mb-1 md:mb-3 leading-tight">
+                    {/* Right Section - Bonus & CTA */}
+                    <div className="flex-1 flex flex-col justify-center gap-2 min-w-0">
+                      {/* Bonus */}
+                      <div>
+                        <div className="text-[#FFD700] text-xs font-bold leading-tight">
                           {casino.bonus.split('\n')[0] || casino.bonus}
                         </div>
                         {casino.bonus.includes('\n') && (
-                          <div className="text-blue-300 text-lg md:text-3xl font-bold leading-tight">
+                          <div className="text-[#B8C5D6] text-[10px] leading-tight mt-0.5">
                             {casino.bonus.split('\n')[1]}
                           </div>
                         )}
                       </div>
 
-                      {/* GET BONUS Button - Elegant Blue/Purple */}
-                      <div>
+                      {/* CTA Button */}
+                      <a
+                        href={processPlayLink(casino.playLink)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => {
+                          track('casino_click', {
+                            casino_name: casino.name,
+                            casino_rating: casino.rating.toString(),
+                            position: rank.toString(),
+                            button_type: 'get_bonus'
+                          });
+                        }}
+                        className="w-full btn-primary py-2 px-3 rounded-lg text-center text-[10px]"
+                      >
+                        PLAY NOW
+                      </a>
+                      
+                      {/* Payment Icons */}
+                      <div className="flex items-center gap-2 justify-center">
+                        <div className="relative w-8 h-5">
+                          <Image
+                            src="/logos/credit-card-debit-card-mastercard-logo-visa-go-vector-thumbnail.jpg"
+                            alt="VISA"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div className="relative w-8 h-5">
+                          <Image
+                            src="/logos/MasterCard_Logo.svg.png"
+                            alt="Mastercard"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div className="relative w-8 h-5">
+                          <Image
+                            src="/logos/PayPal_Logo_Icon_2014.svg"
+                            alt="PayPal"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Desktop Layout - Grid */}
+                  <div className="hidden md:grid md:grid-cols-12 gap-4 p-4">
+                    {/* Rank & Casino Info - Column 1 */}
+                    <div className="col-span-2 flex items-center gap-3">
+                      {/* Rank Number */}
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#FFD700] to-[#FFC929] flex items-center justify-center text-[#1A2332] font-bold text-xl shadow-lg shadow-[#FFD700]/50">
+                        {rank}
+                      </div>
+                      
+                      {/* Logo - Bigger */}
+                      <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gradient-to-br from-[#FFD700]/20 to-[#FFC929]/20 p-2 border border-[#FFD700]/30">
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={`/casino-logos/${casino.logo}`}
+                            alt={casino.name}
+                            fill
+                            className="object-contain rounded-full"
+                            style={{ objectFit: 'contain' }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Welcome Bonus - Column 2 */}
+                    <div className="col-span-4 flex flex-col justify-center">
+                      <div className="text-[#FFD700] text-xs font-semibold uppercase mb-1">
+                        Bonus
+                      </div>
+                      <div className="text-[#FFD700] text-base font-bold leading-tight">
+                        {casino.bonus.split('\n')[0] || casino.bonus}
+                      </div>
+                        {casino.bonus.includes('\n') && (
+                          <div className="text-[#B8C5D6] text-sm font-semibold leading-tight mt-0.5">
+                          {casino.bonus.split('\n')[1]}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Rating - Column 3 */}
+                    <div className="col-span-3 flex flex-col justify-center items-center">
+                      <div className="flex items-center gap-0.5 mb-1">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <span
+                            key={star}
+                            className={`text-sm ${
+                              star <= Math.round(casino.rating) 
+                                ? 'text-[#FFD700]' 
+                                : 'text-gray-600'
+                            }`}
+                          >
+                            ★
+                          </span>
+                        ))}
+                      </div>
+                      <div className="text-[#FFD700] text-lg font-bold mb-2">{casino.rating}</div>
+                      <div className="flex items-center gap-1.5 text-[#FFD700] text-xs">
+                        <div className="w-1.5 h-1.5 bg-[#FFD700] rounded-full animate-pulse"></div>
+                        <span>{visitorCount} Live Players</span>
+                      </div>
+                    </div>
+
+                    {/* CTA Button - Column 4 */}
+                    <div className="col-span-3 flex flex-col justify-center">
                         <a
                           href={processPlayLink(casino.playLink)}
                           target="_blank"
@@ -181,14 +293,41 @@ export default function CasinoBrands() {
                             track('casino_click', {
                               casino_name: casino.name,
                               casino_rating: casino.rating.toString(),
-                              position: (index + 1).toString(),
+                            position: rank.toString(),
                               button_type: 'get_bonus'
                             });
                           }}
-                          className="block w-full bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#3B82F6] text-white font-bold py-2.5 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl text-center text-sm md:text-lg hover:from-[#2563EB] hover:via-[#7C3AED] hover:to-[#2563EB] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 border border-[#3B82F6]"
+                        className="w-full btn-primary py-3 px-4 rounded-lg text-center text-sm"
                         >
-                          GET BONUS
+                        PLAY NOW
                         </a>
+                      
+                      {/* Payment Methods */}
+                      <div className="flex items-center justify-center gap-2 mt-2">
+                        <div className="relative w-10 h-6">
+                          <Image
+                            src="/logos/credit-card-debit-card-mastercard-logo-visa-go-vector-thumbnail.jpg"
+                            alt="VISA"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div className="relative w-10 h-6">
+                          <Image
+                            src="/logos/MasterCard_Logo.svg.png"
+                            alt="Mastercard"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div className="relative w-10 h-6">
+                          <Image
+                            src="/logos/PayPal_Logo_Icon_2014.svg"
+                            alt="PayPal"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
