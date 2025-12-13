@@ -134,11 +134,11 @@ export default function CasinoBrands() {
                 {/* Casino Card */}
                 <div className="bg-[#1A2332] border border-[#FFD700]/20 rounded-xl md:rounded-lg overflow-hidden hover:border-[#FFD700]/50 hover:shadow-lg hover:shadow-[#FFD700]/20 transition-all duration-300">
                   {/* Mobile Layout - Horizontal */}
-                  <div className="md:hidden flex items-center gap-4 p-5">
-                    {/* Left Section - Logo & Info */}
-                    <div className="flex items-center gap-4 flex-shrink-0">
-                      {/* Logo - Bigger */}
-                      <div className="w-28 h-28 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[#FFD700]/20 to-[#FFC929]/20 p-2.5 md:p-2 border-2 md:border border-[#FFD700]/30 flex-shrink-0">
+                  <div className="md:hidden flex items-center gap-5 p-5">
+                    {/* Left Section - Logo, Rating & Live Players Stacked */}
+                    <div className="flex flex-col items-center gap-2 flex-shrink-0">
+                      {/* Logo */}
+                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#FFD700]/20 to-[#FFC929]/20 p-2.5 border-2 border-[#FFD700]/30 flex-shrink-0">
                         <div className="relative w-full h-full">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
@@ -150,44 +150,41 @@ export default function CasinoBrands() {
                         </div>
                       </div>
 
-                      {/* Rating & Info */}
-                      <div className="flex flex-col gap-2 md:gap-1.5">
-                        {/* Live Players */}
-                        <div className="flex items-center gap-1.5 text-white text-xs md:text-[10px]">
-                          <div className="w-2 h-2 md:w-1.5 md:h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
-                          <span>{visitorCount} Live Players</span>
-                        </div>
-                        
-                        {/* Star Rating & Number */}
-                        <div className="flex items-center gap-2 md:gap-1.5">
-                          <div className="flex items-center gap-0.5">
+                      {/* Live Players - Under Logo */}
+                      <div className="flex items-center gap-1.5 text-white text-[10px]">
+                        <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span>{visitorCount} Live</span>
+                      </div>
+                      
+                      {/* Star Rating & Number - Under Live Players */}
+                      <div className="flex flex-col items-center gap-1">
+                        <div className="flex items-center gap-0.5">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <span
                                 key={star}
-                                className={`text-sm md:text-[10px] ${
+                              className={`text-xs ${
                                   star <= Math.round(casino.rating) 
-                                    ? 'text-[#FFD700]' 
-                                    : 'text-gray-600'
+                                  ? 'text-[#FFD700]' 
+                                  : 'text-gray-600'
                                 }`}
                               >
                                 ★
                               </span>
                             ))}
                           </div>
-                          <span className="text-[#FFD700] text-base md:text-xs font-bold">{casino.rating}</span>
-                        </div>
+                        <span className="text-[#FFD700] text-sm font-bold">{casino.rating}</span>
                       </div>
                     </div>
 
                     {/* Right Section - Bonus & CTA */}
-                    <div className="flex-1 flex flex-col justify-center gap-3 md:gap-2 min-w-0">
+                    <div className="flex-1 flex flex-col justify-center gap-4 min-w-0">
                       {/* Bonus */}
-                      <div className="text-center md:text-left">
-                        <div className="text-white text-base md:text-xs font-bold leading-tight">
+                      <div className="text-center">
+                        <div className="text-white text-lg font-bold leading-tight">
                           {casino.bonus.split('\n')[0] || casino.bonus}
                         </div>
                         {casino.bonus.includes('\n') && (
-                          <div className="text-white text-sm md:text-[10px] leading-tight mt-1 md:mt-0.5">
+                          <div className="text-white text-base leading-tight mt-1">
                             {casino.bonus.split('\n')[1]}
                           </div>
                         )}
@@ -206,7 +203,7 @@ export default function CasinoBrands() {
                             button_type: 'get_bonus'
                           });
                         }}
-                        className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-3 md:py-2 px-4 md:px-3 rounded-xl md:rounded-lg text-center text-sm md:text-[10px] shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transform hover:scale-[1.02] transition-all duration-300"
+                        className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-xl text-center text-base shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transform hover:scale-[1.02] transition-all duration-300"
                       >
                         PLAY NOW
                       </a>
