@@ -11,7 +11,7 @@ export const siteConfig = {
   // Basic site information
   name: "Premium Casinos UK",
   description: "Discover the UK's most trusted online casinos. Compare top-rated platforms, exclusive bonuses, and premium gaming experiences all in one place.",
-  url: "https://premiumcasinos.uk",
+  url: "https://top10newcasinoss.com",
   
   // Brand colors - modern purple and cyan design
   colors: {
@@ -138,6 +138,6 @@ export const siteConfig = {
   
   // Contact information
   contact: {
-    email: "info@premiumcasinos.uk"
+    email: "info@top10newcasinoss.com"
   }
 };
