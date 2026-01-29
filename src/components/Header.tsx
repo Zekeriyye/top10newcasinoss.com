@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="flex items-center group">
             <div className="relative w-36 h-8 md:w-56 md:h-14">
               <Image
-                src="/logos/premiumcasinos-logo.svg"
+                src="/logos/top10newcasinoss-logo.svg"
                 alt={siteConfig.name}
                 fill
                 className="object-contain group-hover:opacity-90 transition-opacity"

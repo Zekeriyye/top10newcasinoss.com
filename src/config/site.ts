@@ -9,7 +9,7 @@ export interface CasinoBrand {
 
 export const siteConfig = {
   // Basic site information
-  name: "Premium Casinos UK",
+  name: "Top 10 New Casinos",
   description: "Discover the UK's most trusted online casinos. Compare top-rated platforms, exclusive bonuses, and premium gaming experiences all in one place.",
   url: "https://top10newcasinoss.com",
   

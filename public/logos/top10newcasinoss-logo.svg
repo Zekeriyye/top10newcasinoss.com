@@ -1,0 +1,76 @@
+<svg width="280" height="70" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A78BFA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#22D3EE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0A0F;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Playing Cards Stack -->
+  <g transform="translate(5, 12)">
+    <!-- Card 3 (back) -->
+    <rect x="8" y="6" width="24" height="34" rx="2" fill="url(#darkGradient)" stroke="url(#purpleGradient)" stroke-width="2"/>
+    
+    <!-- Card 2 (middle) -->
+    <rect x="4" y="3" width="24" height="34" rx="2" fill="url(#darkGradient)" stroke="url(#cyanGradient)" stroke-width="2"/>
+    
+    <!-- Card 1 (front - Ace) -->
+    <rect x="0" y="0" width="24" height="34" rx="2" fill="url(#darkGradient)" stroke="url(#purpleGradient)" stroke-width="2.5"/>
+    
+    <!-- A -->
+    <text x="12" y="11" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="url(#purpleGradient)" text-anchor="middle">A</text>
+    
+    <!-- Spade -->
+    <g transform="translate(12, 15)">
+      <path d="M0,-4 Q-2.5,0 0,2 Q2.5,0 0,-4 M-1.5,2 Q0,3 1.5,2" fill="url(#cyanGradient)"/>
+    </g>
+  </g>
+  
+  <!-- Poker Chip -->
+  <g transform="translate(38, 12)">
+    <circle cx="23" cy="23" r="20" fill="url(#darkGradient)" stroke="url(#purpleGradient)" stroke-width="3"/>
+    <circle cx="23" cy="23" r="14" fill="none" stroke="url(#cyanGradient)" stroke-width="1.5"/>
+    
+    <!-- Chip edge segments (8 segments) -->
+    <g stroke="url(#purpleGradient)" stroke-width="3.5" stroke-linecap="round">
+      <line x1="23" y1="3" x2="23" y2="9" />
+      <line x1="37" y1="9" x2="33" y2="13" />
+      <line x1="43" y1="23" x2="37" y2="23" />
+      <line x1="37" y1="37" x2="33" y2="33" />
+      <line x1="23" y1="43" x2="23" y2="37" />
+      <line x1="9" y1="37" x2="13" y2="33" />
+      <line x1="3" y1="23" x2="9" y2="23" />
+      <line x1="9" y1="9" x2="13" y2="13" />
+    </g>
+    
+    <!-- Center value -->
+    <text x="23" y="28" font-family="Arial" font-size="10" font-weight="bold" fill="url(#cyanGradient)" text-anchor="middle">£</text>
+  </g>
+  
+  <!-- Main Text -->
+  <g>
+    <text x="102" y="32" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="url(#purpleGradient)" filter="url(#glow)">
+      TOP 10 NEW
+    </text>
+    <text x="102" y="52" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#CBD5E1">
+      CASINOS UK
+    </text>
+  </g>
+</svg>
