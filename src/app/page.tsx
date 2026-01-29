@@ -9,7 +9,7 @@ import CasinoPopup from '@/components/CasinoPopup';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#0F1419] relative">
+    <div className="min-h-screen bg-[#0A0A0F] relative">
       <div className="relative z-10">
         <Header />
         <Hero />

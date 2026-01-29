@@ -73,18 +73,18 @@ export default function CasinoBrands() {
   };
 
   const getBadge = (index: number) => {
-    if (index === 0) return { text: 'TOP IN UK', color: 'from-[#FFD700] to-[#FFC929]', icon: 'star' };
-    if (index === 1) return { text: 'POPULAR', color: 'from-[#B8C5D6] to-[#8899AA]', icon: 'flame' };
-    if (index === 2) return { text: 'EXCLUSIVE', color: 'from-[#FFD700] to-[#FFC929]', icon: 'gift' };
+    if (index === 0) return { text: 'TOP IN UK', color: 'from-[#8B5CF6] to-[#06B6D4]', icon: 'star' };
+    if (index === 1) return { text: 'POPULAR', color: 'from-[#CBD5E1] to-[#94A3B8]', icon: 'flame' };
+    if (index === 2) return { text: 'EXCLUSIVE', color: 'from-[#8B5CF6] to-[#06B6D4]', icon: 'gift' };
     return null;
   };
 
   return (
-    <section id="casinos" className="pt-6 pb-8 md:py-16 bg-[#0F1419] relative overflow-hidden">
+    <section id="casinos" className="pt-6 pb-8 md:py-16 bg-[#0A0A0F] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#FFD700] rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#FFC929] rounded-full filter blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6] rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#06B6D4] rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
@@ -136,13 +136,13 @@ export default function CasinoBrands() {
                 )}
 
                 {/* Casino Card */}
-                <div className="bg-[#1A2332] border border-[#FFD700]/20 rounded-xl md:rounded-lg overflow-hidden hover:border-[#FFD700]/50 hover:shadow-lg hover:shadow-[#FFD700]/20 transition-all duration-300">
+                <div className="bg-[#1A1A2E] border border-[#8B5CF6]/20 rounded-xl md:rounded-lg overflow-hidden hover:border-[#8B5CF6]/50 hover:shadow-lg hover:shadow-[#8B5CF6]/20 transition-all duration-300">
                   {/* Mobile Layout - Horizontal */}
                   <div className="md:hidden flex items-center gap-5 p-5">
                     {/* Left Section - Logo, Rating & Live Players Stacked */}
                     <div className="flex flex-col items-center gap-2 flex-shrink-0">
                       {/* Logo */}
-                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#FFD700]/20 to-[#FFC929]/20 p-2.5 border-2 border-[#FFD700]/30 flex-shrink-0">
+                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#8B5CF6]/20 to-[#06B6D4]/20 p-2.5 border-2 border-[#8B5CF6]/30 flex-shrink-0">
                         <div className="relative w-full h-full">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
@@ -168,7 +168,7 @@ export default function CasinoBrands() {
                                 key={star}
                               className={`text-xs ${
                                   star <= Math.round(casino.rating) 
-                                  ? 'text-[#FFD700]' 
+                                  ? 'text-[#8B5CF6]' 
                                   : 'text-gray-600'
                                 }`}
                               >
@@ -176,7 +176,7 @@ export default function CasinoBrands() {
                               </span>
                             ))}
                           </div>
-                        <span className="text-[#FFD700] text-sm font-bold">{casino.rating}</span>
+                        <span className="text-[#8B5CF6] text-sm font-bold">{casino.rating}</span>
                       </div>
                     </div>
 
@@ -247,12 +247,12 @@ export default function CasinoBrands() {
                     {/* Rank & Casino Info - Column 1 */}
                     <div className="col-span-2 flex items-center gap-3">
                       {/* Rank Number */}
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#FFD700] to-[#FFC929] flex items-center justify-center text-[#1A2332] font-bold text-xl shadow-lg shadow-[#FFD700]/50">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#06B6D4] flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#8B5CF6]/50">
                         {rank}
                       </div>
                       
                       {/* Logo - Bigger */}
-                      <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gradient-to-br from-[#FFD700]/20 to-[#FFC929]/20 p-2 border border-[#FFD700]/30">
+                      <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gradient-to-br from-[#8B5CF6]/20 to-[#06B6D4]/20 p-2 border border-[#8B5CF6]/30">
                         <div className="relative w-full h-full">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
@@ -267,7 +267,7 @@ export default function CasinoBrands() {
 
                     {/* Welcome Bonus - Column 2 */}
                     <div className="col-span-4 flex flex-col justify-center">
-                      <div className="text-[#FFD700] text-xs font-semibold uppercase mb-1">
+                      <div className="text-[#8B5CF6] text-xs font-semibold uppercase mb-1">
                         Bonus
                       </div>
                       <div className="text-white text-base font-bold leading-tight">
@@ -288,7 +288,7 @@ export default function CasinoBrands() {
                             key={star}
                             className={`text-sm ${
                               star <= Math.round(casino.rating) 
-                                ? 'text-[#FFD700]' 
+                                ? 'text-[#8B5CF6]' 
                                 : 'text-gray-600'
                             }`}
                           >
@@ -296,7 +296,7 @@ export default function CasinoBrands() {
                           </span>
                         ))}
                       </div>
-                      <div className="text-[#FFD700] text-lg font-bold mb-2">{casino.rating}</div>
+                      <div className="text-[#8B5CF6] text-lg font-bold mb-2">{casino.rating}</div>
                       <div className="flex items-center gap-1.5 text-white text-xs">
                         <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
                         <span>{visitorCount} Live Players</span>

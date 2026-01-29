@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #FFD700;
-  --color-secondary: #1A2332;
-  --color-accent: #FFC929;
-  --color-background: #0F1419;
-  --color-surface: #1A2332;
+  --color-primary: #8B5CF6;
+  --color-secondary: #06B6D4;
+  --color-accent: #A78BFA;
+  --color-background: #0A0A0F;
+  --color-surface: #1A1A2E;
   --color-text: #FFFFFF;
-  --color-text-secondary: #B8C5D6;
-  --color-gold: #FFD700;
-  --color-navy: #1A2332;
+  --color-text-secondary: #CBD5E1;
+  --color-purple: #8B5CF6;
+  --color-cyan: #06B6D4;
 }
 
 * {
@@ -43,8 +43,8 @@ body::before {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(201, 160, 95, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(26, 35, 50, 0.3) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.12) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -61,51 +61,51 @@ a {
   }
 
   .btn-primary {
-    @apply btn bg-gradient-to-r from-[#FFD700] via-[#FFC929] to-[#FFD700] text-[#1A2332] hover:from-[#FFC929] hover:via-[#FFE55C] hover:to-[#FFC929] focus:ring-[#FFD700] shadow-lg hover:shadow-[#FFD700]/50 font-bold transform hover:scale-105 transition-all duration-200;
+    @apply btn bg-gradient-to-r from-[#8B5CF6] via-[#A78BFA] to-[#8B5CF6] text-white hover:from-[#A78BFA] hover:via-[#C4B5FD] hover:to-[#A78BFA] focus:ring-[#8B5CF6] shadow-lg hover:shadow-[#8B5CF6]/50 font-bold transform hover:scale-105 transition-all duration-200;
   }
 
   .btn-secondary {
-    @apply btn bg-gradient-to-r from-[#1A2332] via-[#2A3342] to-[#1A2332] text-[#FFD700] hover:from-[#2A3342] hover:via-[#3A4352] hover:to-[#2A3342] focus:ring-[#FFD700] shadow-lg hover:shadow-[#FFD700]/50 font-bold transform hover:scale-105 transition-all duration-200 border border-[#FFD700]/30;
+    @apply btn bg-gradient-to-r from-[#1A1A2E] via-[#2A2A3E] to-[#1A1A2E] text-[#06B6D4] hover:from-[#2A2A3E] hover:via-[#3A3A4E] hover:to-[#2A2A3E] focus:ring-[#06B6D4] shadow-lg hover:shadow-[#06B6D4]/50 font-bold transform hover:scale-105 transition-all duration-200 border border-[#06B6D4]/30;
   }
 
   .card {
     @apply rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm transition-all duration-300;
-    background: linear-gradient(135deg, rgba(26, 35, 50, 0.95) 0%, rgba(15, 20, 25, 0.95) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.2);
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(10, 10, 15, 0.95) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.2);
   }
   
   .card:hover {
-    border-color: rgba(255, 215, 0, 0.5);
+    border-color: rgba(139, 92, 246, 0.5);
     transform: translateY(-4px);
-    box-shadow: 0 25px 50px -12px rgba(255, 215, 0, 0.3), 0 0 0 1px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.3), 0 0 0 1px rgba(6, 182, 212, 0.2);
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-[#FFD700] via-[#FFC929] to-[#FFD700] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#8B5CF6] via-[#06B6D4] to-[#8B5CF6] bg-clip-text text-transparent;
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(15, 20, 25, 0.1) 50%, rgba(26, 35, 50, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(10, 10, 15, 0.1) 50%, rgba(6, 182, 212, 0.2) 100%);
   }
 
   .neon-glow {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 0 0 40px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(6, 182, 212, 0.2);
   }
   
   .text-glow {
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.5), 0 0 60px rgba(255, 215, 0, 0.3);
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.5), 0 0 60px rgba(6, 182, 212, 0.3);
   }
   
   .text-glow-white {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3);
   }
   
-  .gold-gradient {
-    @apply bg-gradient-to-r from-[#FFD700] via-[#FFC929] to-[#FFD700];
+  .purple-gradient {
+    @apply bg-gradient-to-r from-[#8B5CF6] via-[#A78BFA] to-[#8B5CF6];
   }
   
-  .navy-gradient {
-    @apply bg-gradient-to-r from-[#1A2332] via-[#2A3342] to-[#1A2332];
+  .cyan-gradient {
+    @apply bg-gradient-to-r from-[#06B6D4] via-[#22D3EE] to-[#06B6D4];
   }
 
   .casino-grid {

@@ -69,7 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <meta name="theme-color" content="#0F1419" />
+        <meta name="theme-color" content="#0A0A0F" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={inter.className}>

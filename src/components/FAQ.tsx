@@ -7,36 +7,36 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Are all casinos on this site UK-licensed?",
-      answer: "Absolutely. Every casino featured on our platform holds a full UK Gambling Commission license. This ensures they meet strict UK standards for player protection, fair gaming, and responsible gambling practices."
+      question: "Do all listed casinos have UK licensing?",
+      answer: "Yes, without exception. Each platform displayed on our site operates under a valid UK Gambling Commission license. This guarantees adherence to rigorous UK regulations covering player safety, game fairness, and responsible gambling measures."
     },
     {
-      question: "How do you choose which casinos to feature?",
-      answer: "We evaluate casinos based on multiple factors including UK licensing status, game variety, bonus offers, customer support quality, payment options, withdrawal speeds, and overall player satisfaction. Only top-tier UK-licensed casinos make our list."
+      question: "What criteria determine which casinos appear here?",
+      answer: "Our selection process considers numerous aspects: valid UK licensing, game library diversity, promotional offers, support responsiveness, banking methods, cashout speed, and user experience ratings. We exclusively showcase premium UK-regulated operators."
     },
     {
-      question: "Are the bonus offers accurate and up-to-date?",
-      answer: "We regularly update our bonus information, but terms can change. We always recommend checking the casino's official website for the latest bonus details and wagering requirements before signing up."
+      question: "How current is the bonus information?",
+      answer: "We maintain regular updates to our promotional details, though operators may modify terms. Always verify the latest bonus conditions and playthrough requirements directly on the casino's website before creating an account."
     },
     {
-      question: "Is it safe to play at these casinos?",
-      answer: "Yes, all featured casinos are UK Gambling Commission licensed, use SSL encryption for secure transactions, and follow comprehensive responsible gambling standards. Your safety and security are our top priorities."
+      question: "Are these casinos secure to use?",
+      answer: "Absolutely. Every featured operator is UK Gambling Commission licensed, implements SSL encryption for data protection, and adheres to strict responsible gambling protocols. We prioritize your security above all else."
     },
     {
-      question: "Do you charge for using this service?",
-      answer: "No, our comparison service is completely free to use. We may earn commissions when you register through our links, but this never influences our reviews or the bonuses available to you."
+      question: "Is there any cost to use your comparison service?",
+      answer: "Our platform is entirely free for users. We may receive referral commissions when you sign up through our links, but this never affects our editorial independence or the bonuses you receive."
     },
     {
-      question: "What should I do if I have a problem with a casino?",
-      answer: "First, contact the casino's customer support team directly. If the issue remains unresolved, you can escalate it to the UK Gambling Commission or use their Alternative Dispute Resolution (ADR) services."
+      question: "How should I handle disputes with a casino?",
+      answer: "Begin by reaching out to the casino's support department. Should the matter remain unresolved, you can file a complaint with the UK Gambling Commission or utilize their Alternative Dispute Resolution procedures."
     },
     {
-      question: "How often do you update your casino reviews?",
-      answer: "We continuously monitor and update our casino information. Reviews are refreshed regularly to reflect current bonuses, game selections, and any changes in casino policies or features."
+      question: "How frequently are reviews updated?",
+      answer: "We conduct ongoing monitoring and refresh our casino data continuously. Our reviews are regularly revised to incorporate the latest bonuses, game additions, and any policy modifications from operators."
     },
     {
-      question: "Can I trust your casino ratings?",
-      answer: "Yes. Our ratings are based on comprehensive testing, real player feedback, and objective criteria. We maintain complete independence and never let commercial relationships influence our assessments."
+      question: "Are your ratings reliable?",
+      answer: "Absolutely. Our scoring system relies on extensive testing, genuine user experiences, and impartial evaluation standards. We preserve complete editorial autonomy and never allow business partnerships to impact our ratings."
     }
   ];
 
@@ -45,7 +45,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 bg-[#1A2332] border-y border-[#FFD700]/20">
+    <section className="py-16 bg-[#1A1A2E] border-y border-[#8B5CF6]/30">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -53,24 +53,24 @@ export default function FAQ() {
               Frequently Asked Questions
             </span>
           </h2>
-          <p className="text-[#B8C5D6] text-lg">
+          <p className="text-[#CBD5E1] text-lg">
             Everything you need to know about our casino recommendations
           </p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-[#0F1419] border border-[#FFD700]/30 rounded-xl overflow-hidden hover:border-[#FFD700]/50 transition-all">
+            <div key={index} className="bg-[#0A0A0F] border border-[#8B5CF6]/30 rounded-xl overflow-hidden hover:border-[#8B5CF6]/50 transition-all">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-[#FFD700]/5 transition-colors"
+                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-[#8B5CF6]/5 transition-colors"
               >
-                <h3 className="text-[#FFD700] font-semibold text-lg pr-4">
+                <h3 className="text-[#8B5CF6] font-semibold text-lg pr-4">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
                   <svg
-                    className={`w-5 h-5 text-[#FFD700] transition-transform duration-200 ${
+                    className={`w-5 h-5 text-[#8B5CF6] transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -87,8 +87,8 @@ export default function FAQ() {
                 </div>
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-5 border-t border-[#FFD700]/20">
-                  <p className="text-[#B8C5D6] leading-relaxed pt-4">
+                <div className="px-6 pb-5 border-t border-[#8B5CF6]/20">
+                  <p className="text-[#CBD5E1] leading-relaxed pt-4">
                     {faq.answer}
                   </p>
                 </div>

@@ -78,11 +78,11 @@ export default function CasinoPopup() {
       
       {/* Modal */}
       <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
-        <div className="relative bg-[#1A2332] border-2 border-[#FFD700] rounded-2xl shadow-2xl shadow-[#FFD700]/30 max-w-md w-full overflow-hidden">
+        <div className="relative bg-[#1A1A2E] border-2 border-[#8B5CF6] rounded-2xl shadow-2xl shadow-[#8B5CF6]/30 max-w-md w-full overflow-hidden">
           {/* Close button */}
           <button
             onClick={() => setIsVisible(false)}
-            className="absolute top-4 right-4 text-white hover:text-[#FFD700] transition-colors z-10"
+            className="absolute top-4 right-4 text-white hover:text-[#8B5CF6] transition-colors z-10"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -90,7 +90,7 @@ export default function CasinoPopup() {
           </button>
 
           {/* Casino Logo Section */}
-          <div className="bg-gradient-to-br from-[#1A2332] to-[#0F1419] border-b-2 border-[#FFD700] p-8 flex items-center justify-center">
+          <div className="bg-gradient-to-br from-[#1A1A2E] to-[#0A0A0F] border-b-2 border-[#8B5CF6] p-8 flex items-center justify-center">
             <div className="relative w-48 h-32">
               <Image
                 src={`/casino-logos/${casino.logo}`}

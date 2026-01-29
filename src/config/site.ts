@@ -10,27 +10,27 @@ export interface CasinoBrand {
 export const siteConfig = {
   // Basic site information
   name: "Premium Casinos UK",
-  description: "Your ultimate guide to the best UK-licensed online casinos. Compare bonuses, games, and features to find your perfect casino match.",
+  description: "Discover the UK's most trusted online casinos. Compare top-rated platforms, exclusive bonuses, and premium gaming experiences all in one place.",
   url: "https://premiumcasinos.uk",
   
-  // Brand colors - sophisticated navy and gold design
+  // Brand colors - modern purple and cyan design
   colors: {
-    primary: "#FFD700",    // Bright Gold - premium & wealth
-    secondary: "#1A2332",  // Deep Navy - sophisticated & trust
-    accent: "#FFC929",     // Vibrant Gold - luxury & rewards
-    background: "#0F1419", // Deep navy-black background
-    surface: "#1A2332",   // Dark navy surface
+    primary: "#8B5CF6",    // Vibrant Purple - premium & excitement
+    secondary: "#06B6D4",  // Cyan - modern & trust
+    accent: "#A78BFA",     // Light Purple - luxury & rewards
+    background: "#0A0A0F", // Deep black-purple background
+    surface: "#1A1A2E",   // Dark purple surface
     text: "#FFFFFF",       // Pure white text
-    textSecondary: "#B8C5D6", // Light blue-gray
-    gold: "#FFD700",       // Bright gold accent
-    navy: "#1A2332",       // Deep navy
+    textSecondary: "#CBD5E1", // Light slate gray
+    purple: "#8B5CF6",    // Primary purple accent
+    cyan: "#06B6D4",       // Primary cyan accent
   },
   
   // Hero section content
   hero: {
-    headline: "Best New Casinos UK",
-    subtext: "We've handpicked the UK's finest licensed casinos, each offering exceptional bonuses, premium games, and lightning-fast payouts. Find your perfect match today.",
-    cta: "Explore Top Casinos",
+    headline: "Top UK Casino Destinations",
+    subtext: "Explore hand-selected UK casinos featuring generous welcome bonuses, extensive game libraries, and rapid withdrawal processing. Start your journey today.",
+    cta: "View Casino Offers",
   },
   
   // Casino brands data
@@ -98,41 +98,41 @@ export const siteConfig = {
   
   // Features section
   features: {
-    title: "Why Players Choose Us",
-    subtitle: "We make finding your perfect casino effortless",
+    title: "What Sets Us Apart",
+    subtitle: "Your trusted partner in finding exceptional casino experiences",
     items: [
       {
         icon: "🎯",
-        title: "Expertly Curated",
-        description: "Every casino is thoroughly vetted for quality, security, and player satisfaction"
+        title: "Rigorous Selection Process",
+        description: "Each platform undergoes comprehensive evaluation focusing on security protocols, game diversity, and user experience quality"
       },
       {
         icon: "⚡",
-        title: "Instant Comparisons",
-        description: "Compare bonuses, games, and features side-by-side in seconds"
+        title: "Quick Side-by-Side Analysis",
+        description: "Instantly evaluate welcome packages, game selections, and key features across multiple platforms simultaneously"
       },
       {
         icon: "🔒",
-        title: "100% Licensed",
-        description: "Only UK Gambling Commission licensed casinos make our list"
+        title: "Fully Regulated Platforms",
+        description: "We exclusively showcase casinos operating under valid UK Gambling Commission licenses"
       },
       {
         icon: "💎",
-        title: "Exclusive Bonuses",
-        description: "Access special welcome offers and promotions not available elsewhere"
+        title: "Special Promotional Access",
+        description: "Unlock unique sign-up incentives and limited-time deals unavailable through standard channels"
       }
     ]
   },
   
   // Trust signals
   trustSignals: {
-    title: "Trusted by Thousands of UK Players",
-    subtitle: "Your safety and satisfaction are our top priorities",
+    title: "Trusted by Tens of Thousands",
+    subtitle: "We prioritize your security and gaming satisfaction above all else",
     stats: [
-      { value: "50K+", label: "Happy Players" },
-      { value: "100%", label: "Licensed Casinos" },
-      { value: "24/7", label: "Support Available" },
-      { value: "4.9★", label: "Average Rating" }
+      { value: "75K+", label: "Active Members" },
+      { value: "100%", label: "Regulated Sites" },
+      { value: "24/7", label: "Customer Help" },
+      { value: "4.8★", label: "User Rating" }
     ]
   },
   
