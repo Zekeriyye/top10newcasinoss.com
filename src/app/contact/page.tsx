@@ -24,8 +24,8 @@ export default function ContactPage() {
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-black font-bold">📧</span>
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#8B5CF6] to-[#06B6D4] rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold">📧</span>
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-1">Email</h3>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                     id="subject"
                     name="subject"
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent"
                   >
                     <option value="">Select a subject</option>
                     <option value="casino-recommendation">Casino Recommendation</option>
@@ -130,7 +130,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-colors"
+                  className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white font-bold py-3 px-6 rounded-lg hover:from-[#A78BFA] hover:to-[#22D3EE] focus:outline-none focus:ring-2 focus:ring-[#8B5CF6] focus:ring-offset-2 focus:ring-offset-gray-900 transition-colors"
                 >
                   Send Message
                 </button>

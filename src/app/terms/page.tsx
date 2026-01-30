@@ -14,14 +14,14 @@ export default function TermsPage() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               The terms and conditions governing your use of our casino comparison website.
             </p>
-            <p className="text-sm text-gray-400 mt-4">Last updated: January 2025</p>
+            <p className="text-sm text-gray-400 mt-4">Last updated: January 2026</p>
           </div>
 
           <div className="prose prose-invert max-w-none">
             <div className="bg-gray-900 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                By accessing and using 10BestOnlineCasinosUK, you accept and agree to be bound by these Terms & Conditions. 
+                By accessing and using {siteConfig.name}, you accept and agree to be bound by these Terms & Conditions. 
                 If you do not agree to these terms, please do not use our website.
               </p>
               <p className="text-gray-300 leading-relaxed">
@@ -33,7 +33,7 @@ export default function TermsPage() {
             <div className="bg-gray-900 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Website Purpose</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                10BestOnlineCasinosUK is an independent casino comparison website that provides information about UK-licensed 
+                {siteConfig.name} is an independent casino comparison website that provides information about UK-licensed 
                 online casinos. We are not a gambling operator and do not offer gambling services directly.
               </p>
               <p className="text-gray-300 leading-relaxed">
@@ -100,7 +100,7 @@ export default function TermsPage() {
             <div className="bg-gray-900 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Limitation of Liability</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                To the maximum extent permitted by law, 10BestOnlineCasinosUK shall not be liable for any direct, 
+                To the maximum extent permitted by law, {siteConfig.name} shall not be liable for any direct, 
                 indirect, incidental, special, or consequential damages arising from your use of our website 
                 or the casinos we recommend.
               </p>

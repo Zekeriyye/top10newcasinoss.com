@@ -14,7 +14,7 @@ export default function PrivacyPage() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               How we collect, use, and protect your personal information when you visit our website.
             </p>
-            <p className="text-sm text-gray-400 mt-4">Last updated: January 2025</p>
+            <p className="text-sm text-gray-400 mt-4">Last updated: January 2026</p>
           </div>
 
           <div className="prose prose-invert max-w-none">

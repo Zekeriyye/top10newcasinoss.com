@@ -4,14 +4,14 @@ import { siteConfig } from '@/config/site';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#0A0A0A]">
+    <div className="min-h-screen bg-[#0A0A0F]">
       <Header />
       
       <main className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-[#F59E0B] to-[#FCD34D] bg-clip-text text-transparent">About Winners Casino</span>
+                  <span className="bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] bg-clip-text text-transparent">About {siteConfig.name}</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Your trusted resource highlighting premier UK Gambling Commission licensed online casinos featuring attractive welcome bonuses and protected gaming spaces for British players.
@@ -19,10 +19,10 @@ export default function AboutPage() {
           </div>
 
           <div className="prose prose-invert max-w-none">
-            <div className="bg-[#1C1917] border border-[#F59E0B]/30 rounded-xl p-8 mb-8">
+            <div className="bg-[#1A1A2E] border border-[#8B5CF6]/30 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Who We Are</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Winners Casino is an independent UK-focused casino comparison site committed exclusively to presenting UK Gambling Commission licensed casinos. 
+                {siteConfig.name} is an independent UK-focused casino comparison site committed exclusively to presenting UK Gambling Commission licensed casinos. 
                 We have no partnerships with casino operators, ensuring our assessments stay fully impartial and focused on what's most important to UK players.
               </p>
               <p className="text-gray-300 leading-relaxed">
@@ -52,31 +52,31 @@ export default function AboutPage() {
               </p>
               <ul className="text-gray-300 space-y-2 mb-4">
                 <li className="flex items-start">
-                  <span className="text-[#FCD34D] mr-2">•</span>
+                  <span className="text-[#8B5CF6] mr-2">•</span>
                   <span>UK Gambling Commission licensing and compliance</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#FCD34D] mr-2">•</span>
+                  <span className="text-[#8B5CF6] mr-2">•</span>
                   <span>Game variety and software providers</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#FCD34D] mr-2">•</span>
+                  <span className="text-[#8B5CF6] mr-2">•</span>
                   <span>Bonus offers and wagering requirements</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#FCD34D] mr-2">•</span>
+                  <span className="text-[#8B5CF6] mr-2">•</span>
                   <span>Banking options and withdrawal speeds</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#FCD34D] mr-2">•</span>
+                  <span className="text-[#8B5CF6] mr-2">•</span>
                   <span>Customer support quality and availability</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#FCD34D] mr-2">•</span>
+                  <span className="text-[#8B5CF6] mr-2">•</span>
                   <span>Mobile compatibility and user experience</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#FCD34D] mr-2">•</span>
+                  <span className="text-[#8B5CF6] mr-2">•</span>
                   <span>Responsible gambling tools and support</span>
                 </li>
               </ul>
