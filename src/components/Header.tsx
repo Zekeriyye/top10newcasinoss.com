@@ -43,7 +43,7 @@ export default function Header() {
             {/* Domain Name */}
             <div className="block">
               <div className="text-[#8B5CF6] font-bold text-xs md:text-xl">
-                top10newcasinoss.com
+                top 10 new casinos
               </div>
             </div>
           </Link>
