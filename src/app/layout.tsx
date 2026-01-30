@@ -69,6 +69,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <meta name="theme-color" content="#0A0A0F" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
