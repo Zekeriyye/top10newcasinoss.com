@@ -8,18 +8,18 @@ export default function Footer() {
         {/* Header with Logo and Branding */}
         <div className="py-8 border-b border-[#8B5CF6]/30">
           <div className="flex items-center gap-3 mb-4">
-            {/* Card and Chip Icons */}
-            <div className="flex items-center gap-2">
-              {/* Playing Card */}
-              <div className="w-10 h-14 bg-[#1A1A2E] border-2 border-[#8B5CF6] rounded-md flex items-center justify-center">
+            {/* Card and Chip Icons - Intersecting */}
+            <div className="relative flex items-center">
+              {/* Playing Card - Behind */}
+              <div className="w-10 h-14 bg-[#1A1A2E] border-2 border-[#8B5CF6] rounded-md flex items-center justify-center z-0">
                 <div className="text-center">
                   <div className="text-[#8B5CF6] text-sm font-bold">A</div>
                   <div className="text-[#06B6D4] text-xl">♠</div>
                 </div>
               </div>
               
-              {/* Casino Chip */}
-              <div className="w-10 h-10 rounded-full bg-[#1A1A2E] border-2 border-[#8B5CF6] flex items-center justify-center relative">
+              {/* Casino Chip - Front, Overlapping */}
+              <div className="w-10 h-10 rounded-full bg-[#1A1A2E] border-2 border-[#8B5CF6] flex items-center justify-center relative z-10 -ml-4">
                 <div className="w-full h-full rounded-full border border-[#06B6D4] flex items-center justify-center">
                   <span className="text-[#06B6D4] text-base font-bold">£</span>
                 </div>

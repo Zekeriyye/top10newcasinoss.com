@@ -22,18 +22,18 @@ export default function Header() {
         <div className="flex items-center justify-between h-14 md:h-20">
           {/* Logo and Domain */}
           <Link href="/" className="flex items-center gap-2 md:gap-3 group">
-            {/* Card and Chip Icons */}
-            <div className="flex items-center gap-1.5 md:gap-2">
-              {/* Playing Card */}
-              <div className="w-7 h-10 md:w-12 md:h-16 bg-[#1A1A2E] border-2 border-[#8B5CF6] rounded-md flex items-center justify-center">
+            {/* Card and Chip Icons - Intersecting */}
+            <div className="relative flex items-center">
+              {/* Playing Card - Behind */}
+              <div className="w-7 h-10 md:w-12 md:h-16 bg-[#1A1A2E] border-2 border-[#8B5CF6] rounded-md flex items-center justify-center z-0">
                 <div className="text-center">
                   <div className="text-[#8B5CF6] text-[10px] md:text-sm font-bold">A</div>
                   <div className="text-[#06B6D4] text-xs md:text-xl">♠</div>
                 </div>
               </div>
               
-              {/* Casino Chip */}
-              <div className="w-7 h-7 md:w-12 md:h-12 rounded-full bg-[#1A1A2E] border-2 border-[#8B5CF6] flex items-center justify-center relative">
+              {/* Casino Chip - Front, Overlapping */}
+              <div className="w-7 h-7 md:w-12 md:h-12 rounded-full bg-[#1A1A2E] border-2 border-[#8B5CF6] flex items-center justify-center relative z-10 -ml-3 md:-ml-4">
                 <div className="w-full h-full rounded-full border border-[#06B6D4] flex items-center justify-center">
                   <span className="text-[#06B6D4] text-[10px] md:text-base font-bold">£</span>
                 </div>
