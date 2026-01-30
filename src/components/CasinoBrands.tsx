@@ -142,13 +142,13 @@ export default function CasinoBrands() {
                     {/* Left Section - Logo, Rating & Live Players Stacked */}
                     <div className="flex flex-col items-center gap-2 flex-shrink-0">
                       {/* Logo */}
-                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#8B5CF6]/20 to-[#06B6D4]/20 p-2.5 border-2 border-[#8B5CF6]/30 flex-shrink-0">
+                      <div className="w-32 h-24">
                         <div className="relative w-full h-full">
                           <Image
                             src={`/casino-logos/${casino.logo}`}
                             alt={casino.name}
                             fill
-                            className="object-contain rounded-full"
+                            className="object-contain"
                             style={{ objectFit: 'contain' }}
                           />
                         </div>

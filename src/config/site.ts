@@ -90,7 +90,7 @@ export const siteConfig = {
       logo: "Logo-Karamba.svg",
       bonus: "100% UP TO £250 + 250 FS",
       rating: 8.0,
-      playLink: "https://go.karambaaffiliates.com/visit/?bta=40838&nci=6499&utm_campaign=Karamba-CXUK01ZZ&afp="
+      playLink: "https://www.karamba.co.uk/"
     }
   ],
 
