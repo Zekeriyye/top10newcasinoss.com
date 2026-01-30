@@ -25,6 +25,7 @@
     <circle cx="8" cy="8" r="8" fill="#1A1A2E" stroke="#8B5CF6" stroke-width="1.5"/>
     <circle cx="8" cy="8" r="5" fill="none" stroke="#06B6D4" stroke-width="1"/>
     <circle cx="8" cy="8" r="3" fill="#0A0A0F"/>
-    <text x="8" y="11" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#06B6D4" text-anchor="middle">£</text>
+    <!-- Pound symbol as path to avoid encoding issues -->
+    <path d="M8,4 L8,6 M6,6 L10,6 M8,6 L8,12 M6,12 L10,12" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/>
   </g>
 </svg>
