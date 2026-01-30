@@ -21,28 +21,28 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-20">
           {/* Logo and Domain */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-2 md:gap-3 group">
             {/* Card and Chip Icons */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 md:gap-2">
               {/* Playing Card */}
-              <div className="w-10 h-14 md:w-12 md:h-16 bg-[#1A1A2E] border-2 border-[#8B5CF6] rounded-md flex items-center justify-center">
+              <div className="w-7 h-10 md:w-12 md:h-16 bg-[#1A1A2E] border-2 border-[#8B5CF6] rounded-md flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-[#8B5CF6] text-xs md:text-sm font-bold">A</div>
-                  <div className="text-[#06B6D4] text-lg md:text-xl">♠</div>
+                  <div className="text-[#8B5CF6] text-[10px] md:text-sm font-bold">A</div>
+                  <div className="text-[#06B6D4] text-xs md:text-xl">♠</div>
                 </div>
               </div>
               
               {/* Casino Chip */}
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#1A1A2E] border-2 border-[#8B5CF6] flex items-center justify-center relative">
+              <div className="w-7 h-7 md:w-12 md:h-12 rounded-full bg-[#1A1A2E] border-2 border-[#8B5CF6] flex items-center justify-center relative">
                 <div className="w-full h-full rounded-full border border-[#06B6D4] flex items-center justify-center">
-                  <span className="text-[#06B6D4] text-sm md:text-base font-bold">£</span>
+                  <span className="text-[#06B6D4] text-[10px] md:text-base font-bold">£</span>
                 </div>
               </div>
             </div>
             
             {/* Domain Name */}
-            <div className="hidden md:block">
-              <div className="text-[#8B5CF6] font-bold text-lg md:text-xl">
+            <div className="block">
+              <div className="text-[#8B5CF6] font-bold text-xs md:text-xl">
                 top10newcasinoss.com
               </div>
             </div>
