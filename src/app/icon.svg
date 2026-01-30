@@ -16,8 +16,8 @@
   <!-- Playing Card - Behind -->
   <g transform="translate(4, 6)">
     <rect x="0" y="0" width="12" height="18" rx="2" fill="#1A1A2E" stroke="#8B5CF6" stroke-width="1.5"/>
-    <text x="6" y="8" font-family="Georgia, serif" font-size="6" font-weight="bold" fill="#8B5CF6" text-anchor="middle">A</text>
-    <text x="6" y="14" font-family="Arial" font-size="7" fill="#06B6D4" text-anchor="middle">`</text>
+    <text x="6" y="8" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#8B5CF6" text-anchor="middle">A</text>
+    <path d="M6,10 L5,12 L7,12 Z M5,12 L4,14 L8,14 L7,12 Z" fill="#06B6D4"/>
   </g>
   
   <!-- Casino Chip - Front, Overlapping -->
@@ -25,6 +25,6 @@
     <circle cx="8" cy="8" r="8" fill="#1A1A2E" stroke="#8B5CF6" stroke-width="1.5"/>
     <circle cx="8" cy="8" r="5" fill="none" stroke="#06B6D4" stroke-width="1"/>
     <circle cx="8" cy="8" r="3" fill="#0A0A0F"/>
-    <text x="8" y="11" font-family="Arial" font-size="7" font-weight="bold" fill="#06B6D4" text-anchor="middle">£</text>
+    <text x="8" y="11" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#06B6D4" text-anchor="middle">£</text>
   </g>
 </svg>
