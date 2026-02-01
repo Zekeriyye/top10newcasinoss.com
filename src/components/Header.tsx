@@ -25,17 +25,21 @@ export default function Header() {
             {/* Card and Chip Icons - Intersecting */}
             <div className="relative flex items-center">
               {/* Playing Card - Behind */}
-              <div className="w-7 h-10 md:w-12 md:h-16 bg-[#1A1A2E] border-2 border-[#8B5CF6] rounded-md flex items-center justify-center z-0">
-                <div className="text-center">
+              <div className="w-7 h-10 md:w-12 md:h-16 bg-[#1A1A2E] border-2 border-[#8B5CF6] rounded-md flex items-center justify-center z-0 relative">
+                <div className="text-center w-full h-full flex flex-col items-center justify-center">
                   <div className="text-[#8B5CF6] text-[10px] md:text-sm font-bold">A</div>
-                  <div className="text-[#06B6D4] text-xs md:text-xl">♠</div>
+                  <svg className="w-3 h-3 md:w-4 md:h-4 text-[#06B6D4]" viewBox="0 0 12 12" fill="currentColor">
+                    <path d="M6,2 L5,4 L7,4 Z M5,4 L4,6 L8,6 L7,4 Z"/>
+                  </svg>
                 </div>
               </div>
               
               {/* Casino Chip - Front, Overlapping */}
               <div className="w-7 h-7 md:w-12 md:h-12 rounded-full bg-[#1A1A2E] border-2 border-[#8B5CF6] flex items-center justify-center relative z-10 -ml-3 md:-ml-4">
                 <div className="w-full h-full rounded-full border border-[#06B6D4] flex items-center justify-center">
-                  <span className="text-[#06B6D4] text-[10px] md:text-base font-bold">£</span>
+                  <svg className="w-3 h-3 md:w-5 md:h-5 text-[#06B6D4]" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                    <path d="M6,2 L6,3 M4,3 L8,3 M6,3 L6,6 M4,6 L8,6"/>
+                  </svg>
                 </div>
               </div>
             </div>
